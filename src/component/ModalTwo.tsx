@@ -1,6 +1,14 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Dispatch, SetStateAction, useRef } from "react";
+import IMask from 'imask';
+import { IMaskInput } from "react-imask";
+
+//let phoneMask = document.getElementsByClassName('phone');
+  // let maskOptions = {
+   //     mask:'+{7}(000)000-00-00',
+    //}
+//let mask = new IMask(phoneMask, maskOptions)
 
 type ModelPropsTrade = {
     showTradeInModal: boolean, 
@@ -11,7 +19,8 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
     const [closeStarting, setCloseStarting] = useState(false)
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
-    const [gender, setGender] =  useState('Male')
+    const [ carModal, setCarModal] =  useState('')
+    const [carYear, setCarYear] =  useState('')
     function closeModal() {
         setCloseStarting(true)
         setTimeout(() => {
@@ -19,23 +28,21 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             setCloseStarting(false)
         }, 500)
     }
-    async function sendmail(event: FormEvent<HTMLFormElement>) {
+    async function sendmailTradein(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
-        const res = await fetch('/api/sendmail', {
+        const res = await fetch('/api/sendmailTradein', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name, phone, gender })
+            body: JSON.stringify({ name, phone, carModal, carYear  })
         })
         if (res.ok) {
             const result = await res.json()
             console.log(result);            
         }
     }
-    function changeGender(event: ChangeEvent<HTMLInputElement>) {
-        setGender(event.target.value)
-    }
+
     const backgroundEl = useRef(null)
     const className = [
         'modalBackground',
@@ -49,7 +56,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             <div className="modalWindow" id="modalWindow">
                 <div className="mb-2"><span id="modalTitle">Заказать звонок</span></div>
                 <div className="modalEl">
-                    <form id="submit-form" onSubmit={sendmail}>
+                    <form id="submit-form" onSubmit={sendmailTradein}>
                         <div className="mb-3">
                             <label htmlFor="name" className="form-label"></label>
                             <input type="text" 
@@ -63,23 +70,35 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                         </div>
                         <div className="mb-3">
                             <label htmlFor="phone" className="form-label"></label>
-                            <input type="text" className="phone" id="phone" name="phone" 
+                            {/* <input type="text" className="phone" id="phone" name="phone" 
                             placeholder="+7(***)-***-**-**" 
                             required
                             value={phone}
-                            onChange={event => setPhone(event.target.value)} />
+                            onChange={event => setPhone(event.target.value)} /> */}
+                            <IMaskInput 
+                                className="phone"
+                                mask={'+{7}(000)000-00-00'}
+                                placeholder="+7(***)-***-**-**" 
+                                required
+                                value={phone}
+                                onChange={(event: ChangeEvent<HTMLInputElement>) => setPhone(event.target.value)}
+                            />
                         </div>
                         <div className="mb-3">
-                            <label htmlFor="checkbox1">Male</label>
-                            <input type="radio" id="checkbox1" value="Male"
-                                checked={gender === 'Male'}
-                                onChange={changeGender}
-                            />
-                            <label htmlFor="checkbox2">Female</label>
-                            <input type="radio" id="checkbox2" value="Female" 
-                                checked={gender === 'Female'}
-                                onChange={changeGender}
-                            />
+                            <label htmlFor="carYear" className="form-label"></label>
+                            <input type="number"
+                            placeholder="Год выпуска вашего авто"
+                             min="1990" max="2030"  
+                             value={carYear}
+                             onChange={event => setCarYear(event.target.value)} />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="carModal" className="form-label"></label>
+                            <input type="text" className="carModal" id="carModal" name="carModal" 
+                            placeholder="KIA RIO" 
+                            required
+                            value={carModal}
+                            onChange={event => setCarModal(event.target.value)} />
                         </div>
                         <div className="mb-3">
                             <button className="btn-modal" type="submit">Отправить</button>
@@ -92,7 +111,8 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             </div>
         </div>
 
-        <style jsx>{`
+    <style jsx>{`
+
             @keyframes modalBackground-open {
                 0% {
                     opacity: 0;
@@ -140,8 +160,8 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             .modalWindow {
                 display: flex;
                 justify-content: center;
-                height: 400px;
-                width: 500px;
+                height: 500px;
+                width: 380px;
                 align-items: center;
                 background-color: rgba(48, 54, 58, 1);
                 flex-direction: column;
@@ -203,6 +223,54 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                 font-family: 'Montserrat';
                 font-weight: bold;
             }
+        @media(max-width: 700px) {
+          #modalTitle {
+           font-size:23px;
+          }
+          .mb-2 {
+            font-size:23px; 
+          }
+          .btn-modal {
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+          }
+          .btn-modal:hover {
+            font-size: 16px;
+          }
+          input {
+                font-size: 15px;
+                height: 35px;
+          }
+          .modalWindow {
+            height: 460px;
+            width: 300px;
+          }
+        }
+        @media(max-width: 350px) {
+          #modalTitle {
+           font-size:18px;
+          }
+          .mb-2 {
+            font-size:18px; 
+          }
+          .btn-modal {
+            width: 100px;
+            height: 23px;
+            font-size: 15px;
+          }
+          .btn-modal:hover {
+            font-size: 16px;
+          }
+          input {
+                font-size: 13px;
+                height: 20px;
+          }
+          .modalWindow {
+            height: 370px;
+            width: 230px;
+          }
+        }
       `}
         </style>
     </>

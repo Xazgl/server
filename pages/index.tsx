@@ -54,7 +54,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   })
   return {
     props: {
-      sales
+      sales:JSON.parse(JSON.stringify(sales)),
     }
   }
 }

@@ -44,17 +44,18 @@ const AdminBar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            LOGO
+            OPEL ADMIN
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
+            <IconButton 
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+
             >
               <MenuIcon />
             </IconButton>
@@ -91,7 +92,7 @@ const AdminBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            OPEL ADMIN
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -107,7 +108,10 @@ const AdminBar = () => {
           
         </Toolbar>
       </Container>
+
     </AppBar>
   );
 };
 export default AdminBar;
+
+

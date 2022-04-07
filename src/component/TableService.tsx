@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import { ClientDto } from '../../@types';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'name', headerName: 'ФИО', width: 130 },
-  { field: 'phone', headerName: 'Телефон', width: 130 },
-  { field: 'createdAt', headerName: 'Date', width: 100 }
+  { field: 'id', headerName: 'ID', width:20},
+  { field: 'name', headerName: 'ФИО', width: 300 },
+  { field: 'phone', headerName: 'Телефон', width: 300 },
+  { field: 'createdAt', headerName: 'Date', width: 300 }
 ];
 
 export default function TableService() {

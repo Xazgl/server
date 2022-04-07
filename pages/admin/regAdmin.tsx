@@ -12,14 +12,12 @@ import { TradeIn } from '../../src/component/TradeIn'
 import { SalesComponent } from '../../src/component/Sales'
 import { SelectTest } from '../../src/component/selectTest'
 import { Modal } from '../../src/component/Modal'
-import { TradeinModal } from '../../src/component/ModalTwo'
+
 import { useState } from 'react'
 import BarMenu from '../../src/component/BarMenu'
+import { RegComponent } from '../../src/component/admin/Reg'
 
-
-
-const  Admin: NextPage = () => {
-
+const  regAdmin: NextPage = () => {
     return (
       <>
         <Head>
@@ -29,12 +27,11 @@ const  Admin: NextPage = () => {
         </Head>
         <Menu />
         <BarMenu />
-        <Login />
-        
-    
+        <RegComponent />
+     
       </>
     )
   }
   
-  export default Admin
+  export default regAdmin
   

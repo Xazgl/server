@@ -5,7 +5,7 @@ import db from '../../prisma';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
-        const { name, phone} = req.body
+        const { name, phone, carModal, carYear } = req.body
         try {
             //письмо
             let testEmailAccount = await nodemailer.createTestAccount()
@@ -19,20 +19,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 },
             })
             let result = await transporter.sendMail({
-                from: '"Заявка на ТО" UriyAPKOHT@yandex.ru',
+                from: '"Заявка на TradeIn" UriyAPKOHT@yandex.ru',
                 to: 'UriyAPKOHT@yandex.ru',
-                subject: 'Заявка на ТО',
-                text: `Заявка ТО от ${name} ${phone} с opel.ru`,
+                subject: 'Заявка на Trade',
+                text: `Заявка Trade In от ${name} ${phone} машина ${carModal} ${carYear} с opel.ru`,
                 html:
-                    `Заявка ТО от ${name} ${phone} с opel.ru`,
+                    `Заявка Trade In  от ${name} ${phone} машина ${carModal} ${carYear} с opel.ru`,
             })
             //регистрация в базу
-            const clientSend = await db.client.create({data: {
+            const clientSend = await db.clientTradein.create({data: {
                 name,
-                phone
+                phone,
+                carYear,
+                carModal
             }})
             res.send(clientSend);
         } catch (error) {
+            console.log(error)
             res.status(500).send({ message: "Ошибка сервера" })
         }
     } else {

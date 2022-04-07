@@ -32,7 +32,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
       overflow: hidden;
       margin-top:50px;
       background-size: cover;
-    background-position-y: bottom;
+      background-position-y: bottom;
    }
 
   .content {
@@ -78,6 +78,93 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     border-color:black;
     box-shadow:none;
     transform: scale(0.98);
+  }
+
+  @media(max-width: 1350px) {
+    .background {
+      height:600px;
+    }
+    .title {
+      margin-bottom:10px;
+    }
+    .content {
+      margin-left:40px;
+    }
+  }
+  @media(max-width: 900px ){
+    .background {
+      height:400px;
+    }
+    .content {
+      margin-left:80px;
+    }
+    .title {
+      font-size:30px;
+    }
+    .words {
+      font-size:24px;
+      margin-bottom:100px;
+    }
+    .btn {
+      font-size: 20px;
+      width: 300px;
+    }
+  }
+  @media(max-width: 600px ){
+    .background {
+      height:350px;
+    }
+    .content {
+      margin-left:50px;
+    }
+    .title {
+      font-size:25px;
+    }
+    .words {
+      font-size:20px;
+      margin-bottom:70px;
+    }
+    .btn {
+      font-size: 20px;
+      width: 270px;
+    }
+  }
+  @media(max-width: 360px ){
+    .background {
+      height:180px;
+    }
+    .content {
+      margin-left:30px;
+    }
+    .title {
+      font-size:16px;
+    }
+    .words {
+      font-size:12px;
+      margin-bottom:20px;
+    }
+    .btn {
+      font-size: 12px;
+      width: 170px;
+      height: 30px;
+    }
+  }
+  @media(max-width: 260px ){
+    .background {
+      height:150px;
+    }
+    .words {
+      font-size:9px;
+      margin-bottom:10px;
+    }
+    .btn {
+      font-size: 7px;
+      width: 120px;
+      height: 20px;
+    }
+  }
+
+
   }
 `}</style>
 

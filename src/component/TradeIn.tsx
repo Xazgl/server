@@ -6,35 +6,45 @@ type TradeInProps = {
 }
 export function TradeIn({setShowTradeInModal}: TradeInProps) {
   // const setShowTradeInModal = props.setShowTradeInModal
-   let text = `Позволь себе больше 
-   с новой кредитной программой от OPEL АРКОНТ`
+   let text = `Обменяйте ваш автомобиль 
+   на новый  новый  OPEL  с АРКОНТ`
     return (
         <>
-            <div className="background">
-               <div className="content">      
+          <div className="background">
+            <div className="contentEl">
+                 <div className="content">      
                    <div className="title">Trade-In</div>
                    <div className="words">{text}</div>
-                   <div className="title">
+                 </div>
+                 <div className="content"> 
+                   <div className="btnDiv">
                       <button className="btn" onClick={()=>{setShowTradeInModal(true)}}>Записаться на оценку</button>
-                   </div>
+                  </div>
                </div>
             </div>
+          </div>
 
 <style jsx>{`
    .background { 
      display:flex; 
       width: 100%;
-      height:800px;
+      height:600px;
       justify-content: center;
-      background-color:black;
-      background-image: url('${bannerTradeIn.src}');
+      background-blend-mode: darken;
+      background: rgba(0, 0, 0, .60);
       background-repeat: no-repeat;
       overflow: hidden;
-      margin-top:50px;
       background-size: cover;
-      background-position-y: bottom;
+      background-position: center center;
+      background-image: url('${bannerTradeIn.src}');
    }
-
+  .contentEl{
+    display:flex; 
+    width: 900px;
+    justify-content: center;
+    flex-direction:row;
+    margin-top:50px;
+  }
   .content {
     display:flex; 
     flex-direction:column;
@@ -43,37 +53,45 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
   }
 
   .title {
+    display:flex;
+    justify-content:start;
     font-size:55px;
     font-weight: bold;
-    font-family: Montserrat; 
-    margin-bottom:100px;
+    font-family: 'Montserrat'; 
+    color:white;
+    margin-top:120px;
   }
   .words {
+    display:flex;
+    justify-content:start;
+    color:white;
     font-size:35px;
-    font-family: Montserrat; 
+    font-family: 'Montserrat'; 
     margin-bottom:250px;
     font-weight: 300;
   }
-  
+  .btnDiv{
+    display:flex;
+    justify-content:start;
+    margin-bottom:200px;
+  }
   .btn {
-    background-color:black;
-    color:#f7ff14;
+    background:transparent;
     font-family: 'Montserrat'; 
     font-size:25px;
-    border:none;
-    font-weight: bold;
+    color:white;
     border-radius:5px;
-    -webkit-box-shadow: 1px 26px 8px -3px rgba(34, 60, 80, 0.2);
-    -moz-box-shadow: 1px 26px 8px -3px rgba(34, 60, 80, 0.2);
-    box-shadow: 1px 26px 8px -3px rgba(34, 60, 80, 0.2);  
     width: 350px;
     height: 50px;
+    background-color: transparent;
+    border-color: yellow;
+    font-weight: bold;
+
   }
 
   .btn:hover {
     background-color:#f7ff14;
     color:black;
-    font-family: Montserrat; 
     border:inset;
     border-color:black;
     box-shadow:none;

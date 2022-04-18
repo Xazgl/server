@@ -21,7 +21,7 @@ export function ModelBanner() {
                 .MainBanner {
                     display:flex; 
                     width: 100%;
-                    height: 800px;
+                    height: 600px;
                     justify-content: center;
                     background-color:black;
                     background-position: center center;
@@ -34,10 +34,10 @@ export function ModelBanner() {
                 .title {
                     display:flex;
                     justify-content:center;
-                    alight-items:center;
+                    align-items:center;
                     flex-direction:column;
                     color:black;
-                    font-family: Montserrat; 
+                    font-family: 'Montserrat'; 
                 }
   
             `}</style>

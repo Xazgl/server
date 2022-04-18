@@ -57,6 +57,7 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
         justify-content:center;
         flex-direction:column;
         margin-top:30px;
+        background-color:black;
     
     }
     
@@ -66,12 +67,14 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
         font-size: 35px;
         font-weight: bold;
         justify-content:center;
+        color:white;
     }
     .containerSales {
         display:flex;
         justify-content:space-evenly;
         width: 100%;
         margin-top:50px;
+        color:white;
     } 
     
     .salesEl {
@@ -79,7 +82,8 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
         justify-content: center;
         flex-direction: column;
         height: 400px;
-     
+        color:white;
+        margin-bottom:30px;
     }
     
     .img1{
@@ -150,20 +154,22 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     
     .title {
         display:flex;
-        font-family: Montserrat; 
+        font-family: 'Montserrat'; 
         font-size: 25px;
         font-weight: bold;
         justify-content:center;
         margin-top:10px;
+        color:white;
     }
     
     
     .salesWords {
         display:flex;
-        font-family: Montserrat; 
+        font-family: 'Montserrat'; 
         font-size: 20px;
         justify-content:center;
         margin-top:10px;
+        color:white;
     }
          
     `}</style>

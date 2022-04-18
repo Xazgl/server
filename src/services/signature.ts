@@ -33,7 +33,7 @@ export function unsign (val: string, secret: string): string | boolean {
   if ('string' != typeof val) throw new TypeError("Signed cookie string must be provided.");
   if ('string' != typeof secret) throw new TypeError("Secret string must be provided.");
   const str = val.slice(0, val.lastIndexOf('.'));
-  const mac = exports.sign(str, secret);
+  const mac = sign(str, secret);
 
   return sha1(mac) === sha1(val) ? str : false;
 };

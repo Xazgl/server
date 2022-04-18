@@ -6,16 +6,25 @@ import Image from 'next/image'
 import { Menu } from '../src/component/Menu'
 import { Login } from '../src/component/Login'
 import { MainBanner } from '../src/component/MainBanner'
+import { OurAdvantages  } from '../src/component/OurAdvantages'
 import { Model } from '../src/component/Model'
+import  Gallery from '../src/component/Gallery'
 import { Footer } from '../src/component/Footer'
 import { TradeIn } from '../src/component/TradeIn'
 import { SalesComponent } from '../src/component/Sales'
-import { SelectTest } from '../src/component/selectTest'
+import  BottomMainManner  from '../src/component/BottomMainManner'
 import { Modal } from '../src/component/Modal'
 import { TradeinModal } from '../src/component/ModalTwo'
 import { useState } from 'react'
 import BarMenu from '../src/component/BarMenu'
 import db, { Sales } from '../prisma'
+import { WeDo } from '../src/component/WeDo'
+import {ServiceIndexPage} from '../src/component/ServiceIndexPage'
+import {HowItWorks} from '../src/component/HowItWorks'
+import {Statistic} from '../src/component/Statistic'
+import { ModelRow} from '../src/component/ModelRow'
+
+
 
 const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
   const [showModal, setShowModal] = useState(false)
@@ -30,8 +39,16 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <Menu />
       <BarMenu />
       <MainBanner />
+      <WeDo />
+      <ServiceIndexPage setShowModal={setShowModal} />
+      {/* <BottomMainManner /> */}
+      <OurAdvantages   setShowModal={setShowModal}/>
       <SalesComponent sales={sales} setShowModal={setShowModal} />
+      <ModelRow  setShowModal={setShowModal}/>
+      <HowItWorks />
+      <Statistic />
       <TradeIn setShowTradeInModal={setShowTradeInModal} />
+      <Gallery />
       <Footer />
       {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

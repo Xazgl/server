@@ -16,10 +16,10 @@ export function MainBanner() {
                 {/* <img  className="ImgBanner" src={banner.src} alt="opel" /> */}
                 {/* <div  className="ImgBanner2" /> */}
                     <div className="title">
-                        <h2>АРКОНТ ОФИЦИАЛЬНЫЙ ДИЛЕР OPEL</h2>
+                       <div>АРКОНТ ОФИЦИАЛЬНЫЙ ДИЛЕР OPEL</div>
                         <div className="titleMini">
-                          <h3>Ждем Вас на Спартановке</h3>
-                          <h3>Ежедневно с 8:00 до 20:00</h3>
+                          <div>Ждем Вас на Спартановке</div>
+                          <div>Ежедневно с 8:00 до 20:00</div>
                         </div>
                    </div>
             </div>
@@ -28,28 +28,33 @@ export function MainBanner() {
                 .MainBanner {
                     display:flex; 
                     width: 100%;
-                    height: 800px;
+                    height: 600px;
                     justify-content: center;
-                    background-color:black;
+                    background-blend-mode: darken;
+                    background: rgba(0, 0, 0, .50);
                     background-position: center center;
                     background-image: url('${banner.src}');
+                    
                 }
                 .title {
                     display:flex;
                     justify-content:center;
-                    alight-items:center;
+                    align-items:center;
                     flex-direction:column;
                     color:white;
-                    font-family: Montserrat; 
+                    font-family: 'Montserrat'; 
+                    font-size:40px;
+                    font-weight: bold;
                 }
                 .titleMini {
                     display:flex;
                     justify-content:center;
                     flex-direction:column;
-                    padding-left: 100px;
                     color:white;
                     margin-top:100px;
-                    font-family: Montserrat; 
+                    font-family: 'Montserrat'; 
+                    font-size:20px;
+                    font-weight: bold;
                 }
                 .ImgBanner2{
                    /* overflow: hidden;

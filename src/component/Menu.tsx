@@ -37,7 +37,7 @@ export  function Menu() {
 }
 
       ul {
-        justify-content: space-around; 
+        justify-content: space-evenly; 
         font-family: Montserrat; 
         border-bottom: 1px solid #eaeaea;   
         font-size:17px;
@@ -46,6 +46,8 @@ export  function Menu() {
       li:hover {
         font-weight: bold;
         transform: scale(1.03);
+        background-color:yellow;
+        border-radius:5px;
 
       }
 

@@ -1,15 +1,30 @@
 import { FormEvent, useState } from "react";
 import admin from '/public/images/admin.png';
+import type { NextApiRequest, NextApiResponse } from 'next'
+import router from "next/router";
 
 export function Login() {
     const [login, setLogin] = useState('')
     const [pass, setPass] = useState('')
-    function submit(event: FormEvent<HTMLFormElement>) {
+    async function submit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         console.log(login);
         console.log(pass);
-        fetch(`/api/hello?login=${login}&pass=${pass}`)
-    }
+     const res = await fetch(`/api/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ login, pass })
+        })
+        if (res.ok) {
+        const result = await (await res).json()
+            if (result.redirectUrl) {
+               router.push(result.redirectUrl as string)
+            }
+        console.log(result);
+         }
+}
     return (
     <>  
     <div className="background">

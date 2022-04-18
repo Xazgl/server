@@ -42,10 +42,10 @@ export default function TableService() {
           checkboxSelection
         />
       </div>
-      <div className='container'>
+      {/* <div className='container'>
         <button className='btn'>Выйти</button>
         <button className='btn'>Показать самые новые</button>
-      </div>
+      </div> */}
 
 
       <style jsx>{`
@@ -62,13 +62,11 @@ export default function TableService() {
     transition: transform.3s ;
     color: #ffffff;
     background-color: #48484d;
-    width: 290px;
+    width: 350px;
     height: 50px;
     font-size: 30px;
     margin-top:30px;
 }
-
-
 
 .btn:hover {
     background-color: #f7ff14;

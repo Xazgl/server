@@ -1,10 +1,36 @@
 import { Button, Input, TextField } from '@mui/material'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import { Sales } from '@prisma/client'
+import React from 'react'
 import { Dispatch, FormEvent, MouseEvent, SetStateAction, useEffect, useState } from 'react'
 import salesOne from '/public/images/sales.webp'
 import salesTwo from '/public/images/sales2.webp'
 import salesThree from '/public/images/sales3.webp'
+
+function InputButton() {
+
+  const fileInput = React.useRef();
+
+  return (
+    <div>
+      <Button 
+        variant="contained" 
+        color="primary" 
+        onClick={()=>fileInput.current.click()}
+      >
+        upload file
+      </Button>
+
+      <input 
+        ref={fileInput} 
+        type="file" 
+        style={{ display: 'none' }} 
+      />
+    </div>
+  );
+}
+
+
 
 type SalesAdminProps = {}
 
@@ -72,8 +98,9 @@ export function SalesAdminComponent({  }: SalesAdminProps) {
           onChange={e => setTitle(e.target.value)} />
         <TextField label="Description" variant="outlined" value={description} 
           onChange={e => setDescription(e.target.value)} />
-        <TextField label="Img" variant="outlined" value={img} 
-          onChange={e => setImg(e.target.value)} />
+        {/* <TextField label="Img" variant="outlined" type="file" mul/> */}
+        
+        <InputButton />
         <Button type='submit'>Save</Button>
       </form>
     }

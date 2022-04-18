@@ -35,7 +35,7 @@ const AdminBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static"  sx={{ backgroundColor:'black',color:'yellow'} }>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

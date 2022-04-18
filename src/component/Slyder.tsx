@@ -58,7 +58,7 @@ function SwipeableTextMobileStepper() {
     <>
     <div className='upTitle'>OPEL СЕРВИС</div>
     <div className='background'>
-    <Box  sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box  sx={{ maxWidth: 1500, flexGrow: 1}}>
       <Paper
         square
         elevation={0}
@@ -67,7 +67,7 @@ function SwipeableTextMobileStepper() {
           alignItems: 'center',
           height: 50,
           pl: 2,
-          bgcolor: 'background.default',
+          // bgcolor: '#3d3a3a',
         }}
       >
         <Typography>{images[activeStep].label}</Typography>
@@ -84,11 +84,18 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 500,
+                  height: 550,
                   display: 'block',
-                  maxWidth: 700,
+                  maxWidth: 1500,
                   overflow: 'hidden',
                   width: '100%',
+                  objectFit: {
+                    md: 'cover',
+                    sm: 'contain'
+                  },
+                  // bgcolor: '#242222',
+                  // bgcolor: 'black',
+                  borderRadius:'7px',
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -98,11 +105,17 @@ function SwipeableTextMobileStepper() {
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
+        sx={{
+          // bgcolor: '#3d3a3a',
+        }}
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
         nextButton={
           <Button
+          sx={{
+            color: 'black',
+          }}
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
@@ -116,7 +129,10 @@ function SwipeableTextMobileStepper() {
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0}
+          sx={{
+            color: 'white',
+          }}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (

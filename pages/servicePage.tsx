@@ -9,6 +9,7 @@ import { Container } from '@mui/material';
 import { Modal } from '../src/component/Modal'
 import { SpecialOffers } from '../src/component/specialOffers'
 import { Special } from '../src/component/Special'
+import { SelectService } from '../src/component/SelectService'
 import { useState } from 'react'
 import ServiceServices from '../src/component/serviceServices'
 
@@ -28,6 +29,7 @@ const ServicePage: NextPage = () => {
           <Slider />
           <Service  setShowModal={setShowModal} />
           <SpecialOffers />
+          <SelectService setShowModal={setShowModal} />
           <ServiceServices setShowModal={setShowModal}  />
           <Special />
           <Footer />

@@ -222,8 +222,8 @@ const modelList: Model[] = [
 
 export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     const [curModelId, setCurModelId] = useState(0)
-
     const [complectationlId, setcomplectationId] = useState(0)
+    
     const power = useMemo(() => modelList.find(model => model.id === curModelId)?.
         complectations.find(comp => comp.id === complectationlId)?.power, [curModelId, complectationlId]);
     const engine = useMemo(() => modelList.find(model => model.id === curModelId)?.
@@ -265,7 +265,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
                     <div className="titleCard">{modelList.find(model => model.id === curModelId)?.name}</div>
                     <div className="miniTitleCard">{modelList.find(model => model.id === curModelId)?.bodyType}</div>
                     <div className="carImg1"></div>
-                    <div className="twoROW">
+                    {(curModelId && complectationlId) ? <div className="twoROW">
                         <div className="twoColumCard">
                             <div className="inColum">
                                 <div className="row3"> <img className="mini" src={y.src} /> </div>
@@ -299,7 +299,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
                                 <div className="row1">Трансмиссия</div>
                             </div>
                         </div>
-                    </div>
+                    </div> : null}
 
                     <div className="btnCard">
                         <form onSubmit={showModal}>

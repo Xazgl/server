@@ -29,14 +29,15 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display:flex;
     justify-content:center;
     align-items:center;
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, .40);
     background-image: url('${banner.src}');
     background-size: cover;
     width: auto;
-    height: 800px;
+    height: 700px;
     background-repeat:no-repeat;
     flex-direction:column;
-
-
+ 
 }
 
 
@@ -51,8 +52,8 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 .word {
     font-family: 'Montserrat', sans-serif;
     color:white;
-    font-size: 70px;
-    margin-bottom:100px;
+    font-size: 60px;
+    margin-bottom:150px;
 
 }
 .btn {
@@ -62,10 +63,12 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     transition: transform.3s ;
     color: #ffffff;
     background-color: #48484d;
-    width: 290px;
-    height: 50px;
-    font-size: 30px;
-    margin-top:30px;
+    width: 320px;
+    height: 55px;
+    font-size: 35px;
+    margin-bottom:120px;
+    border:solid;
+    border-color: #f7ff14;
 }
 
 

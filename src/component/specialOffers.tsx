@@ -1,5 +1,8 @@
 import banner from '/public/images/modelBanner.jpg'
 import Image from 'next/image'
+import Image1 from '/public/images/specialOffers/img1.webp'
+import Image2 from '/public/images/specialOffers/img2.webp'
+import Image3 from '/public/images/specialOffers/img3.webp'
 export function SpecialOffers() {
     return (
         <>
@@ -7,27 +10,27 @@ export function SpecialOffers() {
          <div className="titleMain">Специальные предложения</div>
             <div className="container">
                 <div className='containerEl'>
-                    <div className='img'>
-                        <img src={banner.src} className='banner' />
+                    <div className='img1'>
+                   {/* <img src={banner.src} className='banner' />*/}
                     </div>
                    {/* <div className="img">
                      
                     </div> */}
-                   <div className="titleOffers"></div>
+                   <div className="titleOffers">Подарок на выбор</div>
                    <div className='btnDiv'>
                        <button className="btn" type="submit">Узнать больше</button>
                     </div>
                 </div>
                 <div className='containerEl'>
-                   <div className="img"></div>
-                   <div className="titleOffers"></div>
+                   <div className="img2"></div>
+                   <div className="titleOffers">Скидка на шиномонтаж</div>
                    <div className='btnDiv'>
                        <button className="btn" type="submit">Узнать больше</button>
                     </div>
                 </div>
                 <div className='containerEl'>
-                   <div className="img"></div>
-                   <div className="titleOffers"></div>
+                   <div className="img3"></div>
+                   <div className="titleOffers">Проверка углов колес в подарок</div>
                    <div className='btnDiv'>
                        <button className="btn" type="submit">Узнать больше</button>
                     </div>
@@ -67,13 +70,15 @@ export function SpecialOffers() {
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    background-color:#A9A9A9;
     border:solid;
-    border-color:black;
+    border-color:#f7ff14;
     padding:10px;
     margin-top:30px;
-    width:300px;
-    height:300px;
+    width:350px;
+    height:450px;
+    background-color: #0f0f0f;
+    border-radius: 7px;
+    color: white;
 }
 
 .containerEl:hover{
@@ -81,16 +86,44 @@ export function SpecialOffers() {
         transform: scale(1.005);
 }
 
-.img{
+.img1{
     display:flex;
-    width:100px;
-    height:100px;
+    width:100%;
+    height:300px;
+    background-position: center center;
+    background-image: url('${Image1.src}');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px;
+    background-size:contain;
 }
-
+.img2{
+    width:100%;
+    height:400px;
+    background-position: center center;
+    background-image: url('${Image2.src}');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px;
+    background-size:contain;
+}
+.img3{
+    width:100%;
+    height:400px;
+    background-position: center center;
+    background-image: url('${Image3.src}');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 5px;
+    background-size:contain;
+}
 .titleOffers {
     display:flex;
     flex-direction:row;
     justify-content:center;
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    align-items:center;
 }
 
 .btnDiv {
@@ -100,15 +133,17 @@ export function SpecialOffers() {
 }
 
 .btn {
+    margin-top:20px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
     color: #ffffff;
     background-color: #48484d;
-    width: 150px;
+    width: 180px;
     height: 35px;
-    font-size: 16px;
+    font-size: 18px;
+    margin-bottom:10px;
 }
 
 .btn:hover {

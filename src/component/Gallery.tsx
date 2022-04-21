@@ -24,8 +24,7 @@ export default function Gallery() {
   const [imgSrc, setImgSrc] = useState('')
   return (
     <div className='container'>
-      <div className='title'>OPEL GALLERY</div>
-      <Box sx={{ width: 1400, height: 700, overflowY: 'scroll' }}>
+      <Box sx={{ width: 1200, height: 700, overflowY: 'scroll' }}>
         <ImageList variant="masonry" cols={3} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} >
@@ -51,6 +50,7 @@ export default function Gallery() {
            margin-top:20px;
            justify-content:center;
            align-items:center;
+           margin-bottom:20px;
         }
         .title{
           display:flex;

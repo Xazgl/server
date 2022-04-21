@@ -53,9 +53,9 @@ export function Statistic() {
                     </div>
                     </div>
                 </div> 
-                <div className="right">
+                {/* <div className="right">
                     <div className="img"></div>
-                </div>
+                </div> */}
              </div>
             </div>
 
@@ -70,14 +70,14 @@ export function Statistic() {
                  display:flex; 
                  justify-content: center;
                  flex-direction:row;
-                 width:1000px;
+                 width:900px;
                 }
                 .left{
                  display:flex; 
                  justify-content: center;
                  flex-direction:column;
                  align-items:center;
-                 width:600px;
+                 width:900px;
                 
                 }
                 .right{
@@ -91,7 +91,7 @@ export function Statistic() {
                     display:flex;
                     justify-content:center;
                     flex-direction:row;
-                    font-size:28px;
+                    font-size:40px;
                     font-weight:bold;
                     font-family: 'Montserrat', sans-serif;
                 }
@@ -100,7 +100,7 @@ export function Statistic() {
                     display:flex;
                     justify-content:center;
                     flex-direction:row;
-                    font-size:17px;
+                    font-size:19px;
                     font-family: 'Montserrat', sans-serif;
                     padding:3px;
                 }
@@ -123,6 +123,7 @@ export function Statistic() {
                     justify-content:start;
                     flex-direction:row;
                     align-items: center;
+                    margin-top:20px;
                 }
                     
                 
@@ -139,7 +140,7 @@ export function Statistic() {
                 }
                 #numeric {
                     display:flex;
-                    font-size:30px;
+                    font-size:50px;
                     color:orange;
                     justify-content:center;
                     flex-direction:row;
@@ -148,7 +149,7 @@ export function Statistic() {
                 .wordsT {
                     display:flex;
                     font-family: 'Montserrat', sans-serif;
-                    font-size:18px;
+                    font-size:25px;
                     font-weight:bold;
                     justify-content:center;
                     flex-direction:row;

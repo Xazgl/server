@@ -58,6 +58,7 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
         flex-direction:column;
         margin-top:30px;
         background-color:black;
+        height:500px;
     
     }
     

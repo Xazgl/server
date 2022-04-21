@@ -15,7 +15,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                         <div className="words">Наши работники регулярно проходят повышение квалификации у официальных представителей марки OPEL, поэтому доверяя ваш авто нам вы доверяете, его профессионалам.</div>
                         <div className="btnDiv">
                            <form onSubmit={showModal}>
-                             <button className='btn'>Записаться 	<span id='yellow1'>&#10097;</span></button>
+                             <button className='btn'>Записаться</button>
                             </form>
                         </div>
                    </div>
@@ -24,11 +24,11 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                             <ul>
                                 <li> <span id='yellow'>&#10003;</span> Ремонт КПП</li>
                                 <li> <span id='yellow'>&#10003;</span> Замена масла в  КПП</li>
-                                <li> <span id='yellow'>&#10003;</span> Замена масла в двигателе</li>
+                                <li> <span id='yellow'>&#10003;</span> Замена масла</li>
                                 <li> <span id='yellow'>&#10003;</span> Замена свечей</li>
-                                <li> <span id='yellow'>&#10003;</span> Замена тормозных колодок</li>
+                                <li> <span id='yellow'>&#10003;</span> Замена колодок</li>
                                 <li> <span id='yellow'>&#10003;</span> Балансировка колес</li>
-                                <li> <span id='yellow'>&#10003;</span> Диагностика и считывание ошибок ЭБУ</li>
+                                <li> <span id='yellow'>&#10003;</span> Диагностика ЭБУ</li>
                             </ul>
                         </div>
                     </div>
@@ -36,11 +36,11 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                       <div className="ul">
                            <ul>
                                 <li> <span id='yellow'>&#10003;</span> Замена датчиков</li>
-                                <li> <span id='yellow'>&#10003;</span> Чистка системы кондиционирования</li>
+                                <li> <span id='yellow'>&#10003;</span>Регулировка углов</li>
                                 <li> <span id='yellow'>&#10003;</span> Обновление ПО</li>
                                 <li> <span id='yellow'>&#10003;</span> Прошивка на Евро 2 </li>
                                 <li> <span id='yellow'>&#10003;</span> Замена амортизаторов</li>
-                                <li> <span id='yellow'>&#10003;</span> Мойка радиатора охлаждения</li>
+                                <li> <span id='yellow'>&#10003;</span> Мойка радиатора </li>
                            </ul>
                        </div>
                     </div>  
@@ -51,6 +51,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
 <style jsx>{`
                 .background {
                     display:flex;
+                    margin-top:50px;
                     justify-content:center;
                     flex-direction:row;
                     background-color:#0a0a0a;
@@ -75,7 +76,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                 .container {
                     display:flex;
                     flex-direction:row;
-                    width:900px;
+                    width:1000px;
                     align-items:center;
                     justify-content:space-evenly;
                     margin-top:50px;
@@ -91,7 +92,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                 }
                 .el{
                     height:350px;
-                    width:270px;
+                    width:300px;
                     display:flex;
                     flex-direction:column;
                 }
@@ -101,7 +102,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     margin-top:30px;
                     justify-content:center;
                     font-family: 'Montserrat', sans-serif;
-                    font-size:21px;
+                    font-size:24px;
                     color:white;
                     font-weight: bold;
                 }
@@ -114,7 +115,8 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     justify-content:center;
                     font-family: 'Montserrat', sans-serif;
                     margin-top: 20px;
-                    font-size:12px;
+                    font-size:16px;
+                    padding:3px;
                     color:white;
                 }
                 .ul {
@@ -122,10 +124,11 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                 }
                 li {
                     font-family: 'Montserrat', sans-serif; 
-                    font-size:14px;
+                    font-size:18px;
                     color:white;
                     list-style-type:none;
                     transition: transform.3s ;
+                    margin-top:10px;
                 }
                 li:hover {
                     transform: scale(1.02);
@@ -136,6 +139,9 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     margin-top:20px;
                 }
                 .btn {
+                    justify-content: center;
+                    display: flex;
+                    align-items:center;
                    font-family: 'Montserrat', sans-serif;
                    border-radius: 3px;
                    border:none;
@@ -145,9 +151,9 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                    border: solid;
                    border-width: 1px;
                    background-color: black;
-                   width: 200px;
-                   height: 30px;
-                   font-size: 20px;
+                   width: 202px;
+                   height: 45px;
+                   font-size: 22px;
                    margin-top:10px;
                    font-weight: bold;
                 }

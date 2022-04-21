@@ -7,7 +7,7 @@ type TradeInProps = {
 export function TradeIn({setShowTradeInModal}: TradeInProps) {
   // const setShowTradeInModal = props.setShowTradeInModal
    let text = `Обменяйте ваш автомобиль 
-   на новый  новый  OPEL  с АРКОНТ`
+   на новый OPEL  с АРКОНТ`
     return (
         <>
           <div className="background">

@@ -46,7 +46,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
                   <div className="title">Combo Cargo</div>
                   <div className="words"></div>
             </div>
-            <Link href="/">
+            <Link href="/opelModels/zafira">
                 <div className="containerEl">
                     <div className="img2"></div>
                     <div className="title">Zafira Life</div>
@@ -85,7 +85,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
 .ourAdvantages{
     display:flex;
     flex-direction:column;
-    margin-top:20px;
+    margin-top:50px;
     border-bottom-color: rgba(0, 0, 0, 0.4);
     border-bottom: solid;
 }
@@ -230,17 +230,17 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
 }
 
 .btn {
-    margin-top:30px;
+    margin-top:50px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
     color: #ffffff;
     background-color: #48484d;
-    width: 300px;
-    height: 40px;
-    font-size: 25px;
-    margin-bottom:20px;
+    width: 250px;
+    height: 50px;
+    font-size: 28px;
+    margin-bottom:60px;
 }
 
 .btn:hover {
@@ -250,7 +250,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     font-family: 'Montserrat', sans-serif;
     color:black;
     transform: scale(1.02);
-    font-size: 24px;
+    font-size: 29px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 }         
 `}</style>

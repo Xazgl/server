@@ -23,6 +23,8 @@ import {ServiceIndexPage} from '../src/component/ServiceIndexPage'
 import {HowItWorks} from '../src/component/HowItWorks'
 import {Statistic} from '../src/component/Statistic'
 import { ModelRow} from '../src/component/ModelRow'
+import { Map} from '../src/component/Map'
+import {Config} from '../src/component/Config'
 
 
 
@@ -40,6 +42,7 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <BarMenu />
       <MainBanner />
       <WeDo />
+      <Config setShowModal={setShowModal}/>
       <ServiceIndexPage setShowModal={setShowModal} />
       {/* <BottomMainManner /> */}
       <OurAdvantages   setShowModal={setShowModal}/>
@@ -49,6 +52,7 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <Statistic />
       <TradeIn setShowTradeInModal={setShowTradeInModal} />
       <Gallery />
+      <Map />
       <Footer />
       {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

@@ -1,8 +1,9 @@
 
 // import styles from "./Menu.module.css";
 
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Dispatch, SetStateAction, useRef } from "react";
+import { IMaskInput } from "react-imask";
 
 type ModelProps = {
     showModal: boolean,    
@@ -61,11 +62,17 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="phone" className="form-label"></label>
-                            <input type="text" className="phone" id="phone" name="phone" 
-                            placeholder="+7(***)-***-**-**" 
-                            required
-                            value={phone}
-                            onChange={event => setPhone(event.target.value)} />
+                            <IMaskInput  
+                                style={{fontSize:'18px',height:'35px'}}
+                                id="inputP"
+                                className="phone"
+                                mask={'+{7}(000)000-00-00'}
+                                placeholder="+7(***)-***-**-**" 
+                                required
+                                value={phone}
+                                onChange={(event: ChangeEvent<HTMLInputElement>) => setPhone(event.target.value)}
+                                
+                            />
                         </div>
                         <div className="mb-3">
                             <button className="btn-modal" type="submit">Отправить</button>
@@ -154,6 +161,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                 font-size: 18px;
                 height: 35px;
             }
+          
 
             .btn-modal {
                 font-family: 'Montserrat', sans-serif;

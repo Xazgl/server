@@ -76,6 +76,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                             value={phone}
                             onChange={event => setPhone(event.target.value)} /> */}
                             <IMaskInput 
+                                style={{fontSize:'18px',height:'35px'}}
                                 className="phone"
                                 mask={'+{7}(000)000-00-00'}
                                 placeholder="+7(***)-***-**-**" 

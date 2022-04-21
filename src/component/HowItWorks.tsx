@@ -62,7 +62,7 @@ export function HowItWorks() {
                     display:flex;
                     justify-content:center;
                     flex-direction:row;
-                    font-size:23px;
+                    font-size:43px;
                     color:yellow;
                     font-weight:bold;
                     font-family: 'Montserrat', sans-serif;
@@ -87,7 +87,7 @@ export function HowItWorks() {
                 }
                 .numeric {
                     display:flex;
-                    font-size:155px;
+                    font-size:150px;
                     color:yellow;
                     height:200px;
                     width:50%;   

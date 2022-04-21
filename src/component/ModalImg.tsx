@@ -80,13 +80,13 @@ export function ModalImg({showModal, setShowModal, imgSrc}: ModelProps) {
             }
 
             .modalWindow {
-                height: 400px;
-                width: 500px;
+                height: 500px;
+                width: 700px;
                 background-image: url('${imgSrc}');
                 background-position: center center;
                 background-repeat: no-repeat;
                 overflow: hidden;
-                background-size:cover;
+                background-size:contain;
             }
 
             

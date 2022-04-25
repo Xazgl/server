@@ -173,6 +173,78 @@ export function WeDo() {
                     margin-top: 30%;
                     font-size:23px;
                 }
+
+                
+                @media(max-width: 1000px) {
+                    .container{
+                       width: 630px;
+                    }
+                    .el{
+                        height:200px;
+                        width:210px;
+                    }
+                    .title{
+                        font-size:18px;
+                        margin-top: 40%;
+                    }
+                }
+                @media(max-width: 720px) {
+                    .mainTitle{
+                        font-size: 25px;
+                        margin-top: 30px;
+                    }
+                    .container{
+                       width: 480px;
+                    }
+                    .el{
+                        height:160px;
+                        width:160px;
+                    }
+                    .title{
+                        font-size:14px;
+                        margin-top: 40%;
+                    }
+                }
+                @media(max-width: 540px) {
+                    .row{
+                      display:flex;
+                      flex-direction: column;
+                    }
+                    .container{
+                       width: 630px;
+                       margin-top:10px;
+                       margin-bottom: 0px;
+                    }
+                    .el{
+                        height:150px;
+                        width:210px;
+                    }
+                    .title{
+                        font-size:14px;
+                        margin-top: 30%;
+                    }
+                }
+                @media(max-width: 350px) {
+                    .mainTitle{
+                        font-size: 15px;
+                        margin-top: 10px;
+                    }
+                    .container{
+                       width: 500px;
+                       margin-top:10px;
+                       margin-bottom: 0px;
+                    }
+                    .el{
+                        height:100px;
+                        width:166px;
+                    }
+                }
+                @media(max-width: 250px) {
+                    .title{
+                        font-size:12px;
+                        margin-top: 30%;
+                    }
+                }
             `}</style>
         </>
     )

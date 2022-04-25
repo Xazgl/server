@@ -12,6 +12,8 @@ import crossland from '/public/images/models/1.jpg';
 import granlandX from '/public/images/models/5.jpg';
 
 import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useMemo, useState } from "react"
+import { post } from '../services/fetcher';
+import { type } from 'os';
 
 type Complectation = {
     id: number,
@@ -27,6 +29,7 @@ type Model = {
     name: string,
     bodyType: string,
     img: string,
+    priceTo: number,
     complectations: Complectation[]
 }
 
@@ -37,6 +40,7 @@ const modelList: Model[] = [
         name: 'Combo Cargo',
         bodyType: 'Коммерческий',
         img: `${comboCargo.src}`,
+        priceTo: 1,
         complectations: [
             {
                 id: 1,
@@ -68,6 +72,7 @@ const modelList: Model[] = [
         name: 'Zafira Life',
         bodyType: 'Минивэн',
         img: `${zafira.src}`,
+        priceTo: 2,
         complectations: [
             {
                 id: 1,
@@ -99,6 +104,7 @@ const modelList: Model[] = [
         name: 'Combo Life',
         bodyType: 'Компактвэн',
         img: `${comboLife.src}`,
+        priceTo: 1.2,
         complectations: [
             {
                 id: 1,
@@ -130,6 +136,7 @@ const modelList: Model[] = [
         name: 'GrandLand X',
         bodyType: 'Кроссовер',
         img: `${granlandX.src}`,
+        priceTo: 1.5,
         complectations: [
             {
                 id: 1,
@@ -161,6 +168,7 @@ const modelList: Model[] = [
         name: 'Crossland',
         bodyType: 'Кроссовер',
         img: `${crossland.src}`,
+        priceTo: 1.5,
         complectations: [
             {
                 id: 1,
@@ -192,6 +200,7 @@ const modelList: Model[] = [
         name: 'Vivaro',
         bodyType: 'Минивэн коммерческий',
         img: `${vivaro.src}`,
+        priceTo: 1.6,
         complectations: [
             {
                 id: 1,
@@ -232,7 +241,7 @@ type Service = {
     typeOfService: typeOfService[]
 }
 
-const serviceList:  Service [] = [
+const serviceList: Service[] = [
     {
         id: 1,
         name: 'Ремонт коробки передач',
@@ -254,7 +263,7 @@ const serviceList:  Service [] = [
                 price: 1000,
             }
         ],
-        
+
     },
     {
         id: 2,
@@ -302,68 +311,30 @@ const serviceList:  Service [] = [
     },
 ]
 
-type ModelService = {
-    id: number,
-    price: number,
-    name: string,
-    img: string
-}
 
-const modelListService: ModelService[] = [
-    {
-        id: 1,
-        price: 1,
-        name: 'Combo Cargo',
-        img: `${comboCargo.src}`,
-    },
-    {
-        id: 2,
-        price: 2,
-        name: 'Zafira Life',
-        img: `${zafira.src}`,
-    },
-    {
-        id: 3,
-        price: 1.2,
-        name: 'Combo Life',
-        img: `${comboLife.src}`,
-    },
-    {
-        id: 4,
-        price: 1.6,
-        name: 'GrandLand X',
-        img: `${granlandX.src}`,
-    },
-    {
-        id: 5,
-        price: 1.4,
-        name: 'Crossland',
-        img: `${crossland.src}`,
-    },
-    {
-        id: 6,
-        price: 1.6,
-        name: 'Vivaro',
-        img: `${vivaro.src}`,
-    },
-]
-export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
-    const [mainId,setMainId]=useState('') // id услуги
-     function changeMainId(event:ChangeEvent<HTMLInputElement>){
-         setMainId(event.target.value)
-     }
+export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
+    const [mainId, setMainId] = useState('') // id услуги
+    const [buyId, setBuyId] = useState('') // id услуги
+    function changeMainId(event: ChangeEvent<HTMLInputElement>) {
+        setMainId(event.target.value)
+        setBuyId('')
+    }
+    function changePrice(event: ChangeEvent<HTMLInputElement>) {
+        setBuyId(event.target.value)
+    }
+    //id машины
+    const [curModelId, setCurModelId] = useState(0) //id машины
     //для сервиса 
-    const [curIdService,setСurIdService] = useState(0)//id  раздела услуги Сервиса
+    const [curIdService, setСurIdService] = useState(0)//id  раздела услуги Сервиса
     const [typeOfServicelId, setTypeOfServicelId] = useState(0) //id  конкретной услуги
-    const [carModelId, setCarModelId] = useState(0) //id  машина 
-    const priceService = useMemo(() => serviceList.find(model => model.id === curIdService)?. 
-    typeOfService.find(type => type.id ===  typeOfServicelId)?.price, [curIdService, typeOfServicelId]); //цена услуги
-    const carPrice =  modelListService.find(model => model.id === carModelId)?.price; // коэффициент машины на услугу
+
+    const priceService = useMemo(() => serviceList.find(model => model.id === curIdService)?.
+        typeOfService.find(type => type.id === typeOfServicelId)?.price, [curIdService, typeOfServicelId]); //цена услуги
+    const carPrice = modelList.find(model => model.id === curModelId)?.price; // коэффициент машины на услугу
     const price = (carPrice && priceService) ? carPrice * priceService : 0 // итоговая цена 
-    const imgCarSerivce = useMemo(() => modelListService.find(model => model.id === carModelId)?.img, [carModelId])
+
 
     //для покупки
-    const [curModelId, setCurModelId] = useState(0) //id машины
     const [complectationlId, setcomplectationId] = useState(0) //id комплектации
     const power = useMemo(() => modelList.find(model => model.id === curModelId)?.
         complectations.find(comp => comp.id === complectationlId)?.power, [curModelId, complectationlId]);
@@ -372,141 +343,213 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     const transmission = useMemo(() => modelList.find(model => model.id === curModelId)?.
         complectations.find(comp => comp.id === complectationlId)?.transmission, [curModelId, complectationlId]);
     const imgCar = useMemo(() => modelList.find(model => model.id === curModelId)?.img, [curModelId])
+    
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)
     }
 
+   
+     // @ts-ignore
+ async function post(event) {
+    event.preventDefault()
+    const buyOrService = event.target.mainId.value
+    const carModel= modelList.find(model =>model.id === curModelId)?.name
+    if(buyOrService ==="Ремонт")
+        {
+            const serviceNameMain=serviceList.find(service => service.id === curIdService)?.name
+            const serviceName = serviceList.find(service => service.id === curIdService)?.typeOfService.find(type => type.id === typeOfServicelId)?.name
+            const priceMain = price
+            const res = await fetch('/api/sendmailService', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ buyOrService,carModel,serviceNameMain,serviceName, price })
+            })
+            if (res.ok) {
+                const result = await res.json()
+                console.log(result);            
+            }
+        } else if (buyOrService ==="Покупка"){ 
+            const selectBuy = event.target.buyId.value
+            const complect = modelList.find(model => model.id === curModelId)?.complectations.find(comp =>comp.id===complectationlId)?.name
+            const res = await fetch('/api/sendmailBuy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ buyOrService,carModel,selectBuy,complect})
+            })
+            if (res.ok) {
+                const result = await res.json()
+                console.log(result);            
+            }
+        }
+        
+    }
     return (
         <>
+         <form id="submit-form" onSubmit={post}>
             <div className='containerForTitle'>
                 <div className='el'><span className='title'>Поможем вам сделать выбор</span></div>
             </div>
-            
+          
             <div className='containerForMiniTitle'>Выберите вид услуги:</div>
+            {/* <form onSubmit={async (event) => {
+                event.preventDefault()
+                // @ts-ignore
+                const username: string = event.target.username
+                // const body = {}
+                // body.username = username
+                const result = await post('/api/test', { username })
+            }}>
+                <input name='username' />
+                <input type='submit' />
+            </form> */}
             <div className='containerForSelectMain'>
-              <div className='box1'>
-                 <label htmlFor="checkbox1">Покупка авто</label>
-                   <input type ="radio" id ="checkbox1" value ="Покупка" name ="mainId" checked ={mainId==='Покупка'} 
-                     onChange ={changeMainId} />
-             </div>   
-             <div className='box1'>
-                 <label htmlFor="checkbox3">Тест-драйв</label>
-                   <input type ="radio" id ="checkbox3" value ="Ремонт" name ="mainId" checked ={mainId==='Ремонт'} 
-                     onChange ={changeMainId} />
-              </div>
-             <div className='box1'>
-                 <label htmlFor="checkbox2">Ремонт авто</label>
-                   <input type ="radio" id ="checkbox2" value ="Ремонт" name ="mainId" checked ={mainId==='Ремонт'} 
-                     onChange ={changeMainId} />
-              </div>
+                <div className='box1'>
+                    <label htmlFor="checkbox1">Покупка авто</label>
+                    <input type="radio" id="checkbox1" value="Покупка" name="mainId" checked={mainId === 'Покупка'}
+                        onChange={changeMainId} />
+                </div>
+                <div className='box1'>
+                    <label htmlFor="checkbox2">Ремонт авто</label>
+                    <input type="radio" id="checkbox2" value="Ремонт" name="mainId" checked={mainId === 'Ремонт'}
+                        onChange={changeMainId} />
+                </div>
             </div>
 
             {/* Если выбрали покупку, код ниже */}
+
+            {mainId === 'Покупка' &&
+                <>
+                    <div className="miniTitleCard" id="buy">Выберите ваш способ покупки</div>
+                    <div className='containerForSelectBuy'>
+                        <div className='box1'>
+                            <label htmlFor="checkbox3">Трейд-ин</label>
+                            <input type="radio" id="checkbox3" value="Трейд-ин" name="buyId" checked={buyId === 'Трейд-ин'}
+                                onChange={changePrice} />
+                        </div>
+                        <div className='box1'>
+                            <label htmlFor="checkbox4">Кредит</label>
+                            <input type="radio" id="checkbox4" value="Кредит" name="buyId" checked={buyId === 'Кредит'}
+                                onChange={changePrice} />
+                        </div>
+                    </div>
+                </>}
             <div className='containerForSelect'>
-            {
-                   mainId === 'Покупка' &&                  
-                <select className="selectModel" value={curModelId} onChange={event => setCurModelId(+event.target.value)}>
-                    <option value={0} selected disabled>Выберите модель</option>
-                    {modelList.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}
-                </select>
-            }
+          
                 {
-                    curModelId !== 0 &&
-                    <select className="selectModel" value={complectationlId} onChange={event => setcomplectationId(+event.target.value)}>
+                    mainId !== null && 
+                    <select className="selectModel" value={curModelId}   name="modalCar" onChange={event => setCurModelId(+event.target.value)}>
+                        <option value={0}  selected disabled>Выберите модель</option>
+                        { modelList.map(model => <option key={model.id} value={model.id}>{model.name}</option>)}
+                    </select>
+                }
+                {
+                    mainId === 'Покупка' &&
+                    <select className="selectModel" value={complectationlId} onChange={event => setcomplectationId(+event.target.value)} name="complectation">
                         <option value={0} selected disabled>Укажите комплектацию</option>
                         {modelList.find(model => model.id === curModelId)?.complectations.map(comp => <option key={comp.id} value={comp.id}>{comp.name}</option>)}
                         {/* {modelList.find(model => model.id === curModelId =>complectation===complectationlId)?.complectation} */}
                     </select>
                 }
+
+
+                {
+                    mainId === 'Ремонт' && curModelId!==0 &&
+                    <select className="selectModel" value={curIdService} name="curIdService" onChange={event => setСurIdService(+event.target.value)} >
+                        <option value={0} selected disabled>Выберите вид услуг</option>
+                        {serviceList.map(service => <option key={service.id} value={service.id}>{service.name}</option>)}
+                    </select>
+                }
+
+                {
+                    mainId === 'Ремонт' && curIdService!==0 &&
+                    <select className="selectModel" value={typeOfServicelId} name="typeOfServicelId" onChange={event => setTypeOfServicelId(+event.target.value)}>
+                        <option value={0} selected disabled>Выберите конкретную услугу</option>
+                        {serviceList.find(service => service.id === curIdService)?.typeOfService.map(type => <option key={type.id} value={type.id}>{type.name}</option>)}
+                    </select>
+                }
             </div>
-            <div className="twoModel">
+
+           <div className="twoModel">
                 <div className="ColumCard">
                     <div className="titleCard">{modelList.find(model => model.id === curModelId)?.name}</div>
                     <div className="miniTitleCard">{modelList.find(model => model.id === curModelId)?.bodyType}</div>
                     <div className="carImg1"></div>
-                    {(curModelId && complectationlId) ? <div className="twoROW">
-                        <div className="twoColumCard">
-                            <div className="inColum">
-                                <div className="row3"> <img className="mini" src={y.src} /> </div>
-                                <div className="row">{power}</div>
-                                <div className="row1">Мощность</div>
-                            </div>
-                            <div className="inColum">
-                                <div className="space"></div>
-                                <div className="spaceJ"></div>
-                            </div>
-                            <div className="inColum">
-                                <div className="row3"> <img className="mini" src={d.src} /> </div>
-                                <div className="row">{engine}</div>
-                                <div className="row1">Двигатель</div>
-                            </div>
-                        </div>
+                    {   buyId !== '' &&
+                        mainId === 'Покупка' && <div className="twoROW">
+                            <div className="twoColumCard">
+                                <div className="inColum">
+                                    <div className="row3"> <img className="mini" src={y.src} /> </div>
+                                    <div className="row">{power}</div>
+                                    <div className="row1">Мощность</div>
+                                </div>
 
-                        <div className="twoColumCard">
-                            <div className="inColum1">
-                                <div className="row3"> <img className="mini" src={t.src} /> </div>
-                                <div className="row">{engine}</div>
-                                <div className="row1">Разгон до 100км/ч,с</div>
+                                <div className="inColum">
+                                    <div className="row3"> <img className="mini" src={d.src} /> </div>
+                                    <div className="row">{engine}</div>
+                                    <div className="row1">Двигатель</div>
+                                </div>
                             </div>
-                            <div className="inColum1">
-                                <div className="space"></div>
-                                <div className="spaceJ"></div>
-                            </div>
-                            <div className="inColum1">
-                                <div className="row3"> <img className="mini" src={u.src} /> </div>
-                                <div className="row">{transmission}</div>
-                                <div className="row1">Трансмиссия</div>
+
+                            <div className="twoColumCard">
+                                <div className="inColum1">
+                                    <div className="row3"> <img className="mini" src={t.src} /> </div>
+                                    <div className="row">{engine}</div>
+                                    <div className="row1">Разгон до 100км/ч,с</div>
+                                </div>
+
+                                <div className="inColum1">
+                                    <div className="row3"> <img className="mini" src={u.src} /> </div>
+                                    <div className="row">{transmission}</div>
+                                    <div className="row1">Трансмиссия</div>
+                                </div>
                             </div>
                         </div>
-                    </div> : null}
-                    
+                        
+                    }
+                    {   
+                      buyId !== '' && curModelId !== 0 && 
+                          <div className="btnDiv">
+                                <button className="btn" type="submit">Отправить заявку</button>
+                            </div>
+                    }
+
 
                     {/* Если выбрали сервис, код ниже */}
-          { 
-              mainId === 'Ремонт' &&
-                    <select className="selectModel" value={carModelId} onChange={event => setCarModelId(+event.target.value)}>
-                    <option value={0} selected disabled>Выберите модель вашего авто</option>
-                    {modelListService.map(model =><option key={model.id} value={model.id}>{model.name}</option>)}
-                </select>
-            }
-                 
 
-            { 
-                 carModelId == 0 &&
-                <select className="selectModel" value={curIdService} onChange={event =>setСurIdService(+event.target.value)}>
-                    <option value={0} selected disabled>Выберите вид услуг</option>
-                    {serviceList.map(service => <option key={service.id} value={service.id}>{service.name}</option>)}
-                </select>
-            } 
 
-            {
-                curIdService !== 0 &&
-                    <select className="selectModel" value={typeOfServicelId} onChange={event =>setTypeOfServicelId(+event.target.value)}>
-                        <option value={0} selected disabled>Выберите конкретную услугу</option>
-                        {serviceList.find(service => service.id === curIdService)?.typeOfService.map(type =><option key={type.id} value={type.id}>{type.name}</option>)}
-                        {/* {modelList.find(model => model.id === curModelId =>complectation===complectationlId)?.complectation} */}
-                    </select>
-            }
-             {(carModelId && curIdService && mainId) ?
-                  <div className="ColumCard">
-                    <div className="titleCard">{serviceList.find(model => model.id === curIdService)?.name}</div>
-                    {/* <div className="miniTitleCard">{modelList.find(model => model.id === curIdService)}</div> */}
-                    <div className="carImg2"></div>
-                    <div className="inColum">
-                            <div className="row1">Цена услуги на ваш авто</div>
-                            <div className="row">{price}{' '} &#8381; </div>                    
-                    </div>
-                
-                      
-                    <div className="btnCard">
-                        <form onSubmit={showModal}>
-                            <button className="btn" type="submit">Узнать больше</button>
-                        </form>
-                    </div>
-                </div> : null }
-            </div>
-            </div>
+                    {mainId === 'Ремонт' && typeOfServicelId!==0 && complectationlId!==0 &&
+                        <div className="ColumCard">
+                          <div className="titleCardService">{serviceList.find(model => model.id === curIdService)?.name}</div> 
+                            {/* <div className="miniTitleCard">{modelList.find(model => model.id === curIdService)}</div> */}
+                            <div className="carImg2"></div>
+                            <div className="inColum">
+                                <div className="row1" id="service">Цена услуги на ваш авто</div>
+                                <div className="row" id="servicePrice">{price}{' '} &#8381; </div>
+                            </div>
+
+                            
+                            <div className="btnCard">
+                                
+                                    <button className="btn" type="submit">Записаться</button>
+                                
+                            </div>
+                           
+                            {/* <div className="btnCard">
+                                <form onSubmit={showModal}>
+                                    <button className="btn" type="submit">Узнать больше</button>
+                                </form>
+                            </div> */}
+                        </div>
+                        }
+                </div>
+            </div>}
+            </form>
+
             <style jsx>{`
 .containerForTitle{
     display:flex;
@@ -539,6 +582,21 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     font-family: 'Montserrat'; 
     font-weight:bold;
 }
+.containerForSelectBuy{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly; 
+    align-items: center;
+    font-size: 21px;
+    font-family: 'Montserrat'; 
+    font-weight:bold;
+    width:100%
+}
+#buy{
+    margin-top:25px;
+    width: 100%;
+
+}
 .box1{
     display:flex;
     flex-direction: row;
@@ -549,12 +607,11 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     display:flex;
     flex-direction: column;
     justify-content:center;
-    margin-top:50px;
     align-items: center;
 }
 .selectModel {
-    width: 300px;
-    height: 40px;
+    width: 330px;
+    height: 35px;
     font-size: 19px;
     background-color: #f7ff14;
     margin-top: 20px;
@@ -569,7 +626,7 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
 .twoModel {
     display:flex;
     flex-direction: row;
-    margin-top:50px;
+    margin-top:20px;
     justify-content: space-around;
 
 }
@@ -587,16 +644,39 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 300;
 }
-
-.miniTitleCard {
+.titleCardService{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
+    font-weight: 600;
+}
+#service {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600; 
+}
+#servicePrice{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600; 
+}
+.miniTitleCard {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
     color: #65656c;
     font-weight: 100;
 }
@@ -611,20 +691,13 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
 }
 .carImg1 {
     display: flex;
-    width: 600px;
-    height: 250px;
+    width: 400px;
+    height: 200px;
     background-image: url('${imgCar}');
     background-size: contain;
     background-repeat: no-repeat;
 }
-.carImg2 {
-    display: flex;
-    width: 600px;
-    height: 250px;
-    background-image: url('${imgCarSerivce}');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 .twoROW {
     display: flex;
     flex-direction: row;
@@ -660,8 +733,8 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     justify-content: center;
     align-items: baseline;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
-    font-weight: 100;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .row1 {
@@ -684,7 +757,12 @@ export function Config({ setShowModal }: { setShowModal: Dispatch<SetStateAction
     flex-direction: column;
 }
 
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top:0px;
 
+}
 .btnCard {
     display: inline-flex;
     justify-content: center;

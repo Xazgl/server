@@ -64,6 +64,61 @@ export function MainBanner() {
                     background-position: center center;
                     display:flex;
                 }
+
+                @media(max-width: 1200px) {
+                    .MainBanner { 
+                        background-size: cover;
+                    }
+                }
+                @media(max-width: 900px) {
+                    .title { 
+                        font-size:30px;
+                    }
+                }
+                @media(max-width: 720px) {
+                    .title { 
+                        font-size:25px;
+                    }
+                    .titleMini {
+                        font-size:15px;
+                    }
+                    .MainBanner { 
+                        height: 400px;
+                    }
+                }
+                @media(max-width: 540px) {
+                    .title { 
+                        font-size:18px;
+                    }
+                    .titleMini {
+                        font-size:12px;
+                    }
+                    .MainBanner { 
+                        height: 250px;
+                    }
+                }
+                @media(max-width: 350px) {
+                    .title { 
+                        font-size:12px;
+                    }
+                    .titleMini {
+                        font-size:9px;
+                    }
+                    .MainBanner { 
+                        height: 150px;
+                    }
+                }
+                @media(max-width: 250px) {
+                    .title { 
+                        font-size:10px;
+                    }
+                    .titleMini {
+                        font-size:7px;
+                    }
+                    .MainBanner { 
+                        height: 130px;
+                    }
+                }
             `}</style>
         </>
     )

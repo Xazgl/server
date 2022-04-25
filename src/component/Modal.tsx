@@ -70,6 +70,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                                 placeholder="+7(***)-***-**-**" 
                                 required
                                 value={phone}
+                                name="phone"
                                 onChange={(event: ChangeEvent<HTMLInputElement>) => setPhone(event.target.value)}
                                 
                             />

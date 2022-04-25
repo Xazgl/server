@@ -38,11 +38,7 @@ export  function Menu() {
 
     {/* CSS in JS */}
     <style jsx>{`
-    @media(max-width: 700px) {
-    ul {
-      display:none;
-    }
-}
+    
 
       ul {
         justify-content: space-evenly; 
@@ -88,7 +84,12 @@ export  function Menu() {
         list-style: none;
       }
 
-      
+      @media(max-width: 700px) {
+    ul {
+      display:none;
+      z-index:none;
+    }
+}
     `}</style>
   </nav>
 }

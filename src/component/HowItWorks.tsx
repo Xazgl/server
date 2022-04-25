@@ -85,14 +85,7 @@ export function HowItWorks() {
                     height:150px;
                     width:250px;
                 }
-                .numeric {
-                    display:flex;
-                    font-size:150px;
-                    color:yellow;
-                    height:200px;
-                    width:50%;   
-                    font-family: 'Montserrat', sans-serif;
-                }
+ 
                 .img {
                     display:flex;
                     height:250px;
@@ -124,6 +117,7 @@ export function HowItWorks() {
                     font-family: 'Montserrat', sans-serif;
                     margin-top:40px;
                 }
+
             `}</style>
         </>
     )

@@ -20,29 +20,29 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
 
             <div className="titleMain">Наши приемущества</div>
             <div className="container">
-              <div className="containerEl" id="n6">
+              <div className="containerEl" id="n1">
                   <div className="title">Диагностика</div>
                   <div className="words">Проверка авто по 25+ пунктам.Выявление неисправностей</div>
               </div>
-              <div className="containerEl" id="n1">
+              <div className="containerEl" id="n2">
                   <div className="title">Гарантийный ремонт</div>
                   <div className="words">Ремонт автомобиля по гарантии от производителя</div>
               </div>
-              <div className="containerEl" id="n2">
+              <div className="containerEl" id="n3">
                   <div className="title">ТО по регламенту</div>
                   <div className="words">Пришло время пройти ТО? Запишитесь прямо сейчас!</div>
               </div>
             </div>
             <div className="container" >
-              <div className="containerEl" id="n3">
+              <div className="containerEl" id="n4">
                   <div className="title">Кузовные работы</div>
                   <div className="words">Ремонт кузовных элементов,сколов, выпрямление вмятин.</div>
               </div>
-              <div className="containerEl" id="n4">
+              <div className="containerEl" id="n5">
                   <div className="title">Ремонт любой сложности</div>
                   <div className="words">Ремонт и замена узлов и агрегатов. Оригинальные запчасти.</div>
               </div>
-              <div className="containerEl" id="n5">
+              <div className="containerEl" id="n6">
                   <div className="title">Техобслуживание</div>
                   <div className="words">Замена масла, фильтров и другие работы.</div>
               </div>
@@ -80,7 +80,7 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     align-items:center;
 }
 #n1 {
-    background-image:url('${n1}');
+    background-image:url('${n1.src}');
     background-position: center center;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -88,19 +88,39 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
 }
 
 #n2 {
-    background-image: url('${n2}');
+    background-image: url('${n2.src}');
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #n3 {
-    background-image: url('${n3}');
+    background-image: url('${n3.src}');
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #n4 {
-    background-image: url('${n4}');
+    background-image: url('${n4.src}');
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #n5 {
-    background-image: url('${n5}');
+    background-image: url('${n5.src}');
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #n6 {
-    background-image: url('${n5}');
+    background-image: url('${n5.src}');
+    background-position: center center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .containerEl{
     display:flex;

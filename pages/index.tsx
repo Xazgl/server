@@ -25,6 +25,7 @@ import {Statistic} from '../src/component/Statistic'
 import { ModelRow} from '../src/component/ModelRow'
 import { Map} from '../src/component/Map'
 import {Config} from '../src/component/Config'
+import {Config2} from '../src/component/Config2'
 
 
 
@@ -42,7 +43,8 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <BarMenu />
       <MainBanner />
       <WeDo />
-      <Config setShowModal={setShowModal}/>
+      {/* <Config setShowModal={setShowModal}/> */}
+      <Config2 setShowModal={setShowModal}/>
       <ServiceIndexPage setShowModal={setShowModal} />
       {/* <BottomMainManner /> */}
       <OurAdvantages   setShowModal={setShowModal}/>

@@ -252,7 +252,140 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     transform: scale(1.02);
     font-size: 29px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
-}         
+}    
+
+
+
+@media(max-width: 1200px) {
+    .container{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 900px) {
+    .img1{
+        height: 300px;
+    }
+    .img1:hover{
+        transform: scale(1.1);
+    }
+    .img2{
+        height: 300px;
+    }
+    .img2:hover{
+        transform: scale(1.1);
+    }
+    .img3{
+        height: 300px;
+    }
+    .img3:hover{
+        transform: scale(1.1);
+    }
+    .img3:hover{
+        transform: scale(1.1);
+    }
+    .img4{
+        height: 300px;
+    }
+    .img4:hover{
+        transform: scale(1.1);
+    }
+    .img5{
+        height: 300px;
+    }
+    .img5:hover{
+        transform: scale(1.1);
+    }
+    .img6{
+        height: 300px;
+    }
+    .img6:hover{
+        transform: scale(1.1);
+    }
+    .title {
+        font-size:20px;
+    }
+    .btn {
+       width: 200px;
+       height: 40px;
+       font-size: 23px;
+       margin-bottom: 30px;
+       margin-top: 20px;
+    }
+    .btn:hover {
+        font-size: 24px;
+    }
+}
+@media(max-width: 680px) {
+    .titleMain {
+        font-size: 23px;
+    }
+    .img1{
+        height: 200px;
+    }
+    .img2{
+        height: 200px;
+    }
+    .img3{
+        height: 200px;
+    }
+    .img4{
+        height: 200px;
+    }
+    .img5{
+        height: 200px;
+    }
+    .img6{
+        height: 200px;
+    }
+    .title {
+        font-size:16px;
+    }
+    .btn {
+       width: 160px;
+       height: 35px;
+       font-size: 17px;
+       margin-bottom: 30px
+    }
+    .btn:hover {
+        font-size: 18px;
+    }
+}
+@media(max-width: 420px) {
+    .containerEl{
+       height: 150px;
+    }
+    .titleMain {
+        font-size: 18px;
+    }
+    .btn {
+       width: 140px;
+       height: 35px;
+       font-size: 15px;
+       margin-bottom: 20px
+    }
+    .btn:hover {
+        font-size: 16px;
+    }
+}
+@media(max-width: 240px) {
+    .containerEl{
+       height: 100px;
+    } 
+    .titleMain {
+        font-size: 10px;
+    }
+    .title {
+        font-size: 12px;
+    }
+    .btn {
+       width: 90px;
+       font-size: 10px;
+       margin-bottom: 20px
+    }
+    .btn:hover {
+        font-size: 10px;
+    }
+}
 `}</style>
   </div>
 )}

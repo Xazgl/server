@@ -133,7 +133,9 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     margin-top:30px;
     width:310px;
     height:250px;
-    background-color:rgb(51, 51, 51);
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, .60);
+
     border-radius: 7px;
     color: white;
     
@@ -195,7 +197,149 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     color:black;
     transform: scale(1.02);
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
-}         `}</style>
+}     
+
+@media(max-width: 1100px) {
+    .container{
+     width:800px;
+   }
+   .containerEl{
+     width:250px;
+     height:210px;
+     padding:5px;
+   }
+   .title{
+    font-size:17px;
+   }
+   .words {
+    font-size:16px;
+    padding-left:10px;
+   }
+   .btn {
+    height: 45px;
+    font-size: 25px;
+    width: 170px;
+    margin-top:30px;
+   }
+   .btn:hover {
+    font-size: 26px;
+   }
+}
+@media(max-width: 800px) {
+    .container{
+        flex-direction: column;
+   }
+   .containerEl{
+     width:450px;
+     height:150px;
+     padding:5px;
+   }
+   .titleMain{
+    margin-bottom: 0px;
+    font-size: 25px;
+   }
+   .title{
+    font-size:20px;
+   }
+   .words {
+    font-size:18px;
+    padding-left:10px;
+   }
+   .btn {
+    height: 40px;
+    font-size: 20px;
+    width: 200px;
+    margin-top:20px;
+   }
+   .btn:hover {
+    font-size: 21px;
+   }
+}
+@media(max-width: 540px) {
+   .containerEl{
+     width:300px;
+     height:150px;
+     padding:5px;
+   }
+   .titleMain{
+    margin-bottom: 0px;
+    font-size: 20px;
+   }
+   .title{
+    font-size:17px;
+   }
+   .words {
+    font-size:14px;
+    padding-left:10px;
+   }
+   .btn {
+    height: 40px;
+    font-size: 20px;
+    width: 160px;
+    margin-top:20px;
+   }
+   .btn:hover {
+    font-size: 21px;
+   }
+}
+@media(max-width: 340px) {
+
+.containerEl{
+  width:200px;
+  height:100px;
+  padding:5px;
+}
+.titleMain{
+ margin-bottom: 0px;
+ font-size: 17px;
+}
+.title{
+ font-size:12px;
+}
+.words {
+ font-size:10px;
+ padding-left:10px;
+}
+.btn {
+ height: 35px;
+ font-size: 16px;
+ width: 120px;
+ margin-top:20px;
+}
+.btn:hover {
+ font-size: 17px;
+}
+}
+@media(max-width: 240px) {
+
+.containerEl{
+  width:150px;
+  height:100px;
+  padding:5px;
+}
+.titleMain{
+ margin-bottom: 0px;
+ font-size: 12px;
+}
+.title{
+ font-size:10px;
+}
+.words {
+ font-size:9px;
+ padding-left:10px;
+}
+.btn {
+ height: 30px;
+ font-size: 12px;
+ width: 100px;
+ margin-top:20px;
+}
+.btn:hover {
+ font-size: 12px;
+}
+}
+
+ `}</style>
 </>
 )}
 

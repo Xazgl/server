@@ -117,7 +117,41 @@ export function HowItWorks() {
                     font-family: 'Montserrat', sans-serif;
                     margin-top:40px;
                 }
-
+                .numeric{
+                    display:flex;
+                    color:yellow;
+                    font-size:150px;
+                }
+            @media(max-width: 1000px) {
+                .row {
+                 flex-direction: column;
+                }
+                .background {
+                    height: auto
+                }
+                .rowUp {
+                    font-size:18px;
+                }
+                .title {
+                    font-size:25px;
+                }
+                .numeric{
+                    font-size:160px;
+                }
+            }
+            @media(max-width: 600px) {
+                .title {
+                    font-size:17px;
+                }
+                .rowUp {
+                    font-size:14px;
+                }
+            }
+            @media(max-width: 400px) {
+                .background{
+                    display:none;
+                }
+            }
             `}</style>
         </>
     )

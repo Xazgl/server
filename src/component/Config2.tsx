@@ -330,10 +330,11 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 
     const priceService = useMemo(() => serviceList.find(model => model.id === curIdService)?.
         typeOfService.find(type => type.id === typeOfServicelId)?.price, [curIdService, typeOfServicelId]); //цена услуги
-    const carPrice = modelList.find(model => model.id === curModelId)?.price; // коэффициент машины на услугу
-    const price = (carPrice && priceService) ? carPrice * priceService : 0 // итоговая цена 
+    const carPrice = modelList.find(model => model.id === curModelId)?.price; // цена машины
+    const priceTo = modelList.find(model => model.id === curModelId)?.priceTo; // коэффициент машины на услугу
+    const price = (priceTo && priceService) ? priceTo * priceService : 0 // итоговая цена 
 
-
+   
     //для покупки
     const [complectationlId, setcomplectationId] = useState(0) //id комплектации
     const power = useMemo(() => modelList.find(model => model.id === curModelId)?.
@@ -350,27 +351,34 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     }
 
    
-     // @ts-ignore
- async function post(event) {
+
+ async function sendDataToMail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const buyOrService = event.target.mainId.value
+    // @ts-ignore
+    const buyOrService: string = event.target.mainId.value
     const carModel= modelList.find(model =>model.id === curModelId)?.name
     if(buyOrService ==="Ремонт")
         {
             const serviceNameMain=serviceList.find(service => service.id === curIdService)?.name
             const serviceName = serviceList.find(service => service.id === curIdService)?.typeOfService.find(type => type.id === typeOfServicelId)?.name
             const priceMain = price
-            const res = await fetch('/api/sendmailService', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ buyOrService,carModel,serviceNameMain,serviceName, price })
-            })
-            if (res.ok) {
-                const result = await res.json()
-                console.log(result);            
+            try {
+                const result = await post('/api/sendmailService', { buyOrService,carModel,serviceNameMain,serviceName, price })
+                console.log(result);
+            } catch (error) {
+                console.error(error)
             }
+            // const res = await fetch('/api/sendmailService', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ buyOrService,carModel,serviceNameMain,serviceName, price })
+            // })
+            // if (res.ok) {
+            //     const result = await res.json()
+            //     console.log(result);            
+            // }
         } else if (buyOrService ==="Покупка"){ 
             const selectBuy = event.target.buyId.value
             const complect = modelList.find(model => model.id === curModelId)?.complectations.find(comp =>comp.id===complectationlId)?.name
@@ -390,7 +398,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     }
     return (
         <>
-         <form id="submit-form" onSubmit={post}>
+         <form id="submit-form" onSubmit={sendDataToMail}>
             <div className='containerForTitle'>
                 <div className='el'><span className='title'>Поможем вам сделать выбор</span></div>
             </div>
@@ -410,12 +418,12 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
             <div className='containerForSelectMain'>
                 <div className='box1'>
                     <label htmlFor="checkbox1">Покупка авто</label>
-                    <input type="radio" id="checkbox1" value="Покупка" name="mainId" checked={mainId === 'Покупка'}
+                    <input type="radio" className='check' id="checkbox1" value="Покупка" name="mainId" checked={mainId === 'Покупка'}
                         onChange={changeMainId} />
                 </div>
                 <div className='box1'>
                     <label htmlFor="checkbox2">Ремонт авто</label>
-                    <input type="radio" id="checkbox2" value="Ремонт" name="mainId" checked={mainId === 'Ремонт'}
+                    <input type="radio"   className='check' id="checkbox2" value="Ремонт" name="mainId" checked={mainId === 'Ремонт'}
                         onChange={changeMainId} />
                 </div>
             </div>
@@ -428,12 +436,12 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                     <div className='containerForSelectBuy'>
                         <div className='box1'>
                             <label htmlFor="checkbox3">Трейд-ин</label>
-                            <input type="radio" id="checkbox3" value="Трейд-ин" name="buyId" checked={buyId === 'Трейд-ин'}
+                            <input type="radio"  className='check' id="checkbox3" value="Трейд-ин" name="buyId" checked={buyId === 'Трейд-ин'}
                                 onChange={changePrice} />
                         </div>
                         <div className='box1'>
                             <label htmlFor="checkbox4">Кредит</label>
-                            <input type="radio" id="checkbox4" value="Кредит" name="buyId" checked={buyId === 'Кредит'}
+                            <input type="radio"   className='check' id="checkbox4" value="Кредит" name="buyId" checked={buyId === 'Кредит'}
                                 onChange={changePrice} />
                         </div>
                     </div>
@@ -547,7 +555,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                         </div>
                         }
                 </div>
-            </div>}
+            </div>
             </form>
 
             <style jsx>{`
@@ -568,6 +576,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 30px;
     margin-top:30px;
 }
+
 .title {
     font-size: 40px;
     margin-top:20px;
@@ -797,6 +806,204 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 
 }
+@media(max-width: 900px) {
+    .title {
+     font-size: 30px;
+     margin-top:20px;
+    }   
+    .containerForMiniTitle{;
+     font-size: 25px;
+    }
+    .miniTitleCard {
+        font-size: 20px;
+    }
+    .check {
+        font-size: 19px;
+    }
+    .selectModel {
+       width: 250px;
+       height: 25px;
+       font-size: 16px;
+       margin-top: 20px;
+    }
+    .titleCard {
+        font-size: 30px;
+    }
+    .carImg1 {
+        width: 350px;
+        height: 200px;
+    }
+    .row{
+        font-size: 18px;
+    }
+    .row1{
+        font-size: 15px;
+    }
+    .inColumn1{
+        margin-left: 50px;
+    }
+    .btn {
+      width: 190px;
+      height: 45px;
+      font-size: 16px;
+    }
+    .btn:hover {
+        font-size: 17px;
+    }
+}
+@media(max-width: 520px) {
+    .title {
+     font-size: 25px;
+     margin-top:15px;
+    }   
+    .containerForSelectMain{
+      flex-direction: column;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .containerForSelectBuy {
+        flex-direction: column;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .containerForMiniTitle{;
+     font-size: 20px;
+    }
+    .titleCardService {
+        font-size: 18px;
+    }
+    #service {
+        font-size: 13px;
+        margin-top:10px;
+    }
+    #servicePrice {
+        font-size: 27px;
+        margin-top:5px;
+    }
+    .miniTitleCard {
+        font-size: 14px;
+    }
+    .check {
+        font-size: 16px;
+    }
+    .selectModel {
+       width: 250px;
+       height: 20px;
+       font-size: 14px;
+       margin-top: 10px;
+    }
+    .titleCard {
+        font-size: 25px;
+    }
+    .carImg1 {
+        width: 250px;
+        height: 150px;
+    }
+    .row{
+        font-size: 15px;
+    }
+    .row1{
+        font-size: 12px;
+    }
+    .inColumn1{
+        margin-left: 40px;
+    }
+    .btn {
+      width: 150px;
+      height: 30px;
+      font-size: 12px;
+      padding:2px;
+    }
+    .btn:hover {
+        font-size: 13px;
+    }
+    .twoColumCard {
+        display:none;
+    }    
+}
+@media(max-width: 400px) {
+    .title {
+     font-size: 18px;
+    }  
+    .containerForSelectMain{
+      margin-top: 20px;
+     height: 20px;
+    font-size: 12px;
+    }
+    .containerForSelectBuy {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .containerForMiniTitle{;
+     font-size: 14px;
+    }
+    .miniTitleCard {
+        font-size: 14px;
+    }
+    .check {
+        font-size: 10px;
+    }
+    .titleCard {
+        font-size: 18px;
+    }
+    .carImg1 {
+        width: 200px;
+        height: 150px;
+    }
+    .titleCardService {
+        font-size: 15px;
+    }
+    #service {
+        font-size: 10px;
+        margin-top:10px;
+    }
+    #servicePrice {
+        font-size: 22px;
+        margin-top:5px;
+    }
+  }
+  @media(max-width: 300px) {
+     .title {
+      font-size: 12px;
+     }  
+      .selectModel {
+        width: 160px;
+        height: 20px;
+        font-size: 9px;
+        margin-top: 10px;
+      }
+      .carImg1 {
+        width: 170px;
+        height: 100px;
+      }   
+      .containerForMiniTitle{;
+       font-size: 12px;
+      }
+      .miniTitleCard{;
+       font-size: 12px;
+      }
+      .btn {
+      width: 120px;
+      font-size: 9px;
+    }
+    .btn:hover {
+        font-size: 10px;
+    }
+    .titleCardService {
+        font-size: 12px;
+    }
+    #service {
+        font-size: 10px;
+        margin-top:10px;
+    }
+    #servicePrice {
+        font-size: 17px;
+        margin-top:5px;
+    }
+    .inColum {
+        margin-bottom: 20px
+    }
+  
   }
 `}</style>
 

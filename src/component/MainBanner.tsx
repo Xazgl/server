@@ -110,13 +110,18 @@ export function MainBanner() {
                 }
                 @media(max-width: 250px) {
                     .title { 
-                        font-size:10px;
+                        font-size:9px;
+                        margin-top:10px;
                     }
                     .titleMini {
                         font-size:7px;
                     }
                     .MainBanner { 
                         height: 130px;
+                    }
+                    .titleMini{
+                        margin-bottom:00px;
+                        margin-top:10px;
                     }
                 }
             `}</style>

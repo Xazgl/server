@@ -8,6 +8,10 @@ export async function post(url: string, body: Object) {
     })
     if (res.ok) {
         const result = await res.json()
-        return result        
+        return result
     }
+    return Promise.reject({
+        status: res.status,
+        statusText: res.statusText
+    })
 }

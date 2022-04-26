@@ -168,5 +168,94 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                  transform: scale(1.02);
                  box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
                  }
+                 @media(max-width: 1000px) {
+                     .background {
+                        height: 400px;
+                     }
+                     .container {
+                        width:700px;
+                     }
+                     .el {
+                        height: 350px;
+                        width: 250px;
+                     }
+                     .title {
+                        font-size: 17px;
+                     }
+                     .words {
+                        font-size: 15px;
+                     }
+                     .ul {
+                         margin-top:0px;
+                     }
+                     li {
+                        font-size: 15px;
+                     }
+                     .btn {
+                        width: 202px;
+                        height: 40px;
+                        font-size: 19px;
+                        margin-top:10px;
+                     }
+                 }
+                 @media(max-width: 760px) {
+                    .container {
+                        width:500px;
+                     }
+                     .el {
+                        height: 350px;
+                        width: 190px;
+                     }
+                     .title {
+                        font-size: 12px;
+                     }
+                     .words {
+                        font-size: 11px;
+                     }
+                     .ul {
+                         margin-top:15px;
+                     }
+                     li {
+                        font-size: 12px;
+                     }
+                     .btn {
+                        width: 120px;
+                        height: 35px;
+                        font-size: 14px;
+                        margin-top:10px;
+                     }
+                 }
+                 @media(max-width: 560px) {
+                    .container {
+                        width:400px;
+                     }
+                     .el {
+                        height: 300px;
+                        width: 150px;
+                     }
+                     .title {
+                        font-size: 10px;
+                     }
+                     .words {
+                        font-size: 10px;
+                     }
+                     .ul {
+                         margin-top:11px;
+                     }
+                     li {
+                        font-size: 11px;
+                     }
+                     .btn {
+                        width: 100px;
+                        height: 30px;
+                        font-size: 12px;
+                        margin-top:10px;
+                     }
+                 }
+                 @media(max-width: 460px) {
+                    .background {
+                        display:none;
+                     }
+                 }
               
 `}</style></> )}

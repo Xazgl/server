@@ -12,7 +12,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
             <div className="container">  
                    <div className="el">
                         <div className="title"><span>Услуги Сервиса</span> &#160;<span id='yellow'>Арконт</span></div>
-                        <div className="words">Наши работники регулярно проходят повышение квалификации у официальных представителей марки OPEL, поэтому доверяя ваш авто нам вы доверяете, его профессионалам.</div>
+                        <div className="words"><span className='span'>Наши работники регулярно проходят повышение квалификации у официальных представителей марки OPEL, поэтому доверяя ваш авто нам вы доверяете, его профессионалам.</span></div>
                         <div className="btnDiv">
                            <form onSubmit={showModal}>
                              <button className='btn'>Записаться</button>
@@ -83,7 +83,11 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     margin-bottom:50px;
                     color:white;
                 }
-                  
+                .span {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: center;
+                }  
                 
                 .row{
                     display:flex;
@@ -143,14 +147,10 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     display: flex;
                     align-items:center;
                    font-family: 'Montserrat', sans-serif;
-                   border-radius: 3px;
-                   border:none;
                    transition: transform.3s ;
-                   color: white;
-                   border:#f7ff14;
-                   border: solid;
-                   border-width: 1px;
-                   background-color: black;
+                   border-color: yellow;
+                   color: yellow;
+                   background: 0 0;
                    width: 202px;
                    height: 45px;
                    font-size: 22px;
@@ -162,8 +162,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                 }
                .btn:hover {
                  background-color: #f7ff14;
-                 border: none;
-                font-family: 'Montserrat', sans-serif;
+                 font-family: 'Montserrat', sans-serif;
                  color:black;
                  transform: scale(1.02);
                  box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);

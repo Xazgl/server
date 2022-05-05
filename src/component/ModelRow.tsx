@@ -41,11 +41,13 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     <div className="ourAdvantages">
         <div className="titleMain">Модельный ряд OPEL</div>
             <div className="container">
+            <Link href="/opelModels/comboCargo">
               <div className="containerEl">
                   <div className="img1"></div>
                   <div className="title">Combo Cargo</div>
                   <div className="words"></div>
             </div>
+            </Link>
             <Link href="/opelModels/zafira">
                 <div className="containerEl">
                     <div className="img2"></div>
@@ -53,26 +55,34 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
                     <div className="words"></div>
                 </div>
             </Link>
+            <Link href="/opelModels/comboLife">
             <div className="containerEl">
                   <div className="img3"></div>
                   <div className="title">Combo Life</div>
                   <div className="words"></div>
             </div>
+            </Link>
+            <Link href="/opelModels/grandland">
             <div className="containerEl">
                   <div className="img4"></div>
                   <div className="title">Grandland X</div>
                   <div className="words"></div>
             </div>
+            </Link>
+            <Link href="/opelModels/crossland">
             <div className="containerEl">
-                  <div className="img6"></div>
+                  <div className="img5"></div>
                   <div className="title">Crossland</div>
                   <div className="words"></div>
             </div>
+            </Link>
+            <Link href="/opelModels/vivaro">
             <div className="containerEl">
-                  <div className="img5"></div>
+                  <div className="img6"></div>
                   <div className="title">Vivaro</div>
                   <div className="words"></div>
             </div>
+            </Link>
         </div>
         <div className="btnDiv">
            <form onSubmit={showModal}>
@@ -233,24 +243,24 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     margin-top:50px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
-    border:none;
     transition: transform.3s ;
     color: #ffffff;
-    background-color: #48484d;
+    border-color: #000;
+    color: #000;
+    background: 0 0;
     width: 250px;
     height: 50px;
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom:60px;
 }
 
 .btn:hover {
     background-color: #f7ff14;
     font-size: 20px;
-    border: none;
     font-family: 'Montserrat', sans-serif;
     color:black;
     transform: scale(1.02);
-    font-size: 29px;
+    font-size: 25px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 }    
 

@@ -37,7 +37,7 @@ export function Footer() {
       .column {
         display:flex;
         flex-direction:column;
-        font-family: Montserrat; 
+        font-family: 'Montserrat'; 
         color:white;
       }
      
@@ -46,8 +46,54 @@ export function Footer() {
         justify-content:row;
         justify-content:center;
         margin-top:20px;
+       
       }
-    
+
+      @media(max-width: 900px) {
+            .el {
+                font-size:14px;
+            }
+            .label {
+              width: 80px;
+              height: 80px;
+            }
+        }
+        @media(max-width: 700px) {
+            .el {
+                font-size:10px;
+            }
+            .label {
+              width: 80px;
+              height: 80px;
+            }
+        }
+        @media(max-width: 535px) {
+            .el {
+                font-size:7px;
+            }
+            .label {
+              width: 50px;
+              height: 50px;
+            }
+        }
+        @media(max-width: 415px) {
+            .el {
+                font-size:4px;
+            }
+            .label {
+              width: 50px;
+              height: 50px;
+            }
+        }
+        @media(max-width: 270px) {
+            .el {
+                font-size:2px;
+            }
+            .label {
+              width: 50px;
+              height: 50px;
+            }
+        }
     `}</style>
  </>
     )

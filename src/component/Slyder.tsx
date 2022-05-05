@@ -153,6 +153,7 @@ function SwipeableTextMobileStepper() {
     color:white;
     font-family: 'Montserrat', sans-serif;
     font-size:50px;
+    padding-top: 42px;
 }
 
 .background {

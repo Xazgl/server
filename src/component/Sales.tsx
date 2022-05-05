@@ -19,15 +19,15 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
   if (Array.isArray(sales) && sales.length > 0) {
     return (
       <>
-        <div className="blockSales">
-          <div className="titleMain">АКЦИИ OPEL</div>
+      <div className="titleMain">АКЦИИ OPEL</div>
+        <div className="containerSales">
           {
             sales.map(sale => {
               return <div className="salesEl" onClick={showModal} >
-              <img className="img-custom" src={sale.img}/>
-              <div className="title">{sale.title}</div>
-              <div className="salesWords">{sale.description}</div>
-            </div>
+                       <div className="imgDiv"><img className="imgCustom" src={'/uploads/' + sale.img}/></div>
+                       <div className="title"><span className='span'>{sale.title}</span></div>
+                       <div className="salesWords"><span className='span'>{sale.description}</span></div>
+                     </div>
             })
           }
           {/* <div className="containerSales">
@@ -64,41 +64,56 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     
     .titleMain{
         display:flex;
-        font-family: Montserrat; 
+        font-family: 'Montserrat'; 
         font-size: 35px;
         font-weight: bold;
         justify-content:center;
         color:white;
+        background-color:black;
+        margin-top:35px;
     }
     .containerSales {
         display:flex;
         justify-content:space-evenly;
         width: 100%;
-        margin-top:50px;
         color:white;
+        background:black;
+        flex-wrap:wrap;
     } 
     
     .salesEl {
         display:flex;
         justify-content: center;
         flex-direction: column;
-        height: 400px;
+        height: 300px;
+        width:350px;
         color:white;
         margin-bottom:30px;
+        margin-top:20px;
+        align-items: center;
     }
     
-    .img1{
+    .imgCustom{
+      display:flex; 
+        height: 100%;
+        width: 300px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    .imgDiv{
         display:flex; 
         height: 100%;
-        weight: 100%;
+        width: 300px;
         background-position: center center;
-        background-image: url('${salesOne.src}');
         background-repeat: no-repeat;
         overflow: hidden;
         border-radius: 5px;
     }
     
-    .img1:hover{ 
+    .imgDiv:hover{ 
         border:solid;
         border-color:black;
         -webkit-box-shadow: 19px 24px 11px 1px rgba(34, 60, 80, 0.42);
@@ -119,6 +134,11 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
         border-radius: 5px;
     }
     
+    .span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    }
     .img2:hover{ 
         border:solid;
         border-color:black;
@@ -167,12 +187,77 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     .salesWords {
         display:flex;
         font-family: 'Montserrat'; 
-        font-size: 20px;
+        font-size: 18px;
         justify-content:center;
         margin-top:10px;
         color:white;
     }
-         
+    @media(max-width: 1100px) {
+      .titleMain{
+        font-size: 30px;
+      }
+      .salesWords {
+        font-size:16px;
+      }
+      .title {
+        font-size:20px;
+      }
+    }
+    @media(max-width: 540px) {
+      .imgDiv{
+        width: 200px;
+      }
+      .salesWords {
+        font-size:14px;
+      }
+      .salesEl {
+        width: 200px;
+      }
+      .title {
+        font-size:17px;
+      }
+      .titleMain{
+        font-size: 20px;
+      }
+    }
+    @media(max-width: 320px) {
+      .imgDiv{
+        width: 150px;
+      }
+      .salesWords {
+        font-size:12px;
+      }
+      .salesEl {
+        width: 150px;
+        height: 220px;
+      }
+      .title {
+        font-size:14px;
+      }
+      .titleMain{
+        font-size: 16px;
+        margin-top:10px;
+      }
+    }
+    @media(max-width: 320px) {
+      .imgDiv{
+        width: 100px;
+      }
+      .salesWords {
+        font-size:10px;
+      }
+      .salesEl {
+        width: 100px;
+        height: 150px;
+      }
+      .title {
+        font-size:12px;
+      }
+      .titleMain{
+        font-size: 14px;
+        margin-top:10px;
+      }
+    }
     `}</style>
       </>
     )

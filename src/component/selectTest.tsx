@@ -272,10 +272,10 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
                                 <div className="row">{power}</div>
                                 <div className="row1">Мощность</div>
                             </div>
-                            <div className="inColum">
+                            {/* <div className="inColum">
                                 <div className="space"></div>
                                 <div className="spaceJ"></div>
-                            </div>
+                            </div> */}
                             <div className="inColum">
                                 <div className="row3"> <img className="mini" src={d.src} /> </div>
                                 <div className="row">{engine}</div>
@@ -289,10 +289,10 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
                                 <div className="row">{engine}</div>
                                 <div className="row1">Разгон до 100км/ч,с</div>
                             </div>
-                            <div className="inColum1">
+                            {/* <div className="inColum1" id="t">
                                 <div className="space"></div>
                                 <div className="spaceJ"></div>
-                            </div>
+                            </div> */}
                             <div className="inColum1">
                                 <div className="row3"> <img className="mini" src={u.src} /> </div>
                                 <div className="row">{transmission}</div>
@@ -314,18 +314,18 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display:flex;
     flex-direction: column;  
     align-items: center;
-    margin-top: 60px;
+    margin-top: 20px;
     font-family: 'Montserrat'; 
 }
 .title {
     font-size: 40px;
-    margin-top:20px;
+    margin-top:10px;
 }
 .containerForSelect {
     display:flex;
     flex-direction: column;
     justify-content:center;
-    margin-top:50px;
+    margin-top:10px;
     align-items: center;
 }
 .selectModel {
@@ -333,7 +333,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     height: 40px;
     font-size: 19px;
     background-color: #f7ff14;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: 'Montserrat'; 
     border-radius: 5px;
 }
@@ -345,7 +345,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 .twoModel {
     display:flex;
     flex-direction: row;
-    margin-top:50px;
+    margin-top:10px;
     justify-content: space-around;
 
 }
@@ -363,7 +363,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 300;
 }
 
@@ -387,7 +387,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 }
 .carImg1 {
     display: flex;
-    width: 600px;
+    width: 500px;
     height: 250px;
     background-image: url('${imgCar}');
     background-size: contain;
@@ -428,7 +428,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     justify-content: center;
     align-items: baseline;
     font-family: 'Montserrat', sans-serif;
-    font-size: 80px;
+    font-size: 45px;
     font-weight: 100;
 }
 
@@ -465,7 +465,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     border:none;
     transition: transform.3s ;
     color: #ffffff;
-
+    margin-bottom:20px;
     background-color: #48484d;
     width: 220px;
     height: 50px;
@@ -487,7 +487,155 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 
 }
-  }
+@media(max-width: 1250px) {
+    .carImg1{
+        width: 500px;
+       height: 200px;
+    }
+  
+   
+}
+@media(max-width: 1250px) {
+    .carImg1{
+        width: 500px;
+       height: 200px;
+    }
+   
+}
+@media(max-width: 750px) {
+    .carImg1{
+        width: 350px;
+       height: 200px;
+    }
+    .titleCard {
+        font-size: 30px;
+    }
+    .row {
+        font-size: 25px;
+    }
+    .miniTitleCard{
+        font-size: 20px; 
+    }
+    .title {
+        font-size: 35px; 
+    }
+    .containerForSelect{
+        margin-top:0px;
+    }
+    .inColum1{
+        margin-left: 70px;
+    }
+    .btn {
+        width: 158px;
+     height: 40px;
+     font-size: 17px;
+    }
+    .btn:hover {
+        font-size: 17px;
+    }
+    .twoModel {
+        margin-top:20px;
+    }
+}
+@media(max-width: 450px) {
+    .carImg1{
+        width: 250px;
+       height: 150px;
+    }
+    .titleCard {
+        font-size: 30px;
+    }
+    .row {
+        font-size: 17px;
+    }
+    .row1 {
+        font-size: 12px;
+    }
+    .miniTitleCard{
+        font-size: 20px; 
+    }
+    .title {
+        font-size: 25px; 
+    }
+    .containerForSelect{
+        margin-top:0px;
+    }
+    .inColum1{
+        margin-left: 70px;
+    }
+    .btn {
+      width: 120px;
+     font-size: 12px;
+    }
+    .btn:hover {
+        font-size: 12px;
+    }
+    .twoModel {
+        margin-top:20px;
+    }
+    .selectModel {
+        width: 200px;
+        height: 30px;
+    }
+}
+@media(max-width: 300px) {
+    .carImg1{
+        width: 150px;
+       height: 100px;
+    }
+    .titleCard {
+        font-size: 20px;
+    }
+    .row {
+        font-size: 12px;
+    }
+    .row1 {
+        font-size: 9px;
+    }
+    .miniTitleCard{
+        font-size: 16px; 
+    }
+    .title {
+        font-size: 17px; 
+    }
+    .containerForSelect{
+        margin-top:0px;
+    }
+    .inColum1{
+        margin-left: 70px;
+    }
+    .btn {
+      width: 100px;
+     font-size: 10px;
+     height:25px;
+     padding:1px;
+    }
+    .btn:hover {
+        font-size: 10px;
+    }
+    .twoModel {
+        margin-top:20px;
+    }
+    .selectModel {
+        width: 100px;
+        height: 20px;
+        font-size:12px;
+    }
+    .inColum1{
+        margin-left: 30px;
+    }
+}
+@media(max-width:200px) {
+    .containerForTitle {
+        display:none;
+    }
+    .containerForSelect {
+        display:none;
+    }
+    .twoModel{
+        display:none;
+    }
+}
 `}</style>
 
         </>

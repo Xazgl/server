@@ -1,9 +1,9 @@
-import { FormEvent } from 'react'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 import banner from '/public/images/modelBanner.jpg'
 import miniBanner from '/public/images/zafira/carYellow.jpg'
 import zafira from '/public/images/models/3.jpg';
 
-export function BannerZafira() {
+export function BannerZafira({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
@@ -16,10 +16,11 @@ export function BannerZafira() {
             </div>
              
              <div className='descriptionZafira'>
-                 <div className='text'><h1 className='y'>Практичный и элегантный. Рациональный и стильный. Технологичный и удобный. Микроавтобус Zafira Life - отличное решение для деловых поездок и весёлых путешествий.</h1></div>
+                 <div className='text'><h1 className='y'><span className='span'>Практичный и элегантный. Рациональный и стильный. Технологичный и удобный. Микроавтобус Zafira Life - отличное решение для деловых поездок и весёлых путешествий.</span></h1></div>
              </div>
                
                <div className='blockBuy'>
+                <div className='cont'> 
                  <div className='imgBuy'>
                  </div>
 
@@ -28,26 +29,28 @@ export function BannerZafira() {
                       <h2 className="u">ЗАЧЕМ ЖДАТЬ?</h2>
                     </div>
                     <div className='el'>
-                      <h4 className="u2">Найдите подходящий автомобиль в нашем Диллерском центре.</h4>
+                    <span className='span'> <h4 className="u2">Найдите подходящий автомобиль в нашем Диллерском центре.</h4></span>
                     </div>
                     <div className='el'>
                        <form onSubmit={showModal}>
-                        <button className='btn'>Найти авто</button>
+                          <button className='btn'>Найти авто</button>
                         </form>
                     </div>
                   </div>
+                </div>
                </div>
-               <div className='mainName'>Комплектации</div>
-              <div className='complectation'>
+              <div className='mainName'>Комплектации</div>
+              <div className='complectationContainer'>
+               <div className='complectation'>
                 <div className='content'>
                  <div className="comImg"></div>
                  <div className="complTitle">INNOVATION M</div>
                  <div className="complUl">
                    <ul>
-                    <li>Штампованые стальные колесные диски "16"</li>
-                     <li>Ксеноновые фары со светодиодными дневными ходовыми огнями</li>
-                     <li>Мультимедийная система с 7" сенсорным экраном</li>
-                     <li>Подключаемый полный привод (комплектация 4x4)</li>
+                    <li><span className='span'>- Штампованые колесные диски "16"</span></li>
+                     <li><span className='span'>- Ксеноновые фары со светодиодными дневными ходовыми огнями</span></li>
+                     <li><span className='span'>- Мультимедийная система с экраном</span></li>
+                     <li><span className='span'>- Подключаемый полный привод</span></li>
                    </ul>
                    <div className="complTitle">ОТ 4 289 900 ₽</div>
                   </div>
@@ -57,10 +60,10 @@ export function BannerZafira() {
                  <div className="complTitle">INNOVATION L</div>
                  <div className="complUl">
                    <ul>
-                     <li>Штампованые стальные колесные диски "16"</li>
-                     <li>Ксеноновые фары со светодиодными дневными ходовыми огнями</li>
-                     <li>Мультимедийная система с 7" сенсорным экраном</li>
-                     <li>Подключаемый полный привод (комплектация 4x4)</li>
+                     <li><span className='span'>- Штампованые колесные диски "16"</span></li>
+                     <li><span className='span'>- Ксеноновые фары со светодиодными дневными ходовыми огнями</span></li>
+                     <li><span className='span'>- Мультимедийная система</span></li>
+                     <li><span className='span'>- Подключаемый полный привод</span></li>
                    </ul>
                    <div className="complTitle">ОТ 4 289 900 ₽</div>
                   </div>
@@ -70,16 +73,16 @@ export function BannerZafira() {
                  <div className="complTitle">COSMO</div>
                  <div className="complUl">
                    <ul>
-                     <li>Легкосплавные аллюминивые колесные диски 17"</li>
-                     <li> Электрические сдвижные двери</li>
-                     <li> Темная отделка сидений кожей с наличием валика поясничной поддержки и функцией массажа</li>
-                     <li> Мультимедийная навигационная система с сенсорным дисплеем 7", Wifi, Bluetooth, USB, MirrorLink</li>
+                     <li><span className='span'>- Легкосплавные  колесные диски 17"</span></li>
+                     <li><span className='span'>- Электрические сдвижные двери</span></li>
+                     <li><span className='span'>- Сиденья с функцией массажа</span></li>
+                     <li><span className='span'>- Мультимедийная навигационная система</span></li>
                    </ul>
                    <div className="complTitle">ОТ 4 789 900 ₽ ₽</div>
                   </div>
                 </div>
               </div>
-
+              </div>
             <style jsx>{`
             .title {
                     display:flex;
@@ -93,8 +96,8 @@ export function BannerZafira() {
                     font-family:'Montserrat';
                     font-size:80px;
                     color:white;
-                }
-                .bannerZafira {
+            }
+            .bannerZafira {
                     display:flex; 
                     background-blend-mode: darken;
                     background: rgba(0, 0, 0, .40);
@@ -105,94 +108,113 @@ export function BannerZafira() {
                     background-image: url('${banner.src}');
                     background-repeat: no-repeat;
                     background-size: cover;
-
-                }
-
-                .descriptionZafira{
+            }
+            .descriptionZafira{
                     display:flex;
                     justify-content:center;
                     align-items:center;
-                }
-
-                .text {
+            }
+            .text {
                     display:flex;
                     justify-content:center;
                     align-items:center;
                     font-family:'Montserrat';
                     color: #888;
                     padding:20px;
-                }
+          }
 
-               .blockBuy{
+          .blockBuy{
                     display:flex;
                     align-items:center;
-                 
-               }
-               .imgBuy{
+                    justify-content:center;
+                    width:100%
+          }
+          .cont{
+                 display:flex;
+                 justify-content:center;
+                 align-items:center;
+                 width:1000px;
+          }
+          .imgBuy{
                     display:flex;
                     background-image: url('${miniBanner.src}');
                     background-repeat: no-repeat;
-                    background-size: contain;
+                    background-size: cover;
                     width: 100%;
-                    height: 500px;
-               }
-               .blockEl {
+                    height: 300px;
+          }
+          .span {
+                    width: 100%;
+                    display: inline-block;
+                    text-align: start;
+          }
+          .blockEl {
                 display:flex;
+                justify-content: center;
                 flex-direction:column;
                 align-items:start;
-                height: 500px;
+                height: 400px;
                 width: 100%;
-               }
-               .el {
+                padding-left:50px;
+          }
+          .el {
                 display:flex;
                 flex-direction:row;
                 color:black;
                 font-family:'Montserrat';
-               }
-               .btn {
+          }
+          .btn {
                   margin-top:30px;
                   font-family: 'Montserrat', sans-serif;
                   border-radius: 3px;
-                  border:none;
                   transition: transform.3s ;
                   color: #ffffff;
-                  background-color: #48484d;
+                  border-color: #000;
+                  color: #000;
+                  background: 0 0;
                   width: 300px;
                   height: 40px;
                   font-size: 25px;
                   margin-bottom:20px;
-                }
-
-                .btn:hover {
+          }
+          .btn:hover {
                   background-color: #f7ff14;
-                  font-size: 20px;
-                  border: none;
                   font-family: 'Montserrat', sans-serif;
                   color:black;
                   transform: scale(1.02);
-                  font-size: 24px;
                   box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
-                } 
-                .complectation{
+          } 
+          .complectation{
                   display:flex;
                   margin-top:40px;
-                  justify-content:space-evenly;
+                  justify-content:center;
                   flex-direction:row;
                   margin-bottom:30px;
                   align-items: baseline;
-                }
-                .content {
+                  width:1200px
+          }
+          .complectationContainer{
+                  display:flex;
+                  margin-top:40px;
+                  justify-content:center;
+                  flex-direction:row;
+                  margin-bottom:30px;
+                  align-items: center;;
+                  width:100%;
+          }
+          .content {
                   display:flex;
                   justify-content:center;
                   flex-direction:column;
                   align-items:center;
-                  width:20%;
-                }
+                  width:31%;
+          }
+                
                 .comImg{
                   display:flex;
                   flex-direction:row;
                   width:100%;
-                  height:200px;
+                  height:150px;
                   background-position: center center;
                   background-image: url('${zafira.src}');
                   background-repeat: no-repeat;
@@ -220,6 +242,11 @@ export function BannerZafira() {
                   font-family: 'Montserrat', sans-serif;
                   font-size:16px;
                 }
+                li {
+                  list-style-type: none;
+                  margin-top:5px;
+                  
+                }
                 @media (max-width: 1200px) {
                   .bannerZafira {
                     height: 500px;
@@ -239,6 +266,12 @@ export function BannerZafira() {
                   .complTitle {
                     font-size:20px;
                   }
+                  .complectation{
+                  width:1000px
+                }
+                .comImg {
+                  height: 120px;
+                }
                 }
                 @media (max-width: 900px) {
                   .t{
@@ -246,6 +279,9 @@ export function BannerZafira() {
                   }
                   .y{
                      font-size:25px;
+                  }
+                  .cont {
+                    flex-direction: column;
                   }
                   .content {
                     width: 25%;
@@ -255,6 +291,13 @@ export function BannerZafira() {
                   }
                   .complTitle {
                     font-size:18px;
+                  }
+                  .blockEL {
+                    align-items: center;
+                  }
+                  .imgBuy {
+                    margin-left: 500px;
+                    background-size: contain;
                   }
                   .btn {
                     width: 250px;
@@ -281,7 +324,8 @@ export function BannerZafira() {
                     font-size:14px;
                   }
                   .backgroundBuy {
-                    flex-direction:column
+                    flex-direction:column;
+                    align-items: center;
                   }
                   .btn {
                     width: 200px;
@@ -327,6 +371,18 @@ export function BannerZafira() {
                      justify-content:center;
                   }
                 }
+
+                @media (max-width: 600px) {
+                .imgBuy {
+                    margin-left: 750px;
+                    background-size: contain;
+                    height: 200px;
+                  }
+                  .el {
+                    width:200px;
+                    padding:1px;
+                  }
+                }
                 @media (max-width: 500px) {
                   .y{
                      font-size:18px;
@@ -338,11 +394,8 @@ export function BannerZafira() {
                   .bannerZafira {
                     height: 250px;
                   }
-                  .imgBuy{
-                    display:flex;
-                    background-size: cover;
-                    width: 100%;
-                    height: 200px;
+                  .nameBlock {
+                    font-size:25px;
                   }
                   .u{
                     font-size:17px;
@@ -373,7 +426,21 @@ export function BannerZafira() {
                     font-size:10px;
                   }
                 }
+
+                @media (max-width: 400px) {
+                  .imgBuy.jsx-2274578631 {
+                     margin-left: 851px;
+                     background-size: contain;
+                     height: 150px;
+                  }
+                  .nameBlock {
+                    font-size:20px;
+                  }
+                }
                 @media (max-width: 300px) {
+                  .blockBuy {
+                    display:none;
+                  }
                   .y{
                      font-size:12px;
                   }
@@ -385,13 +452,12 @@ export function BannerZafira() {
                     height: 100px;
                   }
                   .imgBuy{
-                    display:flex;
-                    background-size: cover;
-                    width: 100%;
-                    height: 150px;
+                     margin-left: 870px;
+                     background-size: contain;
+                     height: 100px;
                   }
-                  u{
-                    font-size:12px;
+                  .u{
+                    font-size:14px;
                   }
                   .u2{
                     font-size:10px;
@@ -416,9 +482,18 @@ export function BannerZafira() {
                   .complUl {
                     font-size:8px;
                   }
+                  .comImg{
+                    width:220px;
+                  }
                 }
-
-
+                @media (max-width: 250px) {
+                  .comImg{
+                    width:150px;
+                  }
+                  .complU {
+                    font-size:6px;s
+                  }
+                }
 
             `}</style>
         </>

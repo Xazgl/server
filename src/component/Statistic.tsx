@@ -9,8 +9,8 @@ export function Statistic() {
            <div className="background">
              <div className="contentEl">
                 <div className="left">
-                    <div className="title">THE CAR ARKONT STATISTIC</div>
-                    <div className="words">{words}</div>
+                    <div className="title">AРКОНТ СТАТИСТИК</div>
+                    <div className="words"><span className='span'>{words}</span></div>
                      {/* <div className="table">
                                    <div className="tableColumn">
                                        <ul>
@@ -38,7 +38,7 @@ export function Statistic() {
                         </div>
                         <div className='rowT'>
                             <div  id='numeric'>300&emsp; </div>
-                            <div className='wordsT'>Отремонтировали авто</div>
+                            <div className='wordsT'>Ремонт авто</div>
                         </div>
                       </div>
                       <div className="tableColumn">
@@ -126,7 +126,6 @@ export function Statistic() {
                     margin-top:20px;
                 }
                     
-                
                 .img {
                     display:flex;
                     height:250px;
@@ -146,6 +145,11 @@ export function Statistic() {
                     flex-direction:row;
 
                 }
+                .span {
+                  width: 100%;
+                  display: inline-block;
+                 text-align: center;
+                }
                 .wordsT {
                     display:flex;
                     font-family: 'Montserrat', sans-serif;
@@ -158,6 +162,81 @@ export function Statistic() {
                 }
                 li {
                     list-style:none;
+                }
+                @media(max-width: 1000px) {
+                    .title {
+                        font-size: 35px;
+                    }
+                    .words {
+                        font-size: 17px;
+                    }
+                    .table {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .words {
+                        width: 700px;
+                        flex-direction: column;
+                    }
+                }
+                @media(max-width:  750px) {
+                    .background {
+                        height: 450px;
+                    }
+                    .title {
+                        font-size: 25px;
+                    }
+                    .words {
+                        font-size: 14px;
+                    }
+                    .table {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .words {
+                        width: 600px;
+                        flex-direction: column;
+                        padding: 20px;
+                        margin-top:0;
+                        display:none;
+                    }
+                    #numeric {
+                        font-size: 40px;
+                    }
+                    .wordsT {
+                        font-size: 17px;
+                    }
+                    .table{
+                        margin-top: 0px;
+                    }
+                }
+                @media(max-width:  350px) {
+                    .background {
+                        height: 300px;
+                    }
+                    #numeric{
+                        font-size: 20px;
+                    }
+                    .title {
+                        font-size: 17px;
+                    }
+                    .wordsT {
+                        font-size: 14px;
+                    }
+                }
+                @media(max-width:  280px) {
+                    .background {
+                        height: 250px;
+                    }
+                    #numeric{
+                        font-size: 15px;
+                    }
+                    .title {
+                        font-size: 14px;
+                    }
+                    .wordsT {
+                        font-size: 12px;
+                    }
                 }
             `}</style>
         </>

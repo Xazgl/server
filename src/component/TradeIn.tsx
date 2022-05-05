@@ -13,8 +13,8 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
           <div className="background">
             <div className="contentEl">
                  <div className="content">      
-                   <div className="title">Trade-In</div>
-                   <div className="words">{text}</div>
+                   <div className="title"><span className='span'>Trade-In</span></div>
+                   <div className="words"><span className='span'>{text}</span></div>
                  </div>
                  <div className="content"> 
                    <div className="btnDiv">
@@ -52,6 +52,11 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     color:black;
   }
 
+  .span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    }
   .title {
     display:flex;
     justify-content:start;
@@ -120,17 +125,28 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
       font-size:30px;
     }
     .words {
-      font-size:24px;
+      font-size:17px;
       margin-bottom:100px;
     }
     .btn {
-      font-size: 20px;
-      width: 300px;
+      font-size: 16px;
+      width: 220px;
+      border-radius:3px;
     }
+    .btn:hover {
+      font-size: 17px;
+    }
+    .contentEl{
+      width: 600px;
+    }
+    .btnDiv {
+          margin-bottom: 0px;
+    }
+    
   }
-  @media(max-width: 600px ){
-    .background {
-      height:350px;
+  @media(max-width: 650px ){
+    .contentEl{
+    width: 500px;
     }
     .content {
       margin-left:50px;
@@ -139,46 +155,122 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
       font-size:25px;
     }
     .words {
-      font-size:20px;
+      font-size:14px;
       margin-bottom:70px;
+      width:250px;
     }
     .btn {
-      font-size: 20px;
-      width: 270px;
+      font-size: 12px;
+      width: 160px;
+      height: 40px;
+    }
+    .btn:hover {
+      font-size: 12px;
+    }
+  }
+  @media(max-width: 430px ){
+    .contentEl{
+    display:flex; 
+    width: 300px;
+    justify-content: center;
+    flex-direction:column;
+    margin-top:10px;
+    align-items:center;
+  }
+    .contentEl{
+      height:200px;
+    width: 300px;
+    }
+    .title {
+      font-size:18px;
+  
+    }
+    .words {
+      margin-top:20px;
+      font-size:14px;
+      margin-bottom:70px;
+      width:300px;
+    }
+    .content {
+      width: 100px;
+      align-items:center;
+      justify-content:center;
+    }
+    .btnDiv {
+      width: 150px;
+    }
+    .btn {
+      font-size: 10px;
+      width: 150px;
+      height: 30px;
+    }
+    .btn:hover {
+      font-size: 10px;
     }
   }
   @media(max-width: 360px ){
     .background {
-      height:180px;
+      height:200px;
     }
     .content {
       margin-left:30px;
+      width: 70px;
+    }
+    .contentEl {
+      height: 150px;
     }
     .title {
-      font-size:16px;
+      margin-top: 20px;
+      font-size:15px;
     }
     .words {
-      font-size:12px;
-      margin-bottom:20px;
+      font-size:10px;
+      margin-bottom:70px;
+      width:200px;
+    }
+    .btnDiv {
+      width: 130px;
     }
     .btn {
-      font-size: 12px;
-      width: 170px;
-      height: 30px;
+      font-size: 9px;
+      width: 130px;
+      height: 25px;
     }
+    .btn:hover {
+      font-size: 9px;
+    }
+    
   }
   @media(max-width: 260px ){
     .background {
       height:150px;
     }
+    .content {
+      margin-left:20px;
+      width: 70px;
+      height: 30px;
+    }
+    .title {
+      margin-top: 12px;
+      font-size:12px;
+    }
     .words {
-      font-size:9px;
-      margin-bottom:10px;
+      font-size:7px;
+      margin-bottom:70px;
+      width:150px;
+    }
+    .btnDiv{
+      width: 100px;
     }
     .btn {
       font-size: 7px;
-      width: 120px;
+      width: 100px;
       height: 20px;
+      border: 1px solid yellow;
+      border-radius:2px;
+    }
+    .btn:hover {
+      font-size: 7px;
     }
   }
 

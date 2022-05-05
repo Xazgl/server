@@ -781,11 +781,11 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 .btn {
     font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
-    border:none;
     transition: transform.3s ;
     color: #ffffff;
-
-    background-color: #48484d;
+    border-color: #000;
+    color: #000;
+    background: 0 0;
     width: 220px;
     height: 50px;
     font-size: 20px;

@@ -14,6 +14,7 @@ export default function BarMenu() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+         
         >
           <Typography className='title'>Меню</Typography>
         </AccordionSummary>
@@ -21,19 +22,19 @@ export default function BarMenu() {
           <Typography>
     <ul className={"menu"}>
       <li className={"menuEl"}>
-         <Link href={'/servicePage'}>СЕРВИС OPEL</Link>
+         <Link href={'/servicePage'}><span className='span'>СЕРВИС OPEL</span></Link>
       </li>
       <li className="menuEL">
-         <Link href={'/modelPage'}>МОДЕЛИ</Link>
+         <Link href={'/modelPage'}><span className='span'>МОДЕЛИ</span></Link>
       </li>
       <li className="menuEL" >
-         <Link href={'/'}>НА ГЛАВНУЮ</Link>
+         <Link href={'/'}><span className='span'>НА ГЛАВНУЮ</span></Link>
       </li>
       <li className="menuEL">
-      <Link href={'/contactPage'}>КОНТАКТЫ</Link>
+      <Link href={'/contactPage'}><span className='span'>КОНТАКТЫ</span></Link>
       </li>
       <li className="menuEL">
-        <a href="tel:+78442222222">+7(8442)22-22-22</a>
+        <a href="tel:+78442222222"><span className='span'>+7(8442)22-22-22</span></a>
       </li>
     </ul>
           </Typography>
@@ -68,7 +69,7 @@ export default function BarMenu() {
 
 
 ul {
-    font-family: Montserrat; 
+    font-family: 'Montserrat'; 
     border-bottom: 1px solid #eaeaea;   
     font-size:12px;
 }
@@ -78,11 +79,33 @@ li:hover {
     transform: scale(1.03);
    
 }
+.span {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      margin-top: 10px;
+}
 
 li {
     list-style: none;
 }
 
+@media(max-width: 500px) {
+  .span {
+      margin-top: 5px;
+}
+ul {
+    font-size:10px;
+}
+}
+@media(max-width: 200px) {
+  .span {
+      margin-top: 5px;
+}
+ul {
+    font-size:7px;
+}
+}
 `}</style>
     </div>
 

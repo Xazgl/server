@@ -327,30 +327,189 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
 }
 .btn {
     font-family: 'Montserrat', sans-serif;
+    height: 50px;
+    font-size: 22px;
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
-    border:none;
     transition: transform.3s ;
     color: #ffffff;
-
-    background-color: #48484d;
-    width: 220px;
+    border-color: #000;
+    color: #000;
+    background: 0 0;
+    width: 250px;
     height: 50px;
-    font-size: 20px;
-    padding: 12px;
 }
 .btn:hover {
     background-color: #f7ff14;
-    font-size: 20px;
-    border: none;
     font-family: 'Montserrat', sans-serif;
     color:black;
     transform: scale(1.02);
-    font-size: 22px
     padding: 10px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 
 }
-
+@media(max-width: 1100px) {
+    .titleCard {
+        font-size: 40px;
+    }
+    .row {
+        font-size: 50px; 
+    }
+    .btn {
+      width: 190px;
+      height: 50px;
+      font-size: 20px;
+    }
+    .btn:hover {
+        font-size: 20px
+    }
+    .carImg1 {
+        width: 500px;
+       height: 200px;
+    }
+}
+@media(max-width: 750px) {
+    .titleCard {
+        font-size: 20px;
+        margin-top:10px;
+    }
+    .row {
+        font-size: 25px; 
+    }
+    .btn {
+      width: 140px;
+      height: 40px;
+      font-size: 16px;
+      padding:5px;
+    }
+    .btn:hover {
+        font-size: 16px
+    }
+    .carImg1 {
+        width: 400px;
+       height: 200px;
+    }
+    .selectModel {
+        width: 270px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 10px;
+    }
+    .containerForSelect {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 35px
+    }
+    .inColum {
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 450px) {
+    .titleCard {
+        font-size: 15px;
+        margin-top:10px;
+    }
+    .row {
+        font-size: 16px; 
+    }
+    .btn {
+      width: 120px;
+      height: 30px;
+      font-size: 12px;
+      padding:5px;
+    }
+    .btn:hover {
+        font-size: 12px
+    }
+    .carImg1 {
+        width: 250px;
+       height: 150px;
+    }
+    .selectModel {
+        width: 220px;
+        height: 30px;
+       font-size: 11px;
+       margin-top: 10px;
+    }
+    .containerForSelect {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 22px
+    }
+    .inColum {
+        margin-bottom: 10px;
+    }
+    .row1 {
+        font-size: 16px  
+    }
+}
+@media(max-width: 260px) {
+    .titleCard {
+        font-size: 12px;
+        margin-top:10px;
+    }
+    .row {
+        font-size: 12px; 
+    }
+    .btn {
+      width: 100px;
+      height: 30px;
+      font-size: 12px;
+      padding:5px;
+    }
+    .btn:hover {
+        font-size: 12px
+    }
+    .carImg1 {
+        width: 150px;
+       height: 100px;
+    }
+    .selectModel {
+        width: 160px;
+        height: 30px;
+        font-size: 9px;
+       margin-top: 10px;
+    }
+    .containerForSelect {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 17px
+    }
+    .inColum {
+        margin-bottom: 10px;
+    }
+    .row1 {
+        font-size: 12px  
+    }
+}
+@media(max-width: 210px) {
+    .title {
+        font-size: 14px
+    }
+    .titleCard {
+        font-size: 10px;
+        margin-top:10px;
+    }
+    .btn {
+      width: 80px;
+      height: 25px;
+      font-size: 10px;
+      padding:5px;
+    }
+    .btn:hover {
+        font-size: 10px
+    }
+    .selectModel {
+        width: 160px;
+        height: 25px;
+        font-size: 9px;
+       margin-top: 5px;
+    }
+}
 `}</style>
 
 </>)}

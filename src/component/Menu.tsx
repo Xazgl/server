@@ -18,19 +18,19 @@ export  function Menu() {
          <Link href={'/servicePage'}>СЕРВИС OPEL</Link>
       </li> */}
       <li className="menuEL">
-         <Link href={'/servicePage'}>СЕРВИС OPEL</Link>
+         <Link href={'/servicePage'}><span>СЕРВИС OPEL</span></Link>
       </li>
       <li className="menuEL">
-         <Link href={'/modelPage'}>МОДЕЛИ</Link>
+         <Link href={'/modelPage'}><span>МОДЕЛИ</span></Link>
       </li>
       <li className="menuEL" >
-         <Link href={'/'}>НА ГЛАВНУЮ</Link>
+         <Link href={'/'}><span>НА ГЛАВНУЮ</span></Link>
       </li>
       <li className="menuEL">
-      <Link href={'/contactPage'}>КОНТАКТЫ</Link>
+      <Link href={'/contactPage'}><span>КОНТАКТЫ</span></Link>
       </li>
       <li className="menuEL">
-        <a href="tel:+78442222222">+7(8442)22-22-22</a>
+        <a href="tel:+78442222222"><span>+7(8442)22-22-22</span></a>
       </li>
     </ul>
     
@@ -57,27 +57,38 @@ export  function Menu() {
         align-items:center;
         height: 42px;
       }
-      
-      .menuEL:hover {
-        font-weight: bold;
-        transform: scale(1.05);
-        background-color:black;
-        color:white;
-        -webkit-transform: skewX(-15deg); 
-	      -moz-transform: skewX(-15deg); 
-       	-ms-transform: skewX(-15deg); 
-	      -o-transform: skewX(-15deg); 
-	      transform: skewX(-15deg); 
-
-      }
-
       .menuEL {
         display:flex;
         justify-content:center;
         list-style: none;
         transition: 0.4s linear;
+        position:relative;
       }
-   
+
+      span::after{
+        position:absolute;
+        content:"";
+        width:0%;
+        height:1.7px;
+        background-color:black;
+        left:50%;
+        bottom:-1px;
+        transition:all 0.3s ease-in-out;
+      }
+
+      span:hover {
+        font-weight: bold;
+        cursor:pointer;
+        transform:scale(1.04);
+        transition:0.4s;
+      }
+
+      span:hover:after {
+        cursor:pointer;
+        width:100%;
+        left:0;
+      }
+
       .menuLebel {
         display:flex;
         justify-content:start;
@@ -93,3 +104,8 @@ export  function Menu() {
     `}</style>
   </nav>
 }
+// -webkit-transform: skewX(-15deg); 
+// -moz-transform: skewX(-15deg); 
+//  -ms-transform: skewX(-15deg); 
+// -o-transform: skewX(-15deg); 
+// transform: skewX(-15deg); 

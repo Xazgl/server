@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { Menu } from '../src/component/Menu'
 import { Login } from '../src/component/Login'
 import { MainBanner } from '../src/component/MainBanner'
+import { Video } from '../src/component/Video'
 import { OurAdvantages  } from '../src/component/OurAdvantages'
 import { Model } from '../src/component/Model'
 import  Gallery from '../src/component/Gallery'
@@ -42,6 +43,7 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <Menu />
       <BarMenu />
       <MainBanner />
+      <Video />
       <WeDo />
       {/* <Config setShowModal={setShowModal}/> */}
       <Config2 setShowModal={setShowModal}/>

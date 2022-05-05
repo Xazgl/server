@@ -22,29 +22,29 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
             <div className="container">
               <div className="containerEl" id="n1">
                   <div className="title">Диагностика</div>
-                  <div className="words">Проверка авто по 25+ пунктам.Выявление неисправностей</div>
+                  <div className="words"><span className='span'>Проверка авто по 25+ пунктам.Выявление неисправностей</span></div>
               </div>
               <div className="containerEl" id="n2">
                   <div className="title">Гарантийный ремонт</div>
-                  <div className="words">Ремонт автомобиля по гарантии от производителя</div>
+                  <div className="words"><span className='span'>Ремонт автомобиля по гарантии от производителя</span></div>
               </div>
               <div className="containerEl" id="n3">
                   <div className="title">ТО по регламенту</div>
-                  <div className="words">Пришло время пройти ТО? Запишитесь прямо сейчас!</div>
+                  <div className="words"><span className='span'>Пришло время пройти ТО? Запишитесь прямо сейчас!</span></div>
               </div>
             </div>
             <div className="container" >
               <div className="containerEl" id="n4">
                   <div className="title">Кузовные работы</div>
-                  <div className="words">Ремонт кузовных элементов,сколов, выпрямление вмятин.</div>
+                  <div className="words"><span className='span'>Ремонт кузовных элементов,сколов, выпрямление вмятин.</span></div>
               </div>
               <div className="containerEl" id="n5">
                   <div className="title">Ремонт любой сложности</div>
-                  <div className="words">Ремонт и замена узлов и агрегатов. Оригинальные запчасти.</div>
+                  <div className="words"><span className='span'>Ремонт и замена узлов и агрегатов. Оригинальные запчасти.</span></div>
               </div>
               <div className="containerEl" id="n6">
                   <div className="title">Техобслуживание</div>
-                  <div className="words">Замена масла, фильтров и другие работы.</div>
+                  <div className="words"><span className='span'>Замена масла, фильтров и другие работы.</span></div>
               </div>
             </div>
           <div className="btnDiv">
@@ -86,7 +86,11 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
 #n2 {
     background-image: url('${n2.src}');
     background-position: center center;
@@ -177,22 +181,21 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
 
 .btn {
     margin-top:50px;
+    margin-bottom:20px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 3px;
-    border:none;
     transition: transform.3s ;
     color: #ffffff;
-    background-color: #48484d;
-    margin-bottom:20px;
+    border-color: #000;
+    color: #000;
+    background: 0 0;
     width: 250px;
     height: 50px;
-    font-size: 27px;
+    font-size: 23px;
 }
 
 .btn:hover {
     background-color: #f7ff14;
-    font-size: 28px;
-    border: none;
     font-family: 'Montserrat', sans-serif;
     color:black;
     transform: scale(1.02);

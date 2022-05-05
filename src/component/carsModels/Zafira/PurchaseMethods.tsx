@@ -2,9 +2,10 @@ import u from '/public/images/u.png';
 import credit from '/public/images/credit.png';
 import lizing from '/public/images/lizing.png';
 import price from '/public/images/price.png';
+import { Dispatch, FormEvent, SetStateAction } from 'react';
 
 
-export function PurchaseMethods() {
+export function PurchaseMethods({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
@@ -18,7 +19,7 @@ export function PurchaseMethods() {
           <div className="elem">
              <div className="img"><img className="mini" src={lizing.src}/> </div>
              <div className="title"><h5>Покупка в лизинг</h5></div>
-             <div className="txt">Арконт предлагает простые финансовые решения, которые позволяют Вам приобрести этот автомобиль уже сегодня! Вы получаете не только автомобиль, но и выгодные условия! Предложение распространяется на все модели</div>
+             <div className="txt"><span className='span'>Арконт предлагает простые финансовые решения, которые позволяют Вам приобрести этот автомобиль уже сегодня! Вы получаете не только автомобиль, но и выгодные условия! Предложение распространяется на все модели</span></div>
              <div className="btnDiv">
                    <form onSubmit={showModal}>
                         <button className='btn'>Узнать больше</button>
@@ -27,8 +28,8 @@ export function PurchaseMethods() {
           </div>
           <div className="elem">
              <div className="img"><img className="mini" src={credit.src}/></div>
-             <div className="title"><h5>Покупка в кредит</h5></div>
-             <div className="txt">В дилерских центрах АРКОНТ Вы можете воспользоваться автокредитом, в том числе, на выгодных условиях по программе льготного кредитования.</div>
+             <div className="title"><span className='span'><h5>Покупка в кредит</h5></span></div>
+             <div className="txt"><span className='span'>В дилерских центрах АРКОНТ Вы можете воспользоваться автокредитом, в том числе, на выгодных условиях по программе льготного кредитования.</span></div>
              <div className="btnDiv">
                    <form onSubmit={showModal}>
                         <button className='btn'>Узнать больше</button>
@@ -37,8 +38,8 @@ export function PurchaseMethods() {
           </div>
           <div className="elem">
              <div className="img"><img className="mini" src={price.src}/> </div>
-             <div className="title"><h5>Индивидуальные условия</h5></div>
-             <div className="txt">Вы можете воспользоваться специальными финансовыми продуктами, предназначенными для покупки автомобилей определенных брендов и моделей.</div>
+             <div className="title"><span className='span'><h5>Индивидуальные условия</h5></span></div>
+             <div className="txt"><span className='span'>Вы можете воспользоваться специальными финансовыми продуктами, предназначенными для покупки автомобилей определенных брендов и моделей.</span></div>
              <div className="btnDiv">
                    <form onSubmit={showModal}>
                         <button className='btn'>Узнать больше</button>
@@ -48,6 +49,11 @@ export function PurchaseMethods() {
       </div>
 
         <style jsx>{`
+            .span {
+                  width: 100%;
+                  display: inline-block;
+                  text-align: center;
+            }
             .backgroundBuy{
                 display:flex;
                 justify-content:space-evenly;
@@ -85,8 +91,8 @@ export function PurchaseMethods() {
                 justify-content:center;
                 flex-direction:row;
                 font-size:18px;
-              
             }
+
             .txt{
                 margin-top:5px;
                 display:flex;
@@ -104,10 +110,11 @@ export function PurchaseMethods() {
                   margin-top:30px;
                   font-family: 'Montserrat', sans-serif;
                   border-radius: 3px;
-                  border:none;
                   transition: transform.3s ;
                   color: #ffffff;
-                  background-color: #48484d;
+                  border-color: #000;
+                  color: #000;
+                  background: 0 0;
                   width: 150px;
                   height: 35px;
                   font-size: 15px;
@@ -116,8 +123,9 @@ export function PurchaseMethods() {
 
                 .btn:hover {
                   background-color: #f7ff14;
+                  font-family: 'Montserrat', sans-serif;
+                  color:black;
                   font-size: 16px;
-                  border: none;
                   font-family: 'Montserrat', sans-serif;
                   color:black;
                   transform: scale(1.02);
@@ -142,6 +150,9 @@ export function PurchaseMethods() {
                   height:450px;
                   width:80%;
                   margin-bottom:30px;
+                }
+                .nameBlock{
+                    font-size:25px;
                 }
             }
             @media (max-width: 500px) {
@@ -177,8 +188,12 @@ export function PurchaseMethods() {
                 font-size:10px;
                 width:80%
             }
+            
             }
             @media (max-width: 300px) {
+                .nameBlock{
+                    font-size:16px;
+                }
                 .backgroundBuy{
                   flex-direction:column;
                   align-items: center
@@ -191,10 +206,9 @@ export function PurchaseMethods() {
                   margin-bottom:20px;
                 }
 
-            .mini {
-                height: 100px;
-                
-            }
+                .mini {
+                     height: 100px; 
+                }
             .title {
                 margin-top:5px;
                 display:flex;
@@ -219,6 +233,22 @@ export function PurchaseMethods() {
             .btn:hover {
                 font-size: 13px;
             }
+            }
+            @media (max-width: 200px) {
+                .nameBlock{
+                    font-size:12px;
+                }
+                .elem {
+                    height: 370px;
+                }
+                .btn {
+                  width: 100px;
+                  height: 25px;
+                  font-size: 9px;
+                }
+                .btn:hover {
+                   font-size: 10px;
+                }
             }
         `}</style>
       </>)

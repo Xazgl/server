@@ -87,6 +87,8 @@ export function Modal({showModal, setShowModal}: ModelProps) {
         </div>
 
         <style jsx>{`
+           
+            
             @keyframes modalBackground-open {
                 0% {
                     opacity: 0;
@@ -169,11 +171,11 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                 border-radius: 3px;
                 border:solid;
                 border-width: 1px;
-                border-color:#f7ff14;
+                border-color:black;
                 transition: transform.3s ;
-                color: #e1d9d9;
+                color: black;
                 font-size: 18px;
-                background-color:  rgba(48, 54, 58, 1);
+                background-color: white;
                 width: 180px;
                 height: 40px;
                 font-weight: 400;
@@ -183,13 +185,12 @@ export function Modal({showModal, setShowModal}: ModelProps) {
 
             .btn-modal:hover {
                 background-color: #f7ff14;
-                font-size: 19px;
                 border-width: 1px;
-                border: none;
                 font-family: 'Montserrat', sans-serif;
                 border-radius: 3px;
                 color:black;
-                transform: scale(1.02)
+                transform: scale(1.02) translateY(-7px);
+
             }
 
             #modalTitle {
@@ -197,7 +198,118 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                 font-size:30px;
                 font-family: 'Montserrat';
                 font-weight: bold;
+                width: 100%;
+                display: inline-block;
+                text-align: center;
             }
+            @media (max-width: 1000px) {
+                .modalWindow{
+                height: 360px;
+                width: 400px;
+                }
+                #modalTitle {
+                    font-size:25px;
+                }
+                .btn-modal {
+                font-family: 'Montserrat', sans-serif;
+                border-radius: 3px;
+                border:solid;
+                border-width: 1px;
+                border-color:black;
+                transition: transform.3s ;
+                color: black;
+                font-size: 15px;
+                background-color: white;
+                width: 150px;
+                height: 35px;
+                font-weight: 400;
+                margin-top:20px;
+                font-weight: bold;
+            }
+
+            .btn-modal:hover {
+                background-color: #f7ff14;
+                border-width: 1px;
+                font-family: 'Montserrat', sans-serif;
+                border-radius: 3px;
+                color:black;
+                transform: scale(1.02) translateY(-7px);
+
+            }
+            input {
+                font-size: 16px;
+                height: 35px;
+                width:200px;
+            }
+            :global(.phone) {
+                width:200px;
+                font-size: 16px;
+                height: 35px;
+            }
+        }
+        @media (max-width: 600px) {
+                .modalWindow{
+                height: 300px;
+                width: 350px;
+                }
+                #modalTitle {
+                    font-size:20px;
+                }
+                .btn-modal {
+                font-family: 'Montserrat', sans-serif;
+                border-radius: 3px;
+                border:solid;
+                border-width: 1px;
+                border-color:black;
+                transition: transform.3s ;
+                color: black;
+                font-size: 12px;
+                background-color: white;
+                width: 120px;
+                height: 30px;
+                font-weight: 400;
+                margin-top:10px;
+                font-weight: bold;
+            }
+
+            .btn-modal:hover {
+                background-color: #f7ff14;
+                border-width: 1px;
+                font-family: 'Montserrat', sans-serif;
+                border-radius: 3px;
+                color:black;
+                transform: scale(1.02) translateY(-7px);
+
+            }
+            input {
+                font-size: 14px;
+                height:30px;
+                width:150px;
+            }
+            :global(.phone) {
+                font-size: 14px;
+                height:20px;
+                width:160px;
+            }
+        }
+        @media (max-width: 400px) {
+                .modalWindow{
+                    height: 270px;
+                    width: 220px;
+                }               
+                .mb-3 {
+                   margin-top:20px;
+                }
+                .btn-modal {
+                    font-size: 10px;
+                    background-color: white;
+                    width: 100px;
+                    height: 25px;
+                }
+                #modalTitle {
+                    font-size:15px;
+                }
+        }
       `}
         </style>
     </>

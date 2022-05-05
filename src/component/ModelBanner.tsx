@@ -28,9 +28,10 @@ export function ModelBanner() {
                     background-image: url('${banner.src}');
                     background-repeat: no-repeat;
                     background-size: cover;
-}
+                    padding-top: 42px;
+                    }
 
-                }
+                
                 .title {
                     display:flex;
                     justify-content:center;
@@ -39,7 +40,26 @@ export function ModelBanner() {
                     color:black;
                     font-family: 'Montserrat'; 
                 }
-  
+                @media(max-width: 1000px) {
+                    .MainBanner {
+                        height: 400px;
+                    }
+                }
+                @media(max-width: 700px) {
+                    .MainBanner {
+                        height: 300px;
+                    }
+                }
+                @media(max-width: 500px) {
+                    .MainBanner {
+                        height: 200px;
+                    }
+                }
+                @media(max-width: 350px) {
+                    .MainBanner {
+                        height: 100px;
+                    }
+                }
             `}</style>
         </>
     )

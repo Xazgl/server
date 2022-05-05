@@ -85,7 +85,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
         <div className='titlecontainer'>УСЛУГИ СЕРВИСА</div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant='h4'>Ремонт коробок передач</Typography>
+          <Typography variant='h4' >Ремонт коробок передач</Typography>
         </AccordionSummary>
         <AccordionDetails >
           <Typography>

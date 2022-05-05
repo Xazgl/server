@@ -88,7 +88,30 @@ export function ModalImg({showModal, setShowModal, imgSrc}: ModelProps) {
                 overflow: hidden;
                 background-size:contain;
             }
-
+            @media(max-width: 1100px) {
+                .modalWindow {
+                 height: 400px;
+                  width: 600px;
+                }
+            }
+            @media(max-width: 900px) {
+                .modalWindow {
+                 height: 300px;
+                  width: 400px;
+                }
+            }
+            @media(max-width: 600px) {
+                .modalWindow {
+                 height: 200px;
+                  width: 300px;
+                }
+            }
+            @media(max-width: 350px) {
+                .modalWindow {
+                 height: 100px;
+                  width: 200px;
+                }
+            }
             
       `}
         </style>

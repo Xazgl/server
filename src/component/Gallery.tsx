@@ -24,7 +24,26 @@ export default function Gallery() {
   const [imgSrc, setImgSrc] = useState('')
   return (
     <div className='container'>
-      <Box sx={{ width: 1200, height: 700, overflowY: 'scroll' }}>
+      {/* <Box sx={{ width: 1200, height: 700, overflowY: 'scroll' }}> */}
+      <Box sx={theme => ({
+        width: 1200, height: 700, overflowY: 'scroll' ,
+        [theme.breakpoints.down('xl')]:{
+          width: 1200, height: 700, overflowY: 'scroll' 
+          },
+       [theme.breakpoints.down('lg')]:{
+        width: 900, height: 600, overflowY: 'scroll' 
+        },
+        [theme.breakpoints.down('md')]:{
+          width: 600, height: 400, overflowY: 'scroll' 
+        },
+        [theme.breakpoints.down('sm')]:{
+            width: 250, height: 150, overflowY: 'scroll' 
+        },
+        [theme.breakpoints.down('xs')]:{
+          width: 100, height: 150, overflowY: 'scroll' 
+        }
+       })
+      }>
         <ImageList variant="masonry" cols={3} gap={8}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} >

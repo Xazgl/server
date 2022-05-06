@@ -93,7 +93,7 @@ export function Statistic() {
                     flex-direction:row;
                     font-size:40px;
                     font-weight:bold;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                 }
                 .words {
                     margin-top:10px;
@@ -101,7 +101,7 @@ export function Statistic() {
                     justify-content:center;
                     flex-direction:row;
                     font-size:19px;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     padding:3px;
                 }
                 .table {
@@ -152,7 +152,7 @@ export function Statistic() {
                 }
                 .wordsT {
                     display:flex;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size:25px;
                     font-weight:bold;
                     justify-content:center;

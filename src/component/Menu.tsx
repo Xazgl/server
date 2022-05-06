@@ -42,7 +42,7 @@ export  function Menu() {
 
       ul {
         justify-content: space-evenly; 
-        font-family: 'Montserrat'; 
+        font-family: 'OpelNextW01-Regular'; 
         border-bottom: 1px solid #eaeaea;   
         font-size:18px;
         position: fixed;

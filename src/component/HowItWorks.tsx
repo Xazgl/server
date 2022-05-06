@@ -65,7 +65,7 @@ export function HowItWorks() {
                     font-size:43px;
                     color:yellow;
                     font-weight:bold;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     margin-top:20px;
                 }
                 .row {
@@ -114,7 +114,7 @@ export function HowItWorks() {
                     justify-content:center;
                     color:white;
                     font-size:14px;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     margin-top:40px;
                 }
                 .numeric{

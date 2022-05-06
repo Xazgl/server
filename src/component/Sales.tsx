@@ -64,7 +64,7 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     
     .titleMain{
         display:flex;
-        font-family: 'Montserrat'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         font-size: 35px;
         font-weight: bold;
         justify-content:center;
@@ -175,7 +175,7 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     
     .title {
         display:flex;
-        font-family: 'Montserrat'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         font-size: 25px;
         font-weight: bold;
         justify-content:center;
@@ -186,7 +186,7 @@ export function SalesComponent({ setShowModal, sales }: SalesProps) {
     
     .salesWords {
         display:flex;
-        font-family: 'Montserrat'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         font-size: 18px;
         justify-content:center;
         margin-top:10px;

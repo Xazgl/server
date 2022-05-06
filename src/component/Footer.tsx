@@ -37,7 +37,7 @@ export function Footer() {
       .column {
         display:flex;
         flex-direction:column;
-        font-family: 'Montserrat'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         color:white;
       }
      

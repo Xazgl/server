@@ -39,7 +39,7 @@ export function Map() {
         .containerEl {
             display:flex;
             color:white;
-            font-family: 'Montserrat'; 
+            font-family: 'OpelNextW01-Regular', sans-serif; 
             justify-content:center;
             margin-top:20px;
         }

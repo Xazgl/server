@@ -54,7 +54,7 @@ export function SpecialOffers() {
     display:flex;
     flex-direction:row;
     justify-content:center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size:30px;
     font-weight:bold;
 }
@@ -123,7 +123,7 @@ export function SpecialOffers() {
     flex-direction:row;
     justify-content:center;
     font-size:20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     align-items:center;
 }
 
@@ -135,7 +135,7 @@ export function SpecialOffers() {
 
 .btn {
     margin-top:20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
@@ -151,7 +151,7 @@ export function SpecialOffers() {
     background-color: #f7ff14;
     font-size: 20px;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     color:black;
     transform: scale(1.02);
     font-size: 17px;

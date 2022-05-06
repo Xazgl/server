@@ -315,7 +315,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     flex-direction: column;  
     align-items: center;
     margin-top: 20px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
 }
 .title {
     font-size: 40px;
@@ -334,7 +334,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     font-size: 19px;
     background-color: #f7ff14;
     margin-top: 10px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     border-radius: 5px;
 }
 .selectModel:hover {
@@ -362,7 +362,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 40px;
     font-weight: 300;
 }
@@ -371,7 +371,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 30px;
     color: #65656c;
     font-weight: 100;

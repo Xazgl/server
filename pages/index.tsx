@@ -43,7 +43,7 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <Menu />
       <BarMenu />
       <MainBanner />
-      <Video />
+      {/* <Video /> */}
       <WeDo />
       {/* <Config setShowModal={setShowModal}/> */}
       <Config2 setShowModal={setShowModal}/>

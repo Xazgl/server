@@ -42,7 +42,7 @@ export function MainBanner() {
                     align-items:center;
                     flex-direction:column;
                     color:white;
-                    font-family: 'Montserrat'; 
+                    font-family: 'OpelNextW01-Regular'; 
                     font-size:40px;
                     font-weight: bold;
                 }

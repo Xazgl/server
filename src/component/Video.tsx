@@ -8,15 +8,15 @@ export function Video() {
         <>
             <section className="showcase">
                 <video  autoPlay loop muted >
-                  <source src ="/public/video.mp4"  type="video/mp4" />
+                  <source src ="/video.mp4"  type="video/mp4" />
                 </video>
-                <h1 className="title">АРКОНТ OPEL</h1>
+                <h1 className="title">OPEL</h1>
             </section>
 
             <style jsx>{`
                 .showcase {
                     width: 100%;
-                    height: 600px;
+                    height: 400px;
                     position:relative;  
                     display:flex;
                     justify-content:center;
@@ -24,7 +24,7 @@ export function Video() {
                 }
                 .showcase video {
                     width: 100%;
-                    height:  600px;
+                    height:  400px;
                     position:absolute;  
                     top:0;
                     left:0;
@@ -33,8 +33,8 @@ export function Video() {
                 .title {
                     width: 100%;
                     height: 100%;
-                    font-family: 'Montserrat'; 
-                    font-size: 100px;
+                    font-family: 'OpelNextW01-Regular'; 
+                    font-size: 350px;
                     color:#fff;
                     mix-blend-mode:multiply;
                     background-color:black;

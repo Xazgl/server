@@ -50,14 +50,14 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 }
 
 .word {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     color:white;
     font-size: 60px;
     margin-bottom:150px;
 
 }
 .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
@@ -76,7 +76,7 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 .btn:hover {
     background-color: #f7ff14;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     color:black;
     transform: scale(1.02);
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);

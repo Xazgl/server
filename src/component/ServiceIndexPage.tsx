@@ -67,7 +67,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     display:flex;
                     justify-content:center;
                     flex-direction:row;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size:30px;
                     margin-top:50px;
                     font-weight: bold;
@@ -105,7 +105,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     flex-direction:row;
                     margin-top:30px;
                     justify-content:center;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size:24px;
                     color:white;
                     font-weight: bold;
@@ -117,7 +117,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     display:flex;
                     flex-direction:row;
                     justify-content:center;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     margin-top: 20px;
                     font-size:16px;
                     padding:3px;
@@ -127,7 +127,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     margin-top:50px;
                 }
                 li {
-                    font-family: 'Montserrat', sans-serif; 
+                    font-family: 'OpelNextW01-Regular', sans-serif; 
                     font-size:18px;
                     color:white;
                     list-style-type:none;
@@ -146,7 +146,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                     justify-content: center;
                     display: flex;
                     align-items:center;
-                   font-family: 'Montserrat', sans-serif;
+                   font-family: 'OpelNextW01-Regular', sans-serif;
                    transition: transform.3s ;
                    border-color: yellow;
                    color: yellow;
@@ -162,7 +162,7 @@ export function ServiceIndexPage({ setShowModal }: { setShowModal: Dispatch<SetS
                 }
                .btn:hover {
                  background-color: #f7ff14;
-                 font-family: 'Montserrat', sans-serif;
+                 font-family: 'OpelNextW01-Regular', sans-serif;
                  color:black;
                  transform: scale(1.02);
                  box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);

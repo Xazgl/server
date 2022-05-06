@@ -62,7 +62,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     justify-content:start;
     font-size:55px;
     font-weight: bold;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     color:white;
     margin-top:120px;
   }
@@ -71,7 +71,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     justify-content:start;
     color:white;
     font-size:35px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     margin-bottom:250px;
     font-weight: 300;
   }
@@ -82,7 +82,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
   }
   .btn {
     background:transparent;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size:25px;
     color:white;
     border-radius:5px;

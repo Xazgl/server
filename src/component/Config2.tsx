@@ -564,7 +564,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     flex-direction: column;  
     align-items: center;
     margin-top: 60px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     background:black;
     color:white;
 }
@@ -572,7 +572,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display:flex;
     flex-direction: column;  
     align-items: center;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size: 30px;
     margin-top:30px;
 }
@@ -588,7 +588,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     align-items: center;
     margin-top:50px;
     font-size: 21px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-weight:bold;
 }
 .containerForSelectBuy{
@@ -597,7 +597,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     justify-content:space-evenly; 
     align-items: center;
     font-size: 21px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-weight:bold;
     width:100%
 }
@@ -652,7 +652,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family:'OpelNextW01-Regular', sans-serif;
     font-size: 40px;
     font-weight: 300;
 }
@@ -660,7 +660,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 30px;
     font-weight: 600;
 }
@@ -668,7 +668,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 25px;
     font-weight: 600; 
 }
@@ -676,7 +676,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family:'OpelNextW01-Regular', sans-serif;
     font-size: 50px;
     font-weight: 600; 
 }
@@ -684,7 +684,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 25px;
     color: #65656c;
     font-weight: 100;

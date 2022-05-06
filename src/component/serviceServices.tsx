@@ -85,7 +85,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
         <div className='titlecontainer'>УСЛУГИ СЕРВИСА</div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant='h4' >Ремонт коробок передач</Typography>
+          <Typography variant='h4' sx={{fontFamily:'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт коробок передач</Typography>
         </AccordionSummary>
         <AccordionDetails >
           <Typography>
@@ -103,7 +103,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography sx={{fontFamily: 'Roboto',fontSize:'25px'}}>Ремонт выхлопной системы</Typography>
+          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт выхлопной системы</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -122,7 +122,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
 
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-            <Typography variant='h4'>Ремонт двигателей</Typography>
+            <Typography variant='h4' sx={{fontFamily:'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт двигателей</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -145,7 +145,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
 
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography sx={{fontFamily: 'Roboto',fontSize:'25px'}}>Ремонт ходовой части</Typography>
+          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт ходовой части</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -167,7 +167,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
       </Accordion>
       <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <Typography sx={{fontFamily: 'Roboto',fontSize:'25px'}}>Ремонт систем охлаждения</Typography>
+          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт систем охлаждения</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

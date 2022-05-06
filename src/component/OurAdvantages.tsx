@@ -66,7 +66,7 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     display:flex;
     flex-direction:row;
     justify-content:center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size:30px;
     font-weight:bold;
     margin-bottom:20px;

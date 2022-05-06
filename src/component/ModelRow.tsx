@@ -104,7 +104,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     display:flex;
     flex-direction:row;
     justify-content:center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size:30px;
     font-weight:bold;
 }
@@ -133,7 +133,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     flex-direction:row;
     justify-content:center;
     font-size:23px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     align-items:center;
     font-weight: bold;
 }
@@ -144,7 +144,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     flex-direction:row;
     justify-content:center;
     font-size:17px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     align-items:center;
 }
 
@@ -241,7 +241,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
 
 .btn {
     margin-top:50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-radius: 3px;
     transition: transform.3s ;
     color: #ffffff;
@@ -257,7 +257,7 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
 .btn:hover {
     background-color: #f7ff14;
     font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     color:black;
     transform: scale(1.02);
     font-size: 25px;

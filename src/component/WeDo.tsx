@@ -81,7 +81,7 @@ export function WeDo() {
                     display:flex;
                     justify-content:center;
                     flex-direction:row;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size:30px;
                     margin-top:50px;
                     font-weight: bold;
@@ -169,7 +169,7 @@ export function WeDo() {
                     flex-direction:row;
                     margin-top:30px;
                     justify-content:center;
-                    font-family: 'Montserrat', sans-serif;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     margin-top: 30%;
                     font-size:23px;
                 }

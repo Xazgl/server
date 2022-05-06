@@ -19,18 +19,17 @@ services:
   db:
     env_file:
       - .env
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    image: postgres:latest
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: user12345
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_USER: "${DB_USER}"
       MYSQL_PASSWORD: "${DB_PASS}"
     ports:
        - "5432:5432"
     volumes:
-      - my-datavolume:/var/lib/mysql
+         - data:/var/lib/postgresql/data
 
   adminer:
     image: adminer

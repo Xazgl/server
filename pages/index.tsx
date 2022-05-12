@@ -1,3 +1,4 @@
+ //@ts-ignore
 import type { GetServerSideProps, NextPage } from 'next'
 import { Main } from 'next/document'
 import Head from 'next/head'
@@ -18,7 +19,7 @@ import { Modal } from '../src/component/Modal'
 import { TradeinModal } from '../src/component/ModalTwo'
 import { useState } from 'react'
 import BarMenu from '../src/component/BarMenu'
-import db, { Sales } from '../prisma'
+import db,{ Sales }  from '../prisma'
 import { WeDo } from '../src/component/WeDo'
 import {ServiceIndexPage} from '../src/component/ServiceIndexPage'
 import {HowItWorks} from '../src/component/HowItWorks'

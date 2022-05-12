@@ -5,7 +5,7 @@ services:
     image: testapp
     build:
       context: .
-      dockerfile: ./Docker
+      dockerfile: ./Dockerfile
     restart: always
     environment:
       NODE_ENV: production
@@ -14,7 +14,7 @@ services:
       - 3000:3000
     depends_on:
       - "db"
-    # command: sh -c "./swait-for-it.sh db:5432 && npm start"
+    # command: sh -c "./wait-for-it.sh db:3306 && node app.js"
 
   db:
     env_file:
@@ -22,13 +22,14 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      POSTGRES_USER: dbuser
-      POSTGRES_PASSWORD: user12345
-      POSTGRES_DB: development_db
+      MYSQL_ROOT_PASSWORD: user12345
+      MYSQL_DATABASE: "${DB_NAME}"
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: "${DB_PASS}"
     ports:
        - "5432:5432"
     volumes:
-       - "db-data:/var/lib/postgresql/data:rw"
+         - data:/var/lib/postgresql/data
 
   adminer:
     image: adminer
@@ -39,4 +40,4 @@ services:
       - PMA_ARBITRARY=1
   
 volumes:
-    db-data: {}
+  my-datavolume:

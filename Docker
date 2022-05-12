@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:16.5.0-alpine
 RUN apk add --no-cache bash
 ENV NODE_ENV=production
 WORKDIR /app
@@ -8,7 +8,9 @@ COPY . .
 EXPOSE 3000
 RUN chown -R node /app
 USER node
-RUN npm build
-RUN npx prisma migrate deploy
+RUN chmod +x ./wait-for-it.sh
+RUN ./wait-for-it.sh db:5432
 RUN npx prisma generate
+RUN npx prisma migrate deploy
+RUN npm run build
 CMD ["npm", "start"]

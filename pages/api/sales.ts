@@ -1,5 +1,6 @@
+ //@ts-ignore
 import { NextApiRequest, NextApiResponse } from "next";
-import db, { Sales } from '../../prisma';
+import db  from '../../prisma';
 import nextConnect from 'next-connect';
 import multer from 'multer';
 import { CreateSaleDto } from '../../@types';

@@ -22,7 +22,7 @@ const CrosslandPage: NextPage = () => {
           <BarMenu />
           <BannerCrossland setShowModal={setShowModal} />
           <PurchaseMethods setShowModal={setShowModal} />
-          <TextCrossland  />
+          <TextCrossland setShowModal={setShowModal} />
           <Footer  />
           {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

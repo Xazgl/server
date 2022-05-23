@@ -1,12 +1,12 @@
-import { FormEvent } from 'react'
+
 import img1 from '/public/images/vivaro/1.png'
 import img2 from '/public/images/vivaro/2.png'
 import img3 from '/public/images/vivaro/3.png'
 import img4 from '/public/images/vivaro/4.png'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 
 
-
-export function TextVivaro() {
+export function TextVivaro({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)

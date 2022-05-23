@@ -14,7 +14,8 @@ services:
       - 3000:3000
     depends_on:
       - "db"
-    # command: sh -c "./swait-for-it.sh db:5432 && npm start"
+    # command: sh -c "./wait-for-it.sh db:5432 && npx prisma migrate deploy && npm start"
+    command: "sleep 3 && npx prisma migrate deploy && npm start"
 
   db:
     env_file:

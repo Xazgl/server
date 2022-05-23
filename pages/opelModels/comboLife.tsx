@@ -22,7 +22,7 @@ const ComboLifePage: NextPage = () => {
           <BarMenu />
           <BannerLife setShowModal={setShowModal} />
           <PurchaseMethods setShowModal={setShowModal} />
-          <TextComboLife />
+          <TextComboLife setShowModal={setShowModal} />
           <Footer  />
           {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

@@ -57,6 +57,16 @@ export function SalesAdminComponent({ }: SalesAdminProps) {
     //   useEffect(() => {
     //     if (image) setimageURL(URL.createObjectURL(image))
     //   }, [image])
+    //   useEffect(() => {
+    //     fetch('/api/getimage').then(res => {
+    //         if (res.ok) {
+    //             return res.json()
+    //         }
+    //         setError('')
+    //     }).then(res => {
+    //         setImage(res.src)
+    //     })
+    //   }, [])
     const imageURL = useMemo(() => image ? URL.createObjectURL(image) : '', [image])
 
 

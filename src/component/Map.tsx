@@ -19,13 +19,13 @@ export function Map() {
           <div className="containerEl"><span id="words">Ждем вас по адресу г. Волгоград, ул. Вильнюсская, д. 42</span></div>
         </div>
         <div className="first">
-           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="720" frameborder="0"></iframe>
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="720" frameBorder="0"></iframe>
         </div>
         <div className="second">
-           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="500" frameBorder="0"></iframe>
         </div>
         <div className="three">
-           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ae7bd69df4597c0df1c210c058a53f9001c9e6a459524ac86f7983dd1763f95&amp;source=constructor" width="100%" height="300" frameBorder="0"></iframe>
         </div>
         {/* <script type="text/javascript" charSet="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5d0eb9f3144dba9594c054da1284695fa0ceeaf5f15349948c0309e8fff904c3&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>        */}
         {/* <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff921a257cb510513efadfecac5e0a652b1a5285958f95fd32f604ec25402228&amp;source=constructor" width="995" height="720"></iframe> */}
@@ -50,6 +50,9 @@ export function Map() {
             font-size:20px;
         }
         .second {
+          display:none
+        }
+        .three {
           display:none
         }
         @media(max-width: 900px) {

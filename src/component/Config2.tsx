@@ -380,6 +380,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
             //     console.log(result);            
             // }
         } else if (buyOrService ==="Покупка"){ 
+            //@ts-ignore
             const selectBuy = event.target.buyId.value
             const complect = modelList.find(model => model.id === curModelId)?.complectations.find(comp =>comp.id===complectationlId)?.name
             const res = await fetch('/api/sendmailBuy', {

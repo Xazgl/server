@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Menu.module.css";
 import banner from '/public/images/label.png'
 
-const hundler = (event) => {
+const hundler = (event: React.SyntheticEvent) => {
   console.log('Click');
   event.preventDefault()
 }

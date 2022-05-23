@@ -1,12 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import db from '../../prisma';
 import prisma from '../../prisma';
-import checkCookie from '../../src/services/checkCookie';
+import checkSession from '../../src/services/checkCookie';
 
 export default async function findClient(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'GET') {
         try {
-            const admin = await checkCookie(req)
+            const token = req.cookies['sid']
+            const admin = await checkSession(token)
             if (admin) {
                 const clients = await db.clientTradein.findMany()
                 // debugger

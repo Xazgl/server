@@ -22,7 +22,7 @@ const GrandlandPage: NextPage = () => {
           <BarMenu />
           <BannerGrandland setShowModal={setShowModal} />
           <PurchaseMethods setShowModal={setShowModal} />
-          <TextGrandland />
+          <TextGrandland setShowModal={setShowModal} />
           <Footer  />
           {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

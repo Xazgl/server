@@ -1,9 +1,9 @@
-import { FormEvent } from 'react'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 import banner from '/public/images/vavaro.jpg'
 import miniBanner from '/public/images/vivaroMi.jpg'
 import zafira from '/public/images/models/2.jpg';
 
-export function BannerVivaro() {
+export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()

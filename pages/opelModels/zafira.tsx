@@ -23,7 +23,7 @@ const ZafiraPage: NextPage = () => {
           <BarMenu />
           <BannerZafira setShowModal={setShowModal} />
           <PurchaseMethods setShowModal={setShowModal} />
-          <TextZafira />
+          <TextZafira setShowModal={setShowModal} />
           <Footer  />
           {
         showModal && <Modal showModal={showModal} setShowModal={setShowModal} />

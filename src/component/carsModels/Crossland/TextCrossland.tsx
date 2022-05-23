@@ -1,12 +1,11 @@
-import { FormEvent } from 'react'
 import img1 from '/public/images/crossland/1.png'
 import img2 from '/public/images/crossland/2.png'
 import img3 from '/public/images/crossland/3.jpg'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 
 
 
-
-export function TextCrossland() {
+export function TextCrossland({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)

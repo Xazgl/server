@@ -12,7 +12,7 @@ type SalesProps = {
 
 export function SalesComponent({ setShowModal, sales }: SalesProps) {
   const [curModelId, setCurModelId] = useState(0)
-  function showModal(event: MouseEvent<HTMLDivElement, MouseEvent>) {
+  function showModal(event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) {
     setShowModal(true)
   }
 

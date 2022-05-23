@@ -3,9 +3,9 @@ import banner from '/public/images/modelBannerLife.png'
 import miniBanner from '/public/images/b.jpeg'
 import zafira from '/public/images/models/0.jpg';
 
-export function BannerLife() {
+export function BannerLife({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 
-    function showModal({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
+    function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)
     }

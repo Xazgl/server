@@ -1,4 +1,4 @@
-import { FormEvent } from 'react'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 import img1 from '/public/images/comboLife/1.png'
 import img2 from '/public/images/comboLife/2.jpg'
 import img3 from '/public/images/comboLife/3.png'
@@ -6,7 +6,8 @@ import img4 from '/public/images/comboLife/4.png'
 import img5 from '/public/images/comboLife/5.jpg'
 
 
-export function TextComboLife() {
+
+export function TextComboLife({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)

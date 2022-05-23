@@ -2,10 +2,9 @@ import u from '/public/images/u.png';
 import credit from '/public/images/credit.png';
 import lizing from '/public/images/lizing.png';
 import price from '/public/images/price.png';
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 
-
-export function PurchaseMethods() {
-
+export function PurchaseMethods({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)

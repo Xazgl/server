@@ -1,4 +1,4 @@
-import { FormEvent } from 'react'
+import { Dispatch, FormEvent, SetStateAction } from 'react'
 import img1 from '/public/images/grandland/1.png'
 import img2 from '/public/images//grandland/2.png'
 import img3 from '/public/images/grandland/3.png'
@@ -6,7 +6,7 @@ import img4 from '/public/images//grandland/4.png'
 
 
 
-export function TextGrandland() {
+export function TextGrandland({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
     function showModal(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
         setShowModal(true)

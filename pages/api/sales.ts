@@ -4,6 +4,7 @@ import db  from '../../prisma';
 import nextConnect from 'next-connect';
 import multer from 'multer';
 import { CreateSaleDto } from '../../@types';
+import checkSession from "../../src/services/checkCookie";
 
 const upload = multer({
     storage: multer.diskStorage({
@@ -23,7 +24,14 @@ const apiRoute = nextConnect<NextApiRequest & {file?: Express.Multer.File}, Next
 
 apiRoute.use(upload.single('image'));
 
-apiRoute.post(async (req, res) => {
+apiRoute.post(async (req, res, next) => {
+    const token = req.cookies['sid']
+    const admin = await checkSession(token)
+    if (admin) {
+        return next()
+    }
+    next(new Error('Auth required'))
+}, async (req, res) => {
     const img: string = req.file ? req.file.filename : ''
     const { title, description } = req.body as CreateSaleDto
         try {

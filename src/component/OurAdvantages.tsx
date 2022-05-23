@@ -204,8 +204,8 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
 
 @media(max-width: 1100px) {
     .container{
-     width:800px;
-   }
+        width: 100%;
+    }
    .containerEl{
      width:250px;
      height:210px;
@@ -230,33 +230,33 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
 }
 @media(max-width: 800px) {
     .container{
-        flex-direction: column;
-   }
+     flex-direction: column;
+    }
    .containerEl{
      width:450px;
      height:150px;
      padding:5px;
-   }
+    }
    .titleMain{
     margin-bottom: 0px;
     font-size: 25px;
-   }
+    }
    .title{
     font-size:20px;
-   }
+    }
    .words {
     font-size:18px;
     padding-left:10px;
-   }
+    }
    .btn {
     height: 40px;
     font-size: 20px;
     width: 200px;
     margin-top:20px;
-   }
+    }
    .btn:hover {
     font-size: 21px;
-   }
+    }
 }
 @media(max-width: 540px) {
    .containerEl{

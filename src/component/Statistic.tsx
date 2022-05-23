@@ -179,6 +179,17 @@ export function Statistic() {
                         flex-direction: column;
                     }
                 }
+                @media(max-width:  920px) {
+                    .contentEl:{
+                        width: 100%;
+                    }
+                    .left {
+                        width: 100%;
+                    }
+                    .words {
+                        width: 100%;
+                    }
+                }
                 @media(max-width:  750px) {
                     .background {
                         height: 450px;
@@ -209,6 +220,7 @@ export function Statistic() {
                     .table{
                         margin-top: 0px;
                     }
+                    
                 }
                 @media(max-width:  350px) {
                     .background {

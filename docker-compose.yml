@@ -15,7 +15,7 @@ services:
     depends_on:
       - "db"
     # command: sh -c "./wait-for-it.sh db:5432 && npx prisma migrate deploy && npm start"
-    command: "sleep 3 && npx prisma migrate deploy && npm start"
+    command: sh -c "sleep 3 && npx prisma migrate deploy && npm start"
 
   db:
     env_file:

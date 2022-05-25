@@ -175,14 +175,14 @@ export function TextComboLife({ setShowModal }: { setShowModal: Dispatch<SetStat
 
 .columnName {
     font-size:25px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     margin-top:20px;
     display:flex;
     justify-content:center;
 }
 .columnText{ 
     font-size:16px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     margin-top:30px;
     align-items:center;
     justify-content:center;
@@ -259,7 +259,7 @@ li {
 }
 .title{
     font-size:20px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     align-items:center;
     justify-content:center;
     display:flex;
@@ -269,7 +269,7 @@ li {
 }
 .words{
     font-size:14px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     align-items:center;
     justify-content:center;
     display:flex;

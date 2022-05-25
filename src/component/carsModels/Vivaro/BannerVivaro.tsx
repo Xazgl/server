@@ -76,11 +76,11 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                     justify-content:center;
                     align-items:center;
                     flex-direction:row;
-                    font-family:'Montserrat';
+                    font-family:'OpelNextW01-Regular', sans-serif; 
                     font-size:40px;
                 }
             .t {
-                    font-family:'Montserrat';
+                    font-family:'OpelNextW01-Regular', sans-serif; 
                     font-size:80px;
                     color:white;
             }
@@ -105,7 +105,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                     display:flex;
                     justify-content:center;
                     align-items:center;
-                    font-family:'Montserrat';
+                    font-family:'OpelNextW01-Regular', sans-serif; 
                     color: #888;
                     padding:20px;
           }
@@ -148,11 +148,11 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                 display:flex;
                 flex-direction:row;
                 color:black;
-                font-family:'Montserrat';
+                font-family:'OpelNextW01-Regular', sans-serif; 
           }
           .btn {
                   margin-top:30px;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   border-radius: 3px;
                   transition: transform.3s ;
                   color: #ffffff;
@@ -166,7 +166,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
           }
           .btn:hover {
                   background-color: #f7ff14;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   color:black;
                   transform: scale(1.02);
                   box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
@@ -213,7 +213,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                   display:flex;
                   justify-content:center;
                   flex-direction:row;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   font-size:23px;
                 }
                 .mainName {
@@ -221,12 +221,12 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                    justify-content:center;
                    background:black;
                    color:white;
-                   font-family: 'Montserrat', sans-serif;
+                   font-family: 'OpelNextW01-Regular', sans-serif; 
                    font-size:33px;
                    
                 }
                 .complUl{
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   font-size:16px;
                 }
                 li {
@@ -274,6 +274,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                   }
                   .cont {
                     flex-direction: column;
+                    width:auto;
                   }
                   .content {
                     width: 25%;
@@ -288,7 +289,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                     align-items: center;
                   }
                   .imgBuy {
-                    margin-left: 500px;
+                    margin-left: 0px;
                     background-size: contain;
                   }
                   .btn {
@@ -366,7 +367,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
 
                 @media (max-width: 600px) {
                 .imgBuy {
-                    margin-left: 750px;
+                   
                     background-size: contain;
                     height: 200px;
                   }
@@ -444,7 +445,7 @@ export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetState
                     height: 100px;
                   }
                   .imgBuy{
-                     margin-left: 870px;
+                   
                      background-size: contain;
                      height: 100px;
                   }

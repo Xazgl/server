@@ -19,9 +19,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 },
             })
             let result = await transporter.sendMail({
-                from: '"Заявка на ТО" UriyAPKOHT@yandex.ru',
-                to: 'UriyAPKOHT@yandex.ru',
-                subject: 'Заявка на ТО',
+                from: '"Заявка на Покупку" UriyAPKOHT@yandex.ru',
+                to: 'UriyAPKOHT@yandex.ru,a.morgunova@arkont.ru,verbickij@arkont.ru,gubin@arkont.ru,lukyanov@arkont.ru,rusakova@arkont.ru',
+                subject: 'Заявка на Покупку',
                 text: `Заявка на  ${buyOrService} машины модели ${carModel}  с помощью ${selectBuy}комплектации ${complect}с opel.ru`,
                 html:
                     `Заявка на  ${buyOrService} машины модели ${carModel}  с помощью ${selectBuy}комплектации ${complect}с opel.ru`,

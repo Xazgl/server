@@ -167,7 +167,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
           
 
             .btn-modal {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 border:solid;
                 border-width: 1px;
@@ -186,7 +186,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
             .btn-modal:hover {
                 background-color: #f7ff14;
                 border-width: 1px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 color:black;
                 transform: scale(1.02) translateY(-7px);
@@ -196,7 +196,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
             #modalTitle {
                 color: white;
                 font-size:30px;
-                font-family: 'Montserrat';
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 font-weight: bold;
                 width: 100%;
                 display: inline-block;
@@ -211,7 +211,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                     font-size:25px;
                 }
                 .btn-modal {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 border:solid;
                 border-width: 1px;
@@ -230,7 +230,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
             .btn-modal:hover {
                 background-color: #f7ff14;
                 border-width: 1px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 color:black;
                 transform: scale(1.02) translateY(-7px);
@@ -256,7 +256,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                     font-size:20px;
                 }
                 .btn-modal {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 border:solid;
                 border-width: 1px;
@@ -275,7 +275,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
             .btn-modal:hover {
                 background-color: #f7ff14;
                 border-width: 1px;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 color:black;
                 transform: scale(1.02) translateY(-7px);

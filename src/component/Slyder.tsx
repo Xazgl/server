@@ -84,7 +84,7 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 550,
+                  height: 'auto',
                   display: 'block',
                   maxWidth: 1500,
                   overflow: 'hidden',
@@ -151,7 +151,7 @@ function SwipeableTextMobileStepper() {
     justify-content:center;
     background:black;
     color:white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size:50px;
     padding-top: 42px;
 }

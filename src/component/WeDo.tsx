@@ -45,7 +45,7 @@ export function WeDo() {
              <div className="container" >
                <div className="row">
                    <div className="el" id='yellow' onClick={showModel}>
-                        <div className="title" >Продам автомобили</div>
+                        <div className="title" >Продаем автомобили</div>
                         <div className="words"></div>
                    </div>
                    <div className="el">

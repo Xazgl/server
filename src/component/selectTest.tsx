@@ -408,7 +408,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size: 30px;
     margin-bottom: 80px;
 }
@@ -417,7 +417,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size: 30px;
     margin-bottom: 80px;
     margin-left: 100px;
@@ -427,7 +427,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size: 45px;
     font-weight: 100;
 }
@@ -436,7 +436,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     font-size: 20px;
     color: #65656c;
 }
@@ -460,7 +460,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 }
 
 .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
@@ -479,7 +479,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     background-color: #f7ff14;
     font-size: 20px;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     color:black;
     transform: scale(1.02);
     font-size: 22px

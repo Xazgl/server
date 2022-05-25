@@ -344,7 +344,6 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
     font-family: 'OpelNextW01-Regular', sans-serif;
     color:black;
     transform: scale(1.02);
-    padding: 10px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 
 }
@@ -360,9 +359,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
       height: 50px;
       font-size: 20px;
     }
-    .btn:hover {
-        font-size: 20px
-    }
+   
     .carImg1 {
         width: 500px;
        height: 200px;
@@ -382,9 +379,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
       font-size: 16px;
       padding:5px;
     }
-    .btn:hover {
-        font-size: 16px
-    }
+   
     .carImg1 {
         width: 400px;
        height: 200px;
@@ -419,9 +414,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
       font-size: 12px;
       padding:5px;
     }
-    .btn:hover {
-        font-size: 12px
-    }
+   
     .carImg1 {
         width: 250px;
        height: 150px;
@@ -459,9 +452,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
       font-size: 12px;
       padding:5px;
     }
-    .btn:hover {
-        font-size: 12px
-    }
+    
     .carImg1 {
         width: 150px;
        height: 100px;
@@ -499,9 +490,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
       font-size: 10px;
       padding:5px;
     }
-    .btn:hover {
-        font-size: 10px
-    }
+   
     .selectModel {
         width: 160px;
         height: 25px;

@@ -108,7 +108,7 @@ export function PurchaseMethods({ setShowModal }: { setShowModal: Dispatch<SetSt
             }
             .btn {
                   margin-top:30px;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   border-radius: 3px;
                   transition: transform.3s ;
                   color: #ffffff;
@@ -123,10 +123,10 @@ export function PurchaseMethods({ setShowModal }: { setShowModal: Dispatch<SetSt
 
                 .btn:hover {
                   background-color: #f7ff14;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   color:black;
                   font-size: 16px;
-                  font-family: 'Montserrat', sans-serif;
+                  font-family: 'OpelNextW01-Regular', sans-serif; 
                   color:black;
                   transform: scale(1.02);
                   box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
@@ -136,7 +136,7 @@ export function PurchaseMethods({ setShowModal }: { setShowModal: Dispatch<SetSt
                    justify-content:center;
                    background:black;
                    color:white;
-                   font-family: 'Montserrat', sans-serif;
+                   font-family: 'OpelNextW01-Regular', sans-serif; 
                    font-size:30px;
                 } 
              @media (max-width: 800px) {

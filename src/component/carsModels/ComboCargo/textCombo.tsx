@@ -168,14 +168,14 @@ export function TextCombo({ setShowModal }: { setShowModal: Dispatch<SetStateAct
 
 .columnName {
     font-size:25px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     margin-top:20px;
     display:flex;
     justify-content:center;
 }
 .columnText{ 
     font-size:16px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     margin-top:30px;
     align-items:center;
     justify-content:center;
@@ -250,7 +250,7 @@ export function TextCombo({ setShowModal }: { setShowModal: Dispatch<SetStateAct
 }
 .title{
     font-size:20px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     align-items:center;
     justify-content:center;
     display:flex;
@@ -260,7 +260,7 @@ export function TextCombo({ setShowModal }: { setShowModal: Dispatch<SetStateAct
 }
 .words{
     font-size:14px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     align-items:center;
     justify-content:center;
     display:flex;

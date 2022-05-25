@@ -119,7 +119,7 @@ export function TextZafira({ setShowModal }: { setShowModal: Dispatch<SetStateAc
   
 .columnName {
     font-size:25px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     margin-top:20px;
     display:flex;
     justify-content:center;
@@ -127,7 +127,7 @@ export function TextZafira({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 
 .columnText{ 
     font-size:16px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;  
     margin-top:30px;
 }
 .span1 {

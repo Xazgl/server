@@ -49,6 +49,11 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 //         xs: '20px'
 //       }
 //   },
+  [theme.breakpoints.down('xs')]: {
+    '& .MuiTypography-h4': {
+       fontSize: '15px'
+  }
+  },
   [theme.breakpoints.down('sm')]: {
     '& .MuiTypography-h4': {
         fontSize: '20px'
@@ -103,7 +108,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт выхлопной системы</Typography>
+          <Typography  variant='h4' sx={{fontFamily:'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт выхлопной системы</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -145,7 +150,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
 
       <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
-          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт ходовой части</Typography>
+          <Typography  variant='h4' sx={{fontFamily:'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт ходовой части</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -167,7 +172,7 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
       </Accordion>
       <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-          <Typography sx={{fontFamily: 'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт систем охлаждения</Typography>
+          <Typography  variant='h4' sx={{fontFamily:'OpelNextW01-Regular',fontSize:'25px'}}>Ремонт систем охлаждения</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -212,17 +217,17 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
               justify-content:center;
               margin-bottom:20px;
               font-size:30px;
-              font-family: 'Montserrat';
+              font-family: 'OpelNextW01-Regular', sans-serif; ;
               background-color:black;
               color:white;
           }
           li{
               font-size:18px;
-              font-family: 'Montserrat';
+              font-family: 'OpelNextW01-Regular', sans-serif; ;
               list-style: none;
           }
           .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif; 
     border-radius: 3px;
     border:none;
     transition: transform.3s ;
@@ -238,11 +243,79 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
 
 .btn:hover {
     background-color: #f7ff14;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
+    border: none;;
     color:black;
     transform: scale(1.02);
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
+}
+
+ @media(max-width: 700px) {
+    .titlecontainer{
+      font-size: 25px;
+    }
+    .btn {
+      width: 200px;
+     height: 40px;
+     font-size: 22px;
+     margin-top: 20px;
+    }
+    li {
+      font-size:15px;
+    }
+}
+@media(max-width: 550px) {
+  .container{
+      margin-top: 20px;  
+  }
+  .titlecontainer{
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    .btn {
+      width: 156px;
+      height: 30px;
+      font-size: 19px;
+      margin-top: 10px;
+    }
+    li {
+      font-size:14px;
+    }
+}
+@media(max-width: 380px) {
+  .container{
+      margin-top: 10px;  
+  }
+  .titlecontainer{
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .btn {
+      width: 123px;
+      height: 28px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    li {
+      font-size:14px;
+    }
+}
+@media(max-width: 300px) {
+  .container{
+      margin-top: 10px;  
+  }
+  .titlecontainer{
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .btn {
+      width: 99px;
+      height: 21px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    li {
+      font-size:12px;
+    }
 }
       `}</style>
     </div>

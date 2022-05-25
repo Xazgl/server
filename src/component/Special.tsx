@@ -23,6 +23,7 @@ export function Special() {
                 align-items:center;
                 width:100%;
                 height:600px;
+                font-family:'OpelNextW01-Regular', sans-serif; 
             }
           
             .column-left{

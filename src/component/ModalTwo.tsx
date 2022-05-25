@@ -191,7 +191,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             }
 
             .btn-modal {
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 border:solid;
                 border-width: 1px;
@@ -212,7 +212,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                 font-size: 19px;
                 border-width: 1px;
                 border: none;
-                font-family: 'Montserrat', sans-serif;
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 border-radius: 3px;
                 color:black;
                 transform: scale(1.02)
@@ -221,7 +221,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             #modalTitle {
                 color: white;
                 font-size:30px;
-                font-family: 'Montserrat';
+                font-family: 'OpelNextW01-Regular', sans-serif; 
                 font-weight: bold;
             }
         @media(max-width: 700px) {

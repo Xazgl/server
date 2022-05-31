@@ -110,6 +110,7 @@ export function WeDo() {
                     border:black;
                     flex-direction:column;
                     transition: transform.3s ;
+                    justify-content:center;
                 }
                 .el:hover{
                     transform: scale(1.01);
@@ -167,10 +168,8 @@ export function WeDo() {
                 .title{
                     display:flex;
                     flex-direction:row;
-                    margin-top:30px;
                     justify-content:center;
                     font-family: 'OpelNextW01-Regular', sans-serif;
-                    margin-top: 30%;
                     font-size:23px;
                 }
 

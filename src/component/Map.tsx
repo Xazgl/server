@@ -15,7 +15,7 @@ export function Map() {
     return (
         <>
        <div className="container">
-          <div className="containerEl"><span id="title">Схема проезда  OPEL АРКОНТ</span></div>
+          <div className="containerEl" id="main"><span id="title">Схема проезда  OPEL АРКОНТ</span></div>
           <div className="containerEl"><span id="words">Ждем вас по адресу г. Волгоград, ул. Вильнюсская, д. 42</span></div>
         </div>
         <div className="first">
@@ -35,6 +35,7 @@ export function Map() {
             flex-direction:column;
             justify-content:center;
             background-color:black;
+            
         }
         .containerEl {
             display:flex;
@@ -48,6 +49,9 @@ export function Map() {
         }
         #words {
             font-size:20px;
+        }
+        #main {
+          margin-top:42px;
         }
         .second {
           display:none

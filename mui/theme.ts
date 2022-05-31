@@ -6,6 +6,9 @@ const theme = createTheme({
   palette: {
     mode: 'light'
   },
+  typography: {
+    fontFamily: 'OpelNextW01-Regular'
+  }
   // // breakpoints: {
   // //   values: {
   // //     sm: 

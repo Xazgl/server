@@ -62,7 +62,7 @@ export function Service({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     border:none;
     transition: transform.3s ;
     color: #ffffff;
-    background-color: #48484d;
+    background-color: transparent;
     width: 320px;
     height: 55px;
     font-size: 35px;

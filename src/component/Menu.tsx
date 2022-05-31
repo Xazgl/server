@@ -56,10 +56,18 @@ export  function Menu() {
         display:flex;
         align-items:center;
         height: 42px;
+        padding-right: 112px;
+      }
+      li {
+        font-family: 'OpelNextW01-Regular'; 
+      }
+      span{
+        font-family: 'OpelNextW01-Regular'; 
       }
       .menuEL {
         display:flex;
         justify-content:center;
+        font-family: 'OpelNextW01-Regular'; 
         list-style: none;
         transition: 0.4s linear;
         position:relative;

@@ -15,8 +15,8 @@ export function MainBanner() {
 
                 {/* <img  className="ImgBanner" src={banner.src} alt="opel" /> */}
                 {/* <div  className="ImgBanner2" /> */}
-                    <div className="title">
-                       <div>АРКОНТ ОФИЦИАЛЬНЫЙ ДИЛЕР OPEL</div>
+                    <div className="cont">
+                        <div className="title">АРКОНТ ОФИЦИАЛЬНЫЙ ДИЛЕР OPEL</div>
                         <div className="titleMini">
                           <div>Ждем Вас на Спартановке</div>
                           <div>Ежедневно с 8:00 до 20:00</div>
@@ -36,15 +36,23 @@ export function MainBanner() {
                     background-image: url('${banner.src}');
                     
                 }
-                .title {
+                .cont {
                     display:flex;
                     justify-content:center;
                     align-items:center;
                     flex-direction:column;
-                    color:white;
+                    font-family: 'OpelNextW01-Regular'; 
+                    
+                }
+                .title {
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    flex-direction:row;
                     font-family: 'OpelNextW01-Regular'; 
                     font-size:40px;
                     font-weight: bold;
+                    color:white;
                 }
                 .titleMini {
                     display:flex;

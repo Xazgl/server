@@ -233,10 +233,10 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
     transition: transform.3s ;
     color: #ffffff;
     background-color: #48484d;
-    width: 290px;
-    height: 50px;
-    font-size: 30px;
-    margin-top:30px;
+    width: 180px;
+    height: 36px;
+    font-size: 25px;
+    margin-top: 30px;
 }
 
 
@@ -254,8 +254,6 @@ export default function ServiceServices({ setShowModal }: { setShowModal: Dispat
       font-size: 25px;
     }
     .btn {
-      width: 200px;
-     height: 40px;
      font-size: 22px;
      margin-top: 20px;
     }

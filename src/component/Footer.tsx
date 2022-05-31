@@ -1,4 +1,5 @@
 import brend from '/public/images/op.svg';
+import Link from 'next/link';
 
 export function Footer() {
     return (
@@ -8,12 +9,27 @@ export function Footer() {
                    <div className="label"></div> 
                </div>
                <div className="column">
-                  <div className="el">Официальный дилер автомобилей OPEL в Волгограде</div>  
-                  <div className="el">г. Волгоград, ул. Вильнюсская, д. 42</div>  
+                <Link href="/">
+                  <div className="el">Официальный дилер OPEL АРКОНТ</div>  
+                </Link>
+                  <div className="el">г.Волгоград, ул.Вильнюсская, д.42</div>  
+               
                 </div> 
+
                 <div className="column">
-                    <div className="el">+7(8442)22-22-22</div>
-                    <div className="el">E-mail opel@arkont.ru</div>
+                <Link href="/servicePage">
+                  <div className="el">Сервис Арконт</div> 
+                </Link>   
+                <Link href="arkont.ru/owners/diskontnaia-programma-special">
+                  <div className="el">АРКОНТ SPECIAL</div>
+                </Link>       
+                </div> 
+
+                <div className="column">
+                  <Link href="/modelPage">
+                    <div className="el">Модельный ряд</div>
+                  </Link>    
+                  <div className="el">+7(8442)22-22-22</div>
                 </div>     
             </div>
 
@@ -46,9 +62,12 @@ export function Footer() {
         justify-content:row;
         justify-content:center;
         margin-top:20px;
-       
+        transition: transform.3s ;
       }
-
+      .el:hover {
+        transform: scale(1.02);
+        color:yellow;
+      }
       @media(max-width: 900px) {
             .el {
                 font-size:14px;

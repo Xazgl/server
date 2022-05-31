@@ -404,7 +404,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                 <div className='el'><span className='title'>Поможем вам сделать выбор</span></div>
             </div>
           
-            <div className='containerForMiniTitle'>Выберите вид услуги:</div>
+            <div className='containerForMiniTitle'>Выберите вид услуги</div>
             {/* <form onSubmit={async (event) => {
                 event.preventDefault()
                 // @ts-ignore
@@ -416,7 +416,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                 <input name='username' />
                 <input type='submit' />
             </form> */}
-            <div className='containerForSelectMain'>
+            <div className='containerForSelectMain' id="select">
                 <div className='box1'>
                     <label htmlFor="checkbox1">Покупка авто</label>
                     <input type="radio" className='check' id="checkbox1" value="Покупка" name="mainId" checked={mainId === 'Покупка'}
@@ -531,7 +531,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                     {/* Если выбрали сервис, код ниже */}
 
 
-                    {mainId === 'Ремонт' && typeOfServicelId!==0 && complectationlId!==0 &&
+                    {mainId === 'Ремонт' && typeOfServicelId!==0 && curIdService!==0 &&
                         <div className="ColumCard">
                           <div className="titleCardService">{serviceList.find(model => model.id === curIdService)?.name}</div> 
                             {/* <div className="miniTitleCard">{modelList.find(model => model.id === curIdService)}</div> */}
@@ -582,6 +582,14 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 40px;
     margin-top:20px;
 }
+#select {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+#checkbox2 {
+    margin-left:2px;
+}
 .containerForSelectMain{
     display:flex;
     flex-direction: row;
@@ -605,7 +613,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 #buy{
     margin-top:25px;
     width: 100%;
-
+    flex-direction: column;
 }
 .box1{
     display:flex;
@@ -662,16 +670,16 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     justify-content: center;
     align-items: center;
     font-family: 'OpelNextW01-Regular', sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 27px;
+    font-weight: 300;
 }
 #service {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-family: 'OpelNextW01-Regular', sans-serif;
-    font-size: 25px;
-    font-weight: 600; 
+    font-size: 20px;
+    font-weight: 300; 
 }
 #servicePrice{
     display: inline-flex;
@@ -725,14 +733,14 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 21px;
 }
 
 .inColum1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular'; 
     font-size: 30px;
     margin-bottom: 80px;
     margin-left: 100px;
@@ -742,7 +750,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular'; 
     font-size: 25px;
     font-weight: 400;
 }
@@ -751,7 +759,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: inline-flex;
     justify-content: center;
     align-items: baseline;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular'; 
     font-size: 20px;
     color: #65656c;
 }
@@ -780,30 +788,29 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 }
 
 .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular'; 
     border-radius: 3px;
     transition: transform.3s ;
     color: #ffffff;
     border-color: #000;
     color: #000;
     background: 0 0;
-    width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
     height: 50px;
-    font-size: 20px;
-    padding: 12px;
+    font-size: 23px;
 }
 
 
 
 .btn:hover {
     background-color: #f7ff14;
-    font-size: 20px;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+
     color:black;
     transform: scale(1.02);
-    font-size: 22px
-    padding: 10px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 
 }

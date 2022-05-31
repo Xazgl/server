@@ -179,7 +179,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
 
             </div>
                 <div className="ColumCard">
-                    <div className="titleCard">{serviceList.find(model => model.id === curIdService)?.name}</div>
+                    {/*<div className="titleCard">{serviceList.find(model => model.id === curIdService)?.name}</div>*/}
                     {/* <div className="miniTitleCard">{modelList.find(model => model.id === curIdService)}</div> */}
                     <div className="carImg1"></div>
                     <div className="inColum">
@@ -209,7 +209,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
     display:flex;
     flex-direction: column;
     justify-content:center;
-    margin-top:50px;
+    margin-top:25px;
     align-items: center;
 }
 .selectModel {
@@ -263,8 +263,8 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
 
 .carImg1 {
     display: flex;
-    width: 600px;
-    height: 250px;
+    width: 459px;
+    height: 202px;
     background-image: url('${imgCar}');
     background-size: contain;
     background-repeat: no-repeat
@@ -283,7 +283,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
     justify-content: center;
     font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .inColum1 {
     display: flex;
@@ -299,7 +299,7 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
     justify-content: center;
     align-items: baseline;
     font-family: 'OpelNextW01-Regular', sans-serif;
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 100;
 }
 .row1 {

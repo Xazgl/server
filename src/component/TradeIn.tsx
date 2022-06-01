@@ -116,7 +116,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
   }
   @media(max-width: 900px ){
     .background {
-      height:400px;
+      height:300px;
     }
     .content {
       margin-left:80px;
@@ -153,6 +153,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     }
     .title {
       font-size:25px;
+      margin-top:1px;
     }
     .words {
       font-size:14px;
@@ -208,7 +209,7 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
       font-size: 10px;
     }
   }
-  @media(max-width: 360px ){
+  @media(max-width: 370px ){
     .background {
       height:200px;
     }
@@ -221,23 +222,23 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
     }
     .title {
       margin-top: 20px;
-      font-size:15px;
+      font-size:25px;
     }
     .words {
-      font-size:10px;
+      font-size:17px;
       margin-bottom:70px;
       width:200px;
     }
     .btnDiv {
-      width: 130px;
+      width: 200px;
     }
     .btn {
-      font-size: 9px;
-      width: 130px;
-      height: 25px;
+      font-size: 15px;
+      width: 200px;
+      height: 30px;
     }
     .btn:hover {
-      font-size: 9px;
+      font-size: 15px;
     }
     
   }
@@ -260,17 +261,17 @@ export function TradeIn({setShowTradeInModal}: TradeInProps) {
       width:150px;
     }
     .btnDiv{
-      width: 100px;
+      width: 150px;
     }
     .btn {
-      font-size: 7px;
-      width: 100px;
-      height: 20px;
+      font-size: 12px;
+      width: 150px;
+      height: 25px;
       border: 1px solid yellow;
       border-radius:2px;
     }
     .btn:hover {
-      font-size: 7px;
+      font-size: 12px;
     }
   }
 

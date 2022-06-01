@@ -59,10 +59,10 @@ export function MainBanner() {
                     justify-content:center;
                     flex-direction:column;
                     color:white;
-                    margin-top:100px;
-                    font-family: 'Montserrat'; 
-                    font-size:20px;
-                    font-weight: bold;
+                    margin-top:30px;
+                    font-family: 'OpelNextW01-Regular'; 
+                    font-size:30px;
+                    font-weight: 300;
                 }
                 .ImgBanner2{
                    /* overflow: hidden;
@@ -81,6 +81,9 @@ export function MainBanner() {
                 @media(max-width: 900px) {
                     .title { 
                         font-size:30px;
+                    }
+                    .titleMini {
+                        font-size:20px;
                     }
                 }
                 @media(max-width: 720px) {

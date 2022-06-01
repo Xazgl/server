@@ -372,7 +372,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     justify-content: center;
     align-items: center;
     font-family: 'OpelNextW01-Regular', sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     color: #65656c;
     font-weight: 100;
 }
@@ -387,8 +387,8 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 }
 .carImg1 {
     display: flex;
-    width: 500px;
-    height: 250px;
+    width: 400px;
+    height: 200px;
     background-image: url('${imgCar}');
     background-size: contain;
     background-repeat: no-repeat;
@@ -428,7 +428,7 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
     justify-content: center;
     align-items: baseline;
     font-family: 'OpelNextW01-Regular', sans-serif; 
-    font-size: 45px;
+    font-size: 33px;
     font-weight: 100;
 }
 
@@ -460,33 +460,27 @@ export function SelectTest({ setShowModal }: { setShowModal: Dispatch<SetStateAc
 }
 
 .btn {
-    font-family: 'OpelNextW01-Regular', sans-serif; 
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-radius: 3px;
-    border:none;
     transition: transform.3s ;
     color: #ffffff;
-    margin-bottom:20px;
-    background-color: #48484d;
-    width: 220px;
+    border-color: #000;
+    color: #000;
+    background: 0 0;
+    width: 250px;
     height: 50px;
-    font-size: 20px;
-    padding: 12px;
+    font-size: 25px;
+    margin-bottom:20px;
 }
-
-
 
 .btn:hover {
     background-color: #f7ff14;
-    font-size: 20px;
-    border: none;
     font-family: 'OpelNextW01-Regular', sans-serif; 
     color:black;
     transform: scale(1.02);
-    font-size: 22px
-    padding: 10px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
-
 }
+
 @media(max-width: 1250px) {
     .carImg1{
         width: 500px;

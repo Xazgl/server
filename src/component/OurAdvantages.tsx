@@ -219,9 +219,7 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
     padding-left:10px;
    }
    .btn {
-    height: 45px;
     font-size: 25px;
-    width: 170px;
     margin-top:30px;
    }
    .btn:hover {
@@ -277,12 +275,12 @@ export function OurAdvantages({ setShowModal }: { setShowModal: Dispatch<SetStat
    }
    .btn {
     height: 40px;
-    font-size: 20px;
+    font-size: 17px;
     width: 160px;
     margin-top:20px;
    }
    .btn:hover {
-    font-size: 21px;
+    font-size: 18px;
    }
 }
 @media(max-width: 340px) {

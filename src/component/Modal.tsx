@@ -139,7 +139,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                 height: 400px;
                 width: 500px;
                 align-items: center;
-                background-color: rgba(48, 54, 58, 1);
+                background-color: #111111d6;
                 flex-direction: column;
                 border-radius: 3px;
                 box-shadow: 0px 3px 11px 3px #000000bd;
@@ -175,7 +175,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                 transition: transform.3s ;
                 color: black;
                 font-size: 18px;
-                background-color: white;
+                background-color: #f7ff14c7;
                 width: 180px;
                 height: 40px;
                 font-weight: 400;

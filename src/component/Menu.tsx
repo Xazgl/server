@@ -56,7 +56,7 @@ export  function Menu() {
         display:flex;
         align-items:center;
         height: 42px;
-        padding-right: 112px;
+        padding-right: 180px;
       }
       li {
         font-family: 'OpelNextW01-Regular'; 

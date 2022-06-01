@@ -184,7 +184,7 @@ export function WeDo() {
                     }
                     .title{
                         font-size:18px;
-                        margin-top: 40%;
+                        
                     }
                 }
                 @media(max-width: 720px) {
@@ -201,7 +201,7 @@ export function WeDo() {
                     }
                     .title{
                         font-size:14px;
-                        margin-top: 40%;
+                        
                     }
                 }
                 @media(max-width: 540px) {
@@ -220,7 +220,7 @@ export function WeDo() {
                     }
                     .title{
                         font-size:14px;
-                        margin-top: 30%;
+                        
                     }
                 }
                 @media(max-width: 350px) {
@@ -241,7 +241,7 @@ export function WeDo() {
                 @media(max-width: 250px) {
                     .title{
                         font-size:12px;
-                        margin-top: 30%;
+                      
                     }
                 }
             `}</style>

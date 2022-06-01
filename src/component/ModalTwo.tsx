@@ -96,7 +96,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                         <div className="mb-3">
                             <label htmlFor="carModal" className="form-label"></label>
                             <input type="text" className="carModal" id="carModal" name="carModal" 
-                            placeholder="KIA RIO" 
+                            placeholder="Opel Zafira" 
                             required
                             value={carModal}
                             onChange={event => setCarModal(event.target.value)} />
@@ -164,7 +164,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                 height: 500px;
                 width: 380px;
                 align-items: center;
-                background-color: rgba(48, 54, 58, 1);
+                background-color: #111111d6;
                 flex-direction: column;
                 border-radius: 3px;
                 box-shadow: 0px 3px 11px 3px #000000bd;
@@ -188,6 +188,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
             input {
                 font-size: 18px;
                 height: 35px;
+                width:230px;
             }
 
             .btn-modal {
@@ -242,7 +243,13 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
           input {
                 font-size: 15px;
                 height: 35px;
+                width:160
           }
+          :global(.phone) {
+            font-size: 15px;
+                height: 35px;
+                width:160
+            }
           .modalWindow {
             height: 460px;
             width: 300px;
@@ -263,10 +270,17 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
           .btn-modal:hover {
             font-size: 16px;
           }
+         
           input {
                 font-size: 13px;
                 height: 20px;
+                width:110
           }
+          :global(.phone) {
+            font-size: 15px;
+                height: 20px;
+                width: 110px;
+            }
           .modalWindow {
             height: 370px;
             width: 230px;

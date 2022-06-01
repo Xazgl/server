@@ -252,19 +252,18 @@ export function ModelRow({ setShowModal }: { setShowModal: Dispatch<SetStateActi
     height: 50px;
     font-size: 25px;
     margin-bottom:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .btn:hover {
     background-color: #f7ff14;
-    font-size: 20px;
     font-family: 'OpelNextW01-Regular', sans-serif;
     color:black;
     transform: scale(1.02);
-    font-size: 25px;
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
 }    
-
-
 
 @media(max-width: 1200px) {
     .container{

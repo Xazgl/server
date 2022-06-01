@@ -488,8 +488,8 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                     <div className="titleCard">{modelList.find(model => model.id === curModelId)?.name}</div>
                     <div className="miniTitleCard">{modelList.find(model => model.id === curModelId)?.bodyType}</div>
                     <div className="carImg1"></div>
-                    {   buyId !== '' &&
-                        mainId === 'Покупка' && <div className="twoROW">
+                    {   buyId !== '' && mainId === 'Покупка' && curModelId !== 0 && complectationlId !== 0 &&
+                    <div className="twoROW">
                             <div className="twoColumCard">
                                 <div className="inColum">
                                     <div className="row3"> <img className="mini" src={y.src} /> </div>
@@ -521,7 +521,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
                         
                     }
                     {   
-                      buyId !== '' && curModelId !== 0 && 
+                      buyId !== '' && mainId === 'Покупка' && curModelId !== 0  && complectationlId !== 0 &&
                           <div className="btnDiv">
                                 <button className="btn" type="submit">Отправить заявку</button>
                             </div>
@@ -533,7 +533,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 
                     {mainId === 'Ремонт' && typeOfServicelId!==0 && curIdService!==0 &&
                         <div className="ColumCard">
-                          <div className="titleCardService">{serviceList.find(model => model.id === curIdService)?.name}</div> 
+                          {/* <div className="titleCardService">{serviceList.find(model => model.id === curIdService)?.name}</div>  */}
                             {/* <div className="miniTitleCard">{modelList.find(model => model.id === curIdService)}</div> */}
                             <div className="carImg2"></div>
                             <div className="inColum">
@@ -588,7 +588,10 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     margin-top: 20px;
 }
 #checkbox2 {
-    margin-left:2px;
+    margin-left:14px;
+}
+#checkbox4 {
+    margin-left:27px;
 }
 .containerForSelectMain{
     display:flex;
@@ -602,8 +605,8 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
 }
 .containerForSelectBuy{
     display:flex;
-    flex-direction: row;
-    justify-content:space-evenly; 
+    flex-direction: column;
+    justify-content:center; 
     align-items: center;
     font-size: 21px;
     font-family: 'OpelNextW01-Regular', sans-serif; 
@@ -714,6 +717,10 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     background-image: url('${imgCar}');
     background-size: contain;
     background-repeat: no-repeat;
+    transition: 1s; 
+    animation: show 3s 1; 
+    animation-fill-mode: forwards; 
+    animation-delay: 1s; 
 }
 
 .twoROW {
@@ -742,7 +749,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     justify-content: center;
     font-family: 'OpelNextW01-Regular'; 
     font-size: 30px;
-    margin-bottom: 80px;
+    margin-bottom: 21px;
     margin-left: 100px;
 }
 
@@ -928,6 +935,12 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     .twoColumCard {
         display:none;
     }    
+    #checkbox2 {
+       margin-left:12px;
+    }
+    #checkbox4 {
+       margin-left:21px;
+    }
 }
 @media(max-width: 400px) {
     .title {
@@ -968,6 +981,12 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     #servicePrice {
         font-size: 22px;
         margin-top:5px;
+    }
+    #checkbox4 {
+       margin-left:20px;
+    }
+    #checkbox2 {
+       margin-left:10px;
     }
   }
   @media(max-width: 300px) {

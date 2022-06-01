@@ -8,7 +8,7 @@ export function Video() {
         <>
             <section className="showcase">
                 <video  autoPlay loop muted >
-                  <source src ="/video.mp4"  type="video/mp4" />
+                  <source src ="/video.mp4#t=12"  type="video/mp4" />
                 </video>
                 <h1 className="title">OPEL</h1>
             </section>
@@ -45,7 +45,10 @@ export function Video() {
                 
 
              
-                @media(max-width: 900px) {
+                @media(max-width: 1000px) {
+                    .showcase {
+                        display:none;
+                    }
                     .title { 
                         font-size:30px;
                     }

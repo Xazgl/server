@@ -35,7 +35,7 @@ const AdminBar = () => {
   };
 
   return (
-    <AppBar position="static"  sx={{ backgroundColor:'black',color:'yellow'} }>
+    <AppBar position="static"  sx={{ backgroundColor:'black',color:'yellow',marginTop:'51px'} }>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -79,7 +79,7 @@ const AdminBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page.href} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
+                  <Typography textAlign="center" marginLeft="10px">
                     <Link href={page.href}>{page.text}</Link>
                   </Typography>
                 </MenuItem>

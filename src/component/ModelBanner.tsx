@@ -1,4 +1,4 @@
-import banner from '/public/images/modelBanner.jpg'
+import banner from '/public/images/modelBanner.webp'
 
 export function ModelBanner() {
     return (

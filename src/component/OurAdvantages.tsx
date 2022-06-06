@@ -1,9 +1,9 @@
 import { Dispatch, FormEvent, SetStateAction, useMemo, useState } from "react"
-import n1 from '/public/images/a71.png'
-import n2 from '/public/images/a72.png'
-import n3 from '/public/images/a73.png'
+import n1 from '/public/images/a71.webp'
+import n2 from '/public/images/a72.webp'
+import n3 from '/public/images/a73.webp'
 import n4 from '/public/images/a74.png'
-import n5 from '/public/images/a75.png'
+import n5 from '/public/images/a75.webp'
 
 
 

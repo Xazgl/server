@@ -41,7 +41,7 @@ export function MainBanner() {
                     justify-content:center;
                     align-items:center;
                     flex-direction:column;
-                    font-family: 'OpelNextW01-Regular'; 
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     
                 }
                 .title {
@@ -49,8 +49,8 @@ export function MainBanner() {
                     justify-content:center;
                     align-items:center;
                     flex-direction:row;
-                    font-family: 'OpelNextW01-Regular'; 
-                    font-size:40px;
+                    font-family: 'OpelNextW01-Regular', sans-serif;
+                    font-size:55px;
                     font-weight: bold;
                     color:white;
                 }
@@ -60,7 +60,7 @@ export function MainBanner() {
                     flex-direction:column;
                     color:white;
                     margin-top:30px;
-                    font-family: 'OpelNextW01-Regular'; 
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size:30px;
                     font-weight: 300;
                 }

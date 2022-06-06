@@ -50,7 +50,7 @@ const Home: NextPage<{ sales: Sales[] }> = ({ sales }) => {
       <ServiceIndexPage setShowModal={setShowModal} />
       {/* <BottomMainManner /> */}
       <OurAdvantages   setShowModal={setShowModal}/>
-      <SalesComponent sales={sales} setShowModal={setShowModal} />
+      {/* <SalesComponent sales={sales} setShowModal={setShowModal} /> */}
       <ModelRow  setShowModal={setShowModal}/>
       <HowItWorks />
       <Statistic />

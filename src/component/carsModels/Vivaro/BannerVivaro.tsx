@@ -1,7 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
-import banner from '/public/images/vavaro.jpg'
-import miniBanner from '/public/images/vivaroMi.jpg'
-import zafira from '/public/images/models/2.jpg';
+import banner from '/public/images/vavaro.webp'
+import miniBanner from '/public/images/vivaroMi.webp'
+import zafira from '/public/images/models/2.webp';
 
 export function BannerVivaro({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 

@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 secure: true,
                 auth: {
                     user: 'UriyAPKOHT@yandex.ru',
-                    pass: 'hhioyggtvmasygyq',
+                    pass: 'sgqwqfsmmnajkskr',
                 },
             })
             let result = await transporter.sendMail({
@@ -34,6 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             // }})
             res.send(result);
         } catch (error) {
+           
             res.status(500).send({ message: "Ошибка сервера" })
         }
     } else {

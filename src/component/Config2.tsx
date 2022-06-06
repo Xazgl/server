@@ -1,15 +1,15 @@
-import y from '/public/images/y.png';
-import d from '/public/images/d.png';
-import t from '/public/images/t.png';
-import u from '/public/images/u.png';
+import y from '/public/images/y.webp';
+import d from '/public/images/d.webp';
+import t from '/public/images/t.webp';
+import u from '/public/images/u.webp';
 import crosslandImg from '/public/images/miniCrossland.jpg';
 import zafiraImg from '/public/images/miniZafira.png';
-import comboCargo from '/public/images/models/4.jpg';
-import comboLife from '/public/images/models/0.jpg';
-import zafira from '/public/images/models/3.jpg';
-import vivaro from '/public/images/models/2.jpg';
-import crossland from '/public/images/models/1.jpg';
-import granlandX from '/public/images/models/5.jpg';
+import comboCargo from '/public/images/models/4.webp';
+import comboLife from '/public/images/models/0.webp';
+import zafira from '/public/images/models/3.webp';
+import vivaro from '/public/images/models/2.webp';
+import crossland from '/public/images/models/1.webp';
+import granlandX from '/public/images/models/5.webp';
 
 import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useMemo, useState } from "react"
 import { post } from '../services/fetcher';
@@ -559,7 +559,15 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
             </div>
             </form>
 
-            <style jsx>{`
+<style jsx>{`
+@keyframes show-on {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .containerForTitle{
     display:flex;
     flex-direction: column;  
@@ -611,7 +619,8 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 21px;
     font-family: 'OpelNextW01-Regular', sans-serif; 
     font-weight:bold;
-    width:100%
+    width:100%;
+    animation: show-on 1s;
 }
 #buy{
     margin-top:25px;
@@ -629,6 +638,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    animation: show-on 1s;
 }
 .selectModel {
     width: 330px;
@@ -636,8 +646,9 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 19px;
     background-color: #f7ff14;
     margin-top: 20px;
-    font-family: 'Montserrat'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-radius: 5px;
+    animation: show-on 1s;
 }
 .selectModel:hover {
     background-color: black;
@@ -649,7 +660,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     flex-direction: row;
     margin-top:20px;
     justify-content: space-around;
-
+    animation: show-on 1s;
 }
 
 .ColumCard {
@@ -683,6 +694,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 20px;
     font-weight: 300; 
+    animation: show-on 1s;
 }
 #servicePrice{
     display: inline-flex;
@@ -691,6 +703,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-family:'OpelNextW01-Regular', sans-serif;
     font-size: 50px;
     font-weight: 600; 
+    animation: show-on 1s;
 }
 .miniTitleCard {
     display: inline-flex;
@@ -700,6 +713,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 25px;
     color: #65656c;
     font-weight: 100;
+    animation: show-on 1s;
 }
 
 .carImg {
@@ -721,11 +735,13 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     animation: show 3s 1; 
     animation-fill-mode: forwards; 
     animation-delay: 1s; 
+    animation: show-on 1s;
 }
 
 .twoROW {
     display: flex;
     flex-direction: row;
+    animation: show-on 1s;
 }
 .ColumCard {
     display: flex;
@@ -738,7 +754,7 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'OpelNextW01-Regular', sans-serif;
     font-size: 30px;
     margin-bottom: 21px;
 }
@@ -810,8 +826,6 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     font-size: 23px;
 }
 
-
-
 .btn:hover {
     background-color: #f7ff14;
     border: none;
@@ -819,8 +833,9 @@ export function Config2({ setShowModal }: { setShowModal: Dispatch<SetStateActio
     color:black;
     transform: scale(1.02);
     box-shadow: -3px 15px 9px 3px rgba(34, 60, 80, 0.2);
-
 }
+
+
 @media(max-width: 900px) {
     .title {
      font-size: 30px;

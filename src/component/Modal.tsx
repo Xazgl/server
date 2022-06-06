@@ -1,7 +1,8 @@
 
 // import styles from "./Menu.module.css";
-
-import { ChangeEvent, FormEvent, useState } from "react";
+import { Snackbar, Stack } from '@mui/material';
+import Alert from '@mui/material/Alert';
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Dispatch, SetStateAction, useRef } from "react";
 import { IMaskInput } from "react-imask";
 
@@ -14,6 +15,20 @@ export function Modal({showModal, setShowModal}: ModelProps) {
     const [closeStarting, setCloseStarting] = useState(false)
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
+    const [alert, setAlert] = useState(false)
+
+    useEffect(() => {
+        let tid
+        if (alert) {
+            tid = setTimeout(() => {
+                setAlert(false)
+            }, 2000)
+        }
+        return () => {
+            if (tid) clearTimeout(tid)
+        }
+    }, [alert])
+
     function closeModal() {
         setCloseStarting(true)
         setTimeout(() => {
@@ -31,6 +46,11 @@ export function Modal({showModal, setShowModal}: ModelProps) {
             body: JSON.stringify({ name, phone })
         })
         if (res.ok) {
+            // return (
+            //     <>
+            //     <Alert severity="success">This is a success alert — check it out!</Alert>
+            //     </>
+            // )
             const result = await res.json()
             console.log(result);            
         }
@@ -76,7 +96,7 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                             />
                         </div>
                         <div className="mb-3">
-                            <button className="btn-modal" type="submit">Отправить</button>
+                            <button className="btn-modal" type="submit"  onClick={() => setAlert(true)}>Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -84,11 +104,15 @@ export function Modal({showModal, setShowModal}: ModelProps) {
                     <button className="btn-modal" id="close-modal" onClick={() => {closeModal()}}>Закрыть</button>
                 </div>
             </div>
+            <Snackbar open={alert} autoHideDuration={6000} onClose={() => setAlert(false)}>
+                <Alert onClose={() => setAlert(false)} severity="success" sx={{ width: '100%' }}>
+                  Заявка принята
+                </Alert>
+            </Snackbar>
         </div>
 
         <style jsx>{`
-           
-            
+
             @keyframes modalBackground-open {
                 0% {
                     opacity: 0;

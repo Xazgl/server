@@ -8,7 +8,7 @@ export function Video() {
         <>
             <section className="showcase">
                 <video  autoPlay loop muted >
-                  <source src ="/video.mp4#t=12"  type="video/mp4" />
+                  <source src ="/video.webm"  type="video/webm" />
                 </video>
                 <h1 className="title">OPEL</h1>
             </section>
@@ -33,7 +33,7 @@ export function Video() {
                 .title {
                     width: 100%;
                     height: 100%;
-                    font-family: 'OpelNextW01-Regular'; 
+                    font-family: 'OpelNextW01-Regular', sans-serif;
                     font-size: 350px;
                     color:#fff;
                     mix-blend-mode:multiply;
@@ -49,59 +49,10 @@ export function Video() {
                     .showcase {
                         display:none;
                     }
-                    .title { 
-                        font-size:30px;
-                    }
+                    
                 }
-                @media(max-width: 720px) {
-                    .title { 
-                        font-size:25px;
-                    }
-                    .titleMini {
-                        font-size:15px;
-                    }
-                    .MainBanner { 
-                        height: 400px;
-                    }
-                }
-                @media(max-width: 540px) {
-                    .title { 
-                        font-size:18px;
-                    }
-                    .titleMini {
-                        font-size:12px;
-                    }
-                    .MainBanner { 
-                        height: 250px;
-                    }
-                }
-                @media(max-width: 350px) {
-                    .title { 
-                        font-size:12px;
-                    }
-                    .titleMini {
-                        font-size:9px;
-                    }
-                    .MainBanner { 
-                        height: 150px;
-                    }
-                }
-                @media(max-width: 250px) {
-                    .title { 
-                        font-size:9px;
-                        margin-top:10px;
-                    }
-                    .titleMini {
-                        font-size:7px;
-                    }
-                    .MainBanner { 
-                        height: 130px;
-                    }
-                    .titleMini{
-                        margin-bottom:00px;
-                        margin-top:10px;
-                    }
-                }
+                
+                
             `}</style>
         </>
     )

@@ -42,7 +42,7 @@ export  function Menu() {
 
       ul {
         justify-content: space-evenly; 
-        font-family: 'OpelNextW01-Regular'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         border-bottom: 1px solid #eaeaea;   
         font-size:18px;
         position: fixed;
@@ -59,15 +59,15 @@ export  function Menu() {
         padding-right: 180px;
       }
       li {
-        font-family: 'OpelNextW01-Regular'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
       }
       span{
-        font-family: 'OpelNextW01-Regular'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
       }
       .menuEL {
         display:flex;
         justify-content:center;
-        font-family: 'OpelNextW01-Regular'; 
+        font-family: 'OpelNextW01-Regular', sans-serif; 
         list-style: none;
         transition: 0.4s linear;
         position:relative;

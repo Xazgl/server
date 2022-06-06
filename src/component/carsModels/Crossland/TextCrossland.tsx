@@ -1,6 +1,6 @@
-import img1 from '/public/images/crossland/1.png'
-import img2 from '/public/images/crossland/2.png'
-import img3 from '/public/images/crossland/3.jpg'
+import img1 from '/public/images/crossland/1.webp'
+import img2 from '/public/images/crossland/2.webp'
+import img3 from '/public/images/crossland/3.webp'
 import { Dispatch, FormEvent, SetStateAction } from 'react'
 
 

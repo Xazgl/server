@@ -1,5 +1,7 @@
 
-import { ChangeEvent, FormEvent, useState } from "react";
+import { Snackbar, Stack } from '@mui/material';
+import Alert from '@mui/material/Alert';
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Dispatch, SetStateAction, useRef } from "react";
 import IMask from 'imask';
 import { IMaskInput } from "react-imask";
@@ -21,6 +23,20 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
     const [phone, setPhone] = useState('')
     const [ carModal, setCarModal] =  useState('')
     const [carYear, setCarYear] =  useState('')
+    const [alert, setAlert] = useState(false)
+
+    useEffect(() => {
+        let tid
+        if (alert) {
+            tid = setTimeout(() => {
+                setAlert(false)
+            }, 2000)
+        }
+        return () => {
+            if (tid) clearTimeout(tid)
+        }
+    }, [alert])
+
     function closeModal() {
         setCloseStarting(true)
         setTimeout(() => {
@@ -102,7 +118,7 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                             onChange={event => setCarModal(event.target.value)} />
                         </div>
                         <div className="mb-3">
-                            <button className="btn-modal" type="submit">Отправить</button>
+                            <button className="btn-modal" type="submit"  onClick={() => setAlert(true)}>Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -110,6 +126,11 @@ export function TradeinModal({showTradeInModal, setShowTradeInModal}: ModelProps
                     <button className="btn-modal" id="close-modal" onClick={() => {closeModal()}}>Закрыть</button>
                 </div>
             </div>
+            <Snackbar open={alert} autoHideDuration={6000} onClose={() => setAlert(false)}>
+                <Alert onClose={() => setAlert(false)} severity="success" sx={{ width: '100%' }}>
+                    Заявка принята
+                </Alert>
+            </Snackbar>
         </div>
 
     <style jsx>{`

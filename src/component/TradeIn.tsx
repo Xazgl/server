@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import bannerTradeIn from '/public/images/astra.jpg';
+import bannerTradeIn from '/public/images/astra.webp';
 
 type TradeInProps = {
   setShowTradeInModal: Dispatch<SetStateAction<boolean>>

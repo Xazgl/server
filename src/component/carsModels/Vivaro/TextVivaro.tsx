@@ -1,8 +1,8 @@
 
-import img1 from '/public/images/vivaro/1.png'
-import img2 from '/public/images/vivaro/2.png'
-import img3 from '/public/images/vivaro/3.png'
-import img4 from '/public/images/vivaro/4.png'
+import img1 from '/public/images/vivaro/1.webp'
+import img2 from '/public/images/vivaro/2.webp'
+import img3 from '/public/images/vivaro/3.webp'
+import img4 from '/public/images/vivaro/4.webp'
 import { Dispatch, FormEvent, SetStateAction } from 'react'
 
 

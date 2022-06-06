@@ -42,7 +42,6 @@ export function Map() {
             color:white;
             font-family: 'OpelNextW01-Regular', sans-serif; 
             justify-content:center;
-            margin-top:20px;
         }
         #title {
             font-size:30px;
@@ -50,9 +49,7 @@ export function Map() {
         #words {
             font-size:20px;
         }
-        #main {
-          margin-top:42px;
-        }
+        
         .second {
           display:none
         }

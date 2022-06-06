@@ -1,8 +1,8 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
-import img1 from '/public/images/comboLife/1.png'
+import img1 from '/public/images/comboLife/1.webp'
 import img2 from '/public/images/comboLife/2.jpg'
-import img3 from '/public/images/comboLife/3.png'
-import img4 from '/public/images/comboLife/4.png'
+import img3 from '/public/images/comboLife/3.webp'
+import img4 from '/public/images/comboLife/4.webp'
 import img5 from '/public/images/comboLife/5.jpg'
 
 

@@ -1,8 +1,8 @@
-import card1 from '/public/images/card1.jpg';
-import card2 from '/public/images/card2.jpg';
+import card1 from '/public/images/card1.webp';
+import card2 from '/public/images/card2.webp';
 import card3 from '/public/images/card3.jpg';
-import card4 from '/public/images/card4.jpg';
-export function HowItWorks() {
+import card4 from '/public/images/card4.webp';
+export function  HowItWorks() {
     return (
         <>
              <div className="background">

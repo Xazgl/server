@@ -1,7 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
-import banner from '/public/images/modelBannerLife.png'
-import miniBanner from '/public/images/b.jpeg'
-import zafira from '/public/images/models/0.jpg';
+import banner from '/public/images/modelBannerLife.webp'
+import miniBanner from '/public/images/b.webp'
+import zafira from '/public/images/models/0.webp';
 
 export function BannerLife({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 

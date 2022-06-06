@@ -1,7 +1,7 @@
 import u from '/public/images/u.png';
-import credit from '/public/images/credit.png';
-import lizing from '/public/images/lizing.png';
-import price from '/public/images/price.png';
+import credit from '/public/images/credit.webp';
+import lizing from '/public/images/lizing.webp';
+import price from '/public/images/price.webp';
 import { Dispatch, FormEvent, SetStateAction } from 'react';
 
 

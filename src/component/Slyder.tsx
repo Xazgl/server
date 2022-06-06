@@ -9,10 +9,10 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import img1 from '/public/images/1.jpg'
-import img2 from '/public/images/2.jpg'
-import img3 from '/public/images/3.jpg'
-import img4 from '/public/images/4.jpg'
+import img1 from '/public/images/101.webp'
+import img2 from '/public/images/102.webp'
+import img3 from '/public/images/103.webp'
+import img4 from '/public/images/104.webp'
 
 
 

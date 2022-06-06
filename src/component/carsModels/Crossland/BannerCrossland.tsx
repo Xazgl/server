@@ -1,7 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
-import banner from '/public/images/1.jpeg';
-import miniBanner from '/public/images/crosmini.png';
-import zafira from '/public/images/models/1.jpg';
+import banner from '/public/images/1.webp';
+import miniBanner from '/public/images/crosmini.webp';
+import zafira from '/public/images/models/1.webp';
 
 export function BannerCrossland({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 

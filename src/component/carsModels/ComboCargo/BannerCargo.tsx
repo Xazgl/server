@@ -1,7 +1,7 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
 import banner from '/public/images/modelBannerCargo.png'
-import miniBanner from '/public/images/zafira/carYellow.jpg'
-import zafira from '/public/images/models/4.jpg';
+import miniBanner from '/public/images/zafira/carYellow.webp'
+import zafira from '/public/images/models/4.webp';
 
 export function BannerCargo({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {
 

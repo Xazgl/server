@@ -1,8 +1,8 @@
 import { Dispatch, FormEvent, SetStateAction } from 'react'
-import img1 from '/public/images/zafira/1.png'
-import img2 from '/public/images/zafira/2.png'
-import img3 from '/public/images/zafira/3.png'
-import img4 from '/public/images/zafira/4.png'
+import img1 from '/public/images/zafira/1.webp'
+import img2 from '/public/images/zafira/2.webp'
+import img3 from '/public/images/zafira/3.webp'
+import img4 from '/public/images/zafira/4.webp'
 
 
 export function TextZafira({ setShowModal }: { setShowModal: Dispatch<SetStateAction<boolean>> }) {

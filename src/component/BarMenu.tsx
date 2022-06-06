@@ -69,7 +69,7 @@ export default function BarMenu() {
 
 
 ul {
-    font-family: 'OpelNextW01-Regular'; 
+    font-family: 'OpelNextW01-Regular', sans-serif;
     border-bottom: 1px solid #eaeaea;   
     font-size:12px;
 }

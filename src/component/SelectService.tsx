@@ -1,10 +1,10 @@
 
-import comboCargo from '/public/images/models/4.jpg';
-import comboLife from '/public/images/models/0.jpg';
-import zafira from '/public/images/models/3.jpg';
-import vivaro from '/public/images/models/2.jpg';
-import crossland from '/public/images/models/1.jpg';
-import granlandX from '/public/images/models/5.jpg';
+import comboCargo from '/public/images/models/4.webp';
+import comboLife from '/public/images/models/0.webp';
+import zafira from '/public/images/models/3.webp';
+import vivaro from '/public/images/models/2.webp';
+import crossland from '/public/images/models/1.webp';
+import granlandX from '/public/images/models/5.webp';
 import { Dispatch, FormEvent, SetStateAction, useMemo, useState } from "react"
 
 type typeOfService = {
@@ -267,7 +267,11 @@ export function SelectService({ setShowModal }: { setShowModal: Dispatch<SetStat
     height: 202px;
     background-image: url('${imgCar}');
     background-size: contain;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    transition: 1s; 
+    animation: show 3s 1; 
+    animation-fill-mode: forwards; 
+    animation-delay: 1s; 
 }
 
 
